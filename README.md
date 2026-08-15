@@ -1,9 +1,63 @@
 <div align="center">
 
-<img src="docs/assets/forgemind-hero.gif" alt="ForgeMind AI — Azure-Native Industrial Intelligence Platform" width="100%" />
+<img
+  src="docs/assets/forgemind-hero.gif"
+  alt="ForgeMind AI — Azure-Native Industrial Intelligence Platform"
+  width="100%"
+/>
 
 <br/>
-<div align="center">
+
+# 🧠 ForgeMind AI
+
+### Azure-Native Industrial Intelligence Platform
+
+### **Turn fragmented engineering evidence into cited operational decisions.**
+
+**Evidence-grounded intelligence for engineering, reliability, maintenance, quality, safety, and compliance teams.**
+
+<br/>
+
+<a href="docs/AZURE_ARCHITECTURE.md">
+  <img src="https://img.shields.io/badge/Azure-Native-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
+</a>
+<a href="#-deployment-status">
+  <img src="https://img.shields.io/badge/Local-VERIFIED-14B8A6?style=for-the-badge" />
+</a>
+<a href="docs/AZURE_ARCHITECTURE.md">
+  <img src="https://img.shields.io/badge/Azure_Architecture-VALIDATED-2563EB?style=for-the-badge" />
+</a>
+<a href="docs/DEPLOYMENT_STATUS.md">
+  <img src="https://img.shields.io/badge/Azure_Runtime-NOT_DEPLOYED-F59E0B?style=for-the-badge" />
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-Azure-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Azure_AI-Search-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+<img src="https://img.shields.io/badge/Microsoft-Foundry-7C3AED?style=flat-square" />
+
+<br/><br/>
+
+<a href="#-running-locally">🚀 <b>Quick Start</b></a>
+&nbsp;·&nbsp;
+<a href="#-guided-product-demo">🎬 <b>Guided Demo</b></a>
+&nbsp;·&nbsp;
+<a href="#️-architecture-summary">🏗️ <b>Architecture</b></a>
+&nbsp;·&nbsp;
+<a href="#-evaluation-evidence">📊 <b>Evaluation</b></a>
+&nbsp;·&nbsp;
+<a href="#-safety--human-control">🛡️ <b>Safety</b></a>
+
+</div>
+
+---
+">
 
 ## ⚡ ForgeMind AI — Evidence to Decision Flow
 
