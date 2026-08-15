@@ -437,6 +437,6 @@ Configuration files are implementation evidence, not proof of a live Azure deplo
 
 ## 👤 Author
 
-Built by **Janice Benita F** as a separate Azure-native industrial intelligence and conference research platform.
+Built by **Janice Benita F** as a separate Azure-native industrial intelligence platform.
 
 **Connect evidence. Understand operations. Decide with confidence.**
