@@ -3,68 +3,21 @@
 <img src="docs/assets/forgemind-hero.gif" alt="ForgeMind AI — Azure-Native Industrial Intelligence Platform" width="100%" />
 
 <br/>
-
-# 🧠 ForgeMind AI
-
-### Azure-Native Industrial Intelligence Platform
-
-### **Turn fragmented engineering evidence into cited operational decisions.**
-
-Evidence-grounded intelligence for engineering, reliability, maintenance, quality, safety, and compliance teams.
-
-<br/>
-
-[![Azure Native](https://img.shields.io/badge/Azure-Native-0078D4?style=for-the-badge\&logo=microsoftazure\&logoColor=white)](docs/AZURE_ARCHITECTURE.md)
-[![Local Verified](https://img.shields.io/badge/Local-Verified-14B8A6?style=for-the-badge)](#-deployment-status)
-[![Azure Architecture](https://img.shields.io/badge/Azure_Architecture-Validated-2563EB?style=for-the-badge)](docs/AZURE_ARCHITECTURE.md)
-[![Azure Runtime](https://img.shields.io/badge/Azure_Runtime-Not_ deployed-F59E0B?style=for-the-badge)](docs/DEPLOYMENT_STATUS.md)
-[![Human Governed](https://img.shields.io/badge/Human-Governed-10B981?style=for-the-badge)](#-safety--human-control)
-[![Operational Action](https://img.shields.io/badge/Operational_Action-NOT_EXECUTED-DC2626?style=for-the-badge)](#-human-decision-boundary)
-
-<br/>
-
-[![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=flat-square\&logo=nextdotjs)](frontend/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square\&logo=react\&logoColor=black)](frontend/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)](frontend/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square\&logo=fastapi\&logoColor=white)](backend/)
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square\&logo=python\&logoColor=white)](backend/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Azure-4169E1?style=flat-square\&logo=postgresql\&logoColor=white)](infra/)
-[![Azure AI Search](https://img.shields.io/badge/Azure_AI-Search-0078D4?style=flat-square\&logo=microsoftazure)](docs/AZURE_ARCHITECTURE.md)
-[![Microsoft Foundry](https://img.shields.io/badge/Microsoft-Foundry-7C3AED?style=flat-square)](docs/AZURE_ARCHITECTURE.md)
-
-<br/>
-
-### 🚀 [Quick Start](#-running-locally) · 🎛️ [Executive Cockpit](#-guided-product-demo) · 🧠 [Knowledge Copilot](#-guided-product-demo) · 🏗️ [Architecture](#️-architecture-summary) · 🛡️ [Safety](#-safety--human-control) · 📊 [Evaluation](#-evaluation-evidence)
-
-</div>
-
----
-
-## ⚡ 30-Second ForgeMind Flow
-
 <div align="center">
 
-<img src="docs/assets/forgemind-product-flow.gif" alt="ForgeMind AI evidence-to-decision workflow" width="100%" />
+## ⚡ ForgeMind AI — Evidence to Decision Flow
+
+<img
+  src="docs/assets/forgemind-demo.gif"
+  alt="ForgeMind AI evidence-grounded operational intelligence workflow"
+  width="100%"
+/>
+
+<br/>
+
+**Ingest Evidence → Preserve Lineage → Extract Entities → Build Operational Graph → Retrieve Authorized Evidence → Cite → Human Review**
 
 </div>
-
-<div align="center">
-
-### 📥 Ingest Evidence → 🔐 Preserve Lineage → 🧩 Extract Intelligence → 🕸️ Build Operational Graph → 🔎 Retrieve Authorized Evidence → 📚 Answer with Citations → 👤 Require Human Review
-
-</div>
-
-> [!IMPORTANT]
->
-> ## 🚫 OPERATIONAL ACTION: NOT EXECUTED
->
-> ForgeMind AI **explains evidence, identifies risks, supports root-cause analysis, and prepares compliance findings**.
->
-> It does **not** start, stop, isolate, repair, approve, or reconfigure industrial equipment.
->
-> **Every operational, safety, maintenance, quality, and compliance action requires an authorized human decision.**
-
----
 
 # 🌐 Deployment Status
 
