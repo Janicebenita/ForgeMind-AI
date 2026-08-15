@@ -1,0 +1,51 @@
+{
+  "source_root": "<legacy-source-root>",
+  "destination_root": ".",
+  "source_database": "<legacy-source-root>\\backend\\app\\data\\industrial_brain.db",
+  "source_database_sha256": "263b54e21fe2928d2ea6c64973bc1ccfd2b5196eea3a460038ee6259024ee3d3",
+  "source_counts": {
+    "assets": 12,
+    "audit_logs": 32,
+    "chat_sessions": 0,
+    "chunks": 969,
+    "citations": 124,
+    "documents": 29,
+    "entities": 552,
+    "entity_relationships": 122,
+    "failures": 16,
+    "inspections": 6,
+    "procedures": 2,
+    "regulations": 10,
+    "work_orders": 5
+  },
+  "dry_run": false,
+  "completed_at": "2026-08-15T13:46:28.586338+00:00",
+  "target_database": "backend\\app\\data\\forgemind.db",
+  "target_database_sha256": "170d75037e4de90f17c7596a50aeac444c21b9eb8ca87437a172b2d531893d57",
+  "target_counts": {
+    "assets": 12,
+    "audit_logs": 33,
+    "chat_sessions": 0,
+    "chunks": 969,
+    "citations": 124,
+    "documents": 29,
+    "entities": 552,
+    "entity_relationships": 122,
+    "failures": 16,
+    "inspections": 6,
+    "procedures": 2,
+    "regulations": 10,
+    "work_orders": 5
+  },
+  "files": {
+    "copied": 0,
+    "identical": 52,
+    "conflicts": []
+  },
+  "documents": {
+    "relinked": 29,
+    "unresolved": 0
+  },
+  "snapshot": "backend\\app\\data\\legacy_snapshot.json",
+  "published_paths_sanitized": true
+}

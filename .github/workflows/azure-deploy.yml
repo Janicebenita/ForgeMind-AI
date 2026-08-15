@@ -1,0 +1,113 @@
+name: Deploy ForgeMind AI to Azure
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_models:
+        description: Provision the default Foundry model deployments
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: forgemind-azure-deployment
+  cancel-in-progress: false
+
+env:
+  AZURE_CORE_OUTPUT: none
+  RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP || 'rg-forgemind-conference' }}
+  LOCATION: ${{ vars.AZURE_LOCATION || 'centralindia' }}
+  AI_LOCATION: ${{ vars.AZURE_AI_LOCATION || 'eastus2' }}
+  FORGEMIND_PREFIX: ${{ vars.FORGEMIND_PREFIX || 'forgemind' }}
+  IMAGE_TAG: ${{ github.sha }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: azure-conference
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Sign in to Azure with OIDC
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Create resource group
+        run: az group create --name "$RESOURCE_GROUP" --location "$LOCATION"
+
+      - name: Provision Azure foundation
+        id: foundation
+        env:
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          FORGEMIND_JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          PROVISION_MODELS: ${{ inputs.deploy_models }}
+        run: |
+          az deployment group create \
+            --name "forgemind-foundation-${GITHUB_RUN_ID}" \
+            --resource-group "$RESOURCE_GROUP" \
+            --template-file infra/main.bicep \
+            --parameters \
+              prefix="$FORGEMIND_PREFIX" \
+              location="$LOCATION" \
+              aiLocation="$AI_LOCATION" \
+              deployApps=false \
+              provisionModelDeployments="$PROVISION_MODELS" \
+              imageTag="$IMAGE_TAG" \
+              postgresAdminPassword="$POSTGRES_PASSWORD" \
+              jwtSecret="$FORGEMIND_JWT_SECRET"
+
+          registry=$(az acr list --resource-group "$RESOURCE_GROUP" --query "[0].name" -o tsv)
+          test -n "$registry"
+          echo "registry=$registry" >> "$GITHUB_OUTPUT"
+
+      - name: Build API image in Azure Container Registry
+        run: |
+          az acr build \
+            --registry "${{ steps.foundation.outputs.registry }}" \
+            --image "forgemind-api:$IMAGE_TAG" \
+            --file backend/Dockerfile.azure .
+
+      - name: Build web image in Azure Container Registry
+        run: |
+          az acr build \
+            --registry "${{ steps.foundation.outputs.registry }}" \
+            --image "forgemind-web:$IMAGE_TAG" \
+            --file frontend/Dockerfile.azure .
+
+      - name: Deploy Container Apps
+        id: apps
+        env:
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          FORGEMIND_JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          PROVISION_MODELS: ${{ inputs.deploy_models }}
+        run: |
+          frontend_url=$(az deployment group create \
+            --name "forgemind-apps-${GITHUB_RUN_ID}" \
+            --resource-group "$RESOURCE_GROUP" \
+            --template-file infra/main.bicep \
+            --parameters \
+              prefix="$FORGEMIND_PREFIX" \
+              location="$LOCATION" \
+              aiLocation="$AI_LOCATION" \
+              deployApps=true \
+              provisionModelDeployments="$PROVISION_MODELS" \
+              imageTag="$IMAGE_TAG" \
+              postgresAdminPassword="$POSTGRES_PASSWORD" \
+              jwtSecret="$FORGEMIND_JWT_SECRET" \
+            --query "properties.outputs.frontendUrl.value" -o tsv)
+          test -n "$frontend_url"
+          echo "frontend_url=$frontend_url" >> "$GITHUB_OUTPUT"
+
+      - name: Publish deployment URL
+        run: |
+          echo "## ForgeMind AI deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Frontend: ${{ steps.apps.outputs.frontend_url }}" >> "$GITHUB_STEP_SUMMARY"

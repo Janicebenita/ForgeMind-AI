@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-08-15T12:42:28.974710+00:00",
+  "backend": "local",
+  "top_k": 5,
+  "case_count": 8,
+  "positive_case_count": 6,
+  "negative_case_count": 2,
+  "mean_recall_at_k": 1.0,
+  "mean_reciprocal_rank": 1.0,
+  "negative_abstention_accuracy": 1,
+  "retrieval_latency_ms_p50": 3.23,
+  "retrieval_latency_ms_p95": 3.76,
+  "passed_cases": 8,
+  "cases": [
+    {
+      "id": "p101_repeated_failure",
+      "question": "What evidence explains the repeated seal failure and vibration on P-101?",
+      "relevant_files": [
+        "WO-10421_P-101_mechanical_seal.txt",
+        "WO-10877_P-101_vibration_repeat.txt"
+      ],
+      "retrieved_files": [
+        "WO-10877_P-101_vibration_repeat.txt",
+        "WO-10421_P-101_mechanical_seal.txt",
+        "SOP-MECH-014_pump_isolation.txt",
+        "REG-PSM-Checklist.txt",
+        "INSP-5521_heat_exchanger_corrosion.txt"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 2.32,
+      "passed": true
+    },
+    {
+      "id": "p101_isolation",
+      "question": "What isolation steps are required before opening pump P-101?",
+      "relevant_files": [
+        "SOP-MECH-014_pump_isolation.txt"
+      ],
+      "retrieved_files": [
+        "SOP-MECH-014_pump_isolation.txt",
+        "SOP-VES-203_pressure_vessel_entry.txt",
+        "REG-PSM-Checklist.txt",
+        "WO-10421_P-101_mechanical_seal.txt",
+        "Engineering_Metadata_Assets.csv"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 2.14,
+      "passed": true
+    },
+    {
+      "id": "v203_confined_space",
+      "question": "Which confined-space and pressure-vessel requirements apply to V-203?",
+      "relevant_files": [
+        "REG-PSM-Checklist.txt",
+        "SOP-VES-203_pressure_vessel_entry.txt"
+      ],
+      "retrieved_files": [
+        "REG-PSM-Checklist.txt",
+        "SOP-VES-203_pressure_vessel_entry.txt",
+        "SOP-MECH-014_pump_isolation.txt",
+        "INSP-5521_heat_exchanger_corrosion.txt",
+        "WO-10877_P-101_vibration_repeat.txt"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 2.12,
+      "passed": true
+    },
+    {
+      "id": "c201_trip",
+      "question": "What caused the C-201 compressor trip and what action was recorded?",
+      "relevant_files": [
+        "INC-771_compressor_trip.txt"
+      ],
+      "retrieved_files": [
+        "INC-771_compressor_trip.txt",
+        "WO-10421_P-101_mechanical_seal.txt",
+        "REG-PSM-Checklist.txt",
+        "WO-10877_P-101_vibration_repeat.txt",
+        "SOP-MECH-014_pump_isolation.txt"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 2.55,
+      "passed": true
+    },
+    {
+      "id": "hx301_corrosion",
+      "question": "What did inspection INSP-5521 find on HX-301?",
+      "relevant_files": [
+        "INSP-5521_heat_exchanger_corrosion.txt"
+      ],
+      "retrieved_files": [
+        "INSP-5521_heat_exchanger_corrosion.txt",
+        "Engineering_Metadata_Assets.csv",
+        "INC-771_compressor_trip.txt",
+        "WO-10421_P-101_mechanical_seal.txt",
+        "REG-PSM-Checklist.txt"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 3.76,
+      "passed": true
+    },
+    {
+      "id": "asset_register",
+      "question": "Which source lists plant assets, locations, criticality, and operating status?",
+      "relevant_files": [
+        "Engineering_Metadata_Assets.csv"
+      ],
+      "retrieved_files": [
+        "Engineering_Metadata_Assets.csv",
+        "REG-PSM-Checklist.txt",
+        "SOP-MECH-014_pump_isolation.txt",
+        "SOP-VES-203_pressure_vessel_entry.txt",
+        "WO-10877_P-101_vibration_repeat.txt"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 3.65,
+      "passed": true
+    },
+    {
+      "id": "unsupported_temperature",
+      "question": "What is the current motor winding temperature of B-501?",
+      "relevant_files": [],
+      "retrieved_files": [
+        "SOP-MECH-014_pump_isolation.txt",
+        "Engineering_Metadata_Assets.csv",
+        "INC-771_compressor_trip.txt",
+        "INSP-5521_heat_exchanger_corrosion.txt",
+        "REG-PSM-Checklist.txt"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 3.23,
+      "passed": true
+    },
+    {
+      "id": "unsupported_lubricant",
+      "question": "Which bearing lubrication grade is currently installed in EP-401?",
+      "relevant_files": [],
+      "retrieved_files": [
+        "INC-771_compressor_trip.txt",
+        "WO-10421_P-101_mechanical_seal.txt",
+        "INSP-5521_heat_exchanger_corrosion.txt",
+        "SOP-MECH-014_pump_isolation.txt",
+        "REG-PSM-Checklist.txt"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 3.3,
+      "passed": true
+    }
+  ]
+}

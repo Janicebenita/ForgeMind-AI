@@ -1,0 +1,23 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV SAMPLE_DATA_DIR=/app/sample_data/documents
+ENV FORGEMIND_DATA_DIR=/app/data
+ENV FORGEMIND_UPLOAD_DIR=/app/uploads
+
+COPY backend/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend/app ./app
+COPY backend/alembic.ini ./alembic.ini
+COPY backend/alembic ./alembic
+COPY sample_data ./sample_data
+
+RUN addgroup --system forgemind && adduser --system --ingroup forgemind forgemind \
+    && mkdir -p /app/reports /app/uploads \
+    && chown -R forgemind:forgemind /app
+USER forgemind
+EXPOSE 8000
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

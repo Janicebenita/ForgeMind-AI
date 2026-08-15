@@ -1,0 +1,48 @@
+[
+  {
+    "id": "p101_repeated_failure",
+    "question": "What evidence explains the repeated seal failure and vibration on P-101?",
+    "relevant_files": [
+      "WO-10421_P-101_mechanical_seal.txt",
+      "WO-10877_P-101_vibration_repeat.txt"
+    ]
+  },
+  {
+    "id": "p101_isolation",
+    "question": "What isolation steps are required before opening pump P-101?",
+    "relevant_files": ["SOP-MECH-014_pump_isolation.txt"]
+  },
+  {
+    "id": "v203_confined_space",
+    "question": "Which confined-space and pressure-vessel requirements apply to V-203?",
+    "relevant_files": [
+      "SOP-VES-203_pressure_vessel_entry.txt",
+      "REG-PSM-Checklist.txt"
+    ]
+  },
+  {
+    "id": "c201_trip",
+    "question": "What caused the C-201 compressor trip and what action was recorded?",
+    "relevant_files": ["INC-771_compressor_trip.txt"]
+  },
+  {
+    "id": "hx301_corrosion",
+    "question": "What did inspection INSP-5521 find on HX-301?",
+    "relevant_files": ["INSP-5521_heat_exchanger_corrosion.txt"]
+  },
+  {
+    "id": "asset_register",
+    "question": "Which source lists plant assets, locations, criticality, and operating status?",
+    "relevant_files": ["Engineering_Metadata_Assets.csv"]
+  },
+  {
+    "id": "unsupported_temperature",
+    "question": "What is the current motor winding temperature of B-501?",
+    "relevant_files": []
+  },
+  {
+    "id": "unsupported_lubricant",
+    "question": "Which bearing lubrication grade is currently installed in EP-401?",
+    "relevant_files": []
+  }
+]
