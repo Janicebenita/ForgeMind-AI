@@ -72,7 +72,59 @@
 **Ingest Evidence → Preserve Lineage → Extract Entities → Build Operational Graph → Retrieve Authorized Evidence → Cite → Human Review**
 
 </div>
+---
 
+# 🎬 ForgeMind AI — Product Demo
+
+<div align="center">
+
+### See the complete evidence-to-decision workflow in action.
+
+**From fragmented industrial evidence to governed, cited operational intelligence.**
+
+<br/>
+
+[▶️ **WATCH THE FORGEMIND AI PRODUCT DEMO**](docs/demo/forgemind-product-demo.mp4)
+
+<br/>
+
+*Engineering Evidence → Lineage → Knowledge Graph → Authorized Retrieval →  
+Cited Intelligence → Asset & Maintenance Context → RCA → Compliance → Human Review*
+
+</div>
+
+### What the demo shows
+
+The ForgeMind AI product demonstration walks through the verified local
+industrial intelligence workflow, including:
+
+- 📊 **Executive Cockpit** — enterprise operational intelligence at a glance
+- 📄 **Engineering Documents** — evidence ingestion, document lineage, and source integrity
+- 🧠 **Knowledge Copilot** — evidence-grounded answers with citations and confidence
+- 🕸️ **Knowledge Graph** — connected assets, failures, procedures, inspections, and work orders
+- ⚙️ **Asset 360** — unified asset and maintenance intelligence
+- 🔧 **Maintenance Intelligence** — repeated-failure and maintenance context
+- 🔍 **Root Cause Analysis** — evidence-supported investigation
+- 🛡️ **Compliance OS** — obligations, evidence gaps, and supporting records
+- 📈 **Evidence Metrics** — retrieval quality and abstention behavior
+- 👤 **Human Review** — the explicit operational decision boundary
+
+> [!IMPORTANT]
+> **OPERATIONAL ACTION: NOT EXECUTED**
+>
+> The demonstration shows ForgeMind AI as an evidence-grounded
+> decision-support platform. It does not demonstrate autonomous control
+> or execution of industrial actions.
+>
+> **Models explain. Evidence supports. Backend gates. Humans authorize.**
+
+<div align="center">
+
+### ▶️ [Watch the full product demonstration](docs/demo/forgemind-product-demo.mp4)
+
+</div>
+
+---
 # 🌐 Deployment Status
 
 | Environment           | Status                        | Evidence                                                                                            |
