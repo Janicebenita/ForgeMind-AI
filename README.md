@@ -1106,8 +1106,7 @@ Recommended file size:
 ## Team — Omnikon National Hackathon 2026
 
 - **Janice Benita F** — Team Leader
-- **Tytus Glastin** — Team Member
-  - GitHub username: TO BE VERIFIED BEFORE SUBMISSION
+- **Tytus Glastin** ([@TytusGlastin](https://github.com/TytusGlastin)) — Frontend Development
 
 ---
 
