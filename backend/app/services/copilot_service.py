@@ -12,7 +12,7 @@ from app.rag.providers import provider_for
 from app.services.maintenance_service import asset_360, rca_for_asset
 from app.services.retrieval_service import evidence_is_sufficient, retrieve, signal_terms
 
-ASSET_RE = re.compile(r"\b(?:P|C|B|HX|V|EP)-?\d{3}\b")
+ASSET_RE = re.compile(r"\b(?:P|C|B|HX|V|EP|TRK|SW|PM|SIG|BRG|TRM|WHL|OCS)-?\d{3}\b", re.I)
 
 
 def _citations(answer_id: str, evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -80,7 +80,7 @@ def ask_copilot(question: str, user_role: str = "maintenance") -> dict[str, Any]
         if settings.ai_provider == "azure":
             direct = provider_for("azure", settings=settings).summarize(question, evidence)
         else:
-            snippets = " ".join(item["text"][:180].replace("\n", " ") for item in evidence[:3])
+            snippets = " ".join(item["text"][:500].replace("\n", " ") for item in evidence[:3])
             direct += snippets
 
     citations = _citations(answer_id, evidence)
@@ -197,10 +197,11 @@ def _asset_specific_evidence(evidence: list[dict[str, Any]], asset_tags: list[st
 
 
 def _normalize_asset_tag(tag: str) -> str:
-    match = re.match(r"^(P|C|B|HX|V|EP)-?(\d{3})$", tag)
+    match = re.match(r"^(P|C|B|HX|V|EP|TRK|SW|PM|SIG|BRG|TRM|WHL|OCS)-?(\d{3})$", tag, re.I)
     if not match:
         return tag
-    return f"{match.group(1)}-{match.group(2)}"
+    return f"{match.group(1).upper()}-{match.group(2)}"
+
 
 def _asks_overdue_inspections(question_lower: str) -> bool:
     return ("overdue" in question_lower or "due" in question_lower or "expired" in question_lower or "missing" in question_lower) and ("inspection" in question_lower or "inspections" in question_lower or "assets" in question_lower)

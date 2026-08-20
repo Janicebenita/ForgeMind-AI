@@ -31,6 +31,11 @@ def _copy_and_ingest(path: Path) -> dict[str, Any]:
 def _seed_assets() -> int:
     asset_file = DEMO_DATA_DIR / "asset_register.csv"
     rows = list(csv.DictReader(asset_file.open("r", encoding="utf-8")))
+    rail_file = DEMO_DATA_DIR / "rail" / "rail_asset_register.csv"
+    rail_rows = []
+    if rail_file.exists():
+        rail_rows = list(csv.DictReader(rail_file.open("r", encoding="utf-8")))
+
     with connect() as conn:
         for row in rows:
             conn.execute(
@@ -40,13 +45,43 @@ def _seed_assets() -> int:
                 """,
                 (row["asset_tag"], row["asset_name"], row["asset_type"], row["location"], row["criticality"], int(row["risk_score"]), row["operating_status"]),
             )
+        for row in rail_rows:
+            crit = row["criticality"].upper()
+            risk_score = 50
+            if crit == "CRITICAL":
+                risk_score = 90
+            elif crit == "HIGH":
+                risk_score = 75
+            elif crit == "MEDIUM":
+                risk_score = 50
+            else:
+                risk_score = 35
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO assets(tag, name, asset_type, location, criticality, risk_score, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (row["asset_id"], row["description"], row["asset_type"], row["location"], row["criticality"], risk_score, row["status"]),
+            )
         conn.commit()
-    return len(rows)
+    return len(rows) + len(rail_rows)
+
 
 
 def _seed_maintenance_records() -> dict[str, int]:
     work_orders = list(csv.DictReader((DEMO_DATA_DIR / "maintenance_work_orders.csv").open("r", encoding="utf-8")))
     inserted = {"work_orders": 0, "failures": 0}
+    
+    rail_wo_file = DEMO_DATA_DIR / "rail" / "rail_work_orders.csv"
+    rail_wo = []
+    if rail_wo_file.exists():
+        rail_wo = list(csv.DictReader(rail_wo_file.open("r", encoding="utf-8")))
+
+    rail_fail_file = DEMO_DATA_DIR / "rail" / "rail_failures.csv"
+    rail_failures = []
+    if rail_fail_file.exists():
+        rail_failures = list(csv.DictReader(rail_fail_file.open("r", encoding="utf-8")))
+
     with connect() as conn:
         for row in work_orders:
             conn.execute(
@@ -71,12 +106,48 @@ def _seed_maintenance_records() -> dict[str, int]:
                         (row["asset_tag"], failure_mode.title(), row["notes"], row["date"], "High" if row["asset_tag"] in {"P101", "HX401", "EP501"} else "Medium", row["work_order"]),
                     )
                     inserted["failures"] += 1
+
+        for row in rail_wo:
+            performed_on = row["completed_date"] if row["completed_date"] else row["created_date"]
+            role = row["technician"] if row["technician"] else "Technician"
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO work_orders(work_order, asset_tag, action, performed_on, role, status, document_id)
+                VALUES (?, ?, ?, ?, ?, ?, NULL)
+                """,
+                (row["work_order_id"], row["asset_id"], row["description"], performed_on, role, row["status"]),
+            )
+            inserted["work_orders"] += 1
+
+        for row in rail_failures:
+            # Let's see if there is a matching work order for the same asset
+            exists = conn.execute(
+                "SELECT id FROM failures WHERE asset_tag = ? AND failure_mode = ? AND occurred_on = ?",
+                (row["asset_id"], row["failure_type"].title(), row["failure_date"]),
+            ).fetchone()
+            if not exists:
+                conn.execute(
+                    """
+                    INSERT INTO failures(asset_tag, failure_mode, root_cause, occurred_on, severity, work_order, document_id)
+                    VALUES (?, ?, ?, ?, ?, ?, NULL)
+                    """,
+                    (row["asset_id"], row["failure_type"].title(), row["root_cause"] if row["root_cause"] else row["description"], row["failure_date"], row["severity"], None),
+                )
+                inserted["failures"] += 1
+
         conn.commit()
     return inserted
 
 
+
 def _seed_inspections_and_compliance() -> dict[str, int]:
     compliance_rows = list(csv.DictReader((DEMO_DATA_DIR / "OISD_Checklist.csv").open("r", encoding="utf-8")))
+    
+    rail_insp_file = DEMO_DATA_DIR / "rail" / "rail_inspections.csv"
+    rail_inspections = []
+    if rail_insp_file.exists():
+        rail_inspections = list(csv.DictReader(rail_insp_file.open("r", encoding="utf-8")))
+
     with connect() as conn:
         inspection_seed = [
             ("INSP-P101-DEMO", "P101", "Repeated vibration anomaly, low seal flush flow, and elevated suction strainer differential pressure", "2026-02-20", "High", "2026-08-20"),
@@ -89,13 +160,48 @@ def _seed_inspections_and_compliance() -> dict[str, int]:
                 "INSERT OR IGNORE INTO inspections(inspection_id, asset_tag, finding, inspected_on, severity, next_due, document_id) VALUES (?, ?, ?, ?, ?, ?, NULL)",
                 row,
             )
+        for row in rail_inspections:
+            conn.execute(
+                "INSERT OR IGNORE INTO inspections(inspection_id, asset_tag, finding, inspected_on, severity, next_due, document_id) VALUES (?, ?, ?, ?, ?, ?, NULL)",
+                (row["inspection_id"], row["asset_id"], row["finding"], row["inspection_date"], row["severity"], row["next_due"]),
+            )
         for row in compliance_rows:
             conn.execute(
                 "INSERT OR IGNORE INTO regulations(clause, requirement, applies_to, evidence_status) VALUES (?, ?, ?, ?)",
                 (row["clause"], row["requirement"], row["applies_to"], row["evidence_status"].lower()),
             )
         conn.commit()
-    return {"inspections": len(inspection_seed), "compliance_gaps": sum(1 for row in compliance_rows if row["evidence_status"].lower() != "covered")}
+    return {"inspections": len(inspection_seed) + len(rail_inspections), "compliance_gaps": sum(1 for row in compliance_rows if row["evidence_status"].lower() != "covered")}
+
+
+
+def _seed_asset_usage() -> int:
+    """Seed rail usage data from demo-data/rail/rail_usage.csv into asset_usage.
+    Uses INSERT OR IGNORE to ensure idempotency and respects the repository's
+    ConnectionAdapter for SQLite/PostgreSQL portability.
+    Returns the number of rows processed.
+    """
+    usage_file = DEMO_DATA_DIR / "rail" / "rail_usage.csv"
+    rows = list(csv.DictReader(usage_file.open("r", encoding="utf-8")))
+    with connect() as conn:
+        for row in rows:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO asset_usage
+                (usage_id, asset_tag, period, metric, value, unit)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    row["usage_id"],
+                    row["asset_id"],
+                    row["period"],
+                    row["metric"],
+                    float(row["value"]),
+                    row["unit"],
+                ),
+            )
+        conn.commit()
+    return len(rows)
 
 
 def _seed_graph_relationships() -> int:
@@ -136,11 +242,21 @@ def seed_demo_dataset() -> dict[str, Any]:
     for path in sorted(DEMO_DATA_DIR.iterdir()):
         if path.is_file():
             ingested.append(_copy_and_ingest(path))
+    
+    rail_dir = DEMO_DATA_DIR / "rail"
+    if rail_dir.exists():
+        for path in sorted(rail_dir.iterdir()):
+            if path.is_file():
+                ingested.append(_copy_and_ingest(path))
 
     asset_count = _seed_assets()
     maintenance = _seed_maintenance_records()
     compliance = _seed_inspections_and_compliance()
     demo_relationships = _seed_graph_relationships()
+    # Seed rail usage data into asset_usage table (idempotent)
+    usage_count = _seed_asset_usage()
+    # Record usage count in created dict
+    created_usage = {"asset_usage": usage_count}
 
     totals = {
         "documents": query("SELECT COUNT(*) AS count FROM documents")[0]["count"],
@@ -158,6 +274,7 @@ def seed_demo_dataset() -> dict[str, Any]:
         "created": {
             "demo_assets": asset_count,
             "demo_relationships": demo_relationships,
+            "asset_usage": usage_count,
             **maintenance,
             **compliance,
         },

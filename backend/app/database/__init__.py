@@ -312,7 +312,21 @@ CREATE TABLE IF NOT EXISTS audit_logs (
     detail TEXT NOT NULL,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+-- New table for asset usage metrics
+CREATE TABLE IF NOT EXISTS asset_usage (
+    usage_id TEXT PRIMARY KEY,
+    asset_tag TEXT NOT NULL,
+    period TEXT NOT NULL,
+    metric TEXT NOT NULL,
+    value REAL NOT NULL,
+    unit TEXT NOT NULL,
+    FOREIGN KEY(asset_tag) REFERENCES assets(tag) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_asset_usage_asset_tag ON asset_usage(asset_tag);
+CREATE INDEX IF NOT EXISTS idx_asset_usage_period ON asset_usage(period);
 """
+
 
 POSTGRES_SCHEMA = SQLITE_SCHEMA.replace(
     "INTEGER PRIMARY KEY AUTOINCREMENT", "BIGSERIAL PRIMARY KEY"
