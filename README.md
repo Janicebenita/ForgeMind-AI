@@ -1,40 +1,3 @@
-# 🚆 ForgeMind Rail — Omnikon National Hackathon 2026
-
-**Domain:** Transportation & Logistics
-
-**Problem Statement:** Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure
-
-**Hackathon Application:** ForgeMind Rail
-
-ForgeMind Rail is a rail-specific application profile built on the existing
-ForgeMind AI industrial intelligence platform.
-
-Its purpose is to connect fragmented rail asset records, inspections,
-usage information, failure histories, maintenance work orders, manuals,
-and procedures so engineers can identify maintenance priorities before
-failure.
-
-### Workflow
-
-```text
-Rail Evidence
-→ Asset Context
-→ Inspection & Usage Signals
-→ Failure Pattern Intelligence
-→ Maintenance Risk Prioritization
-→ Supporting Evidence & Citations
-→ Human Engineer Review
-```
-
-**Predict earlier. Explain why. Let engineers decide.**
-
-> [!IMPORTANT]
-> ForgeMind Rail is currently an Omnikon hackathon application profile
-> demonstrated using synthetic rail data. It does not represent a production
-> railway deployment, autonomous train control, or certified railway safety system.
-
----
-
 <div align="center">
 
 <img
@@ -47,11 +10,9 @@ Rail Evidence
 
 # 🧠 ForgeMind AI
 
-### Azure-Native Industrial Intelligence Platform
+### Evidence-Grounded Industrial Intelligence Platform
 
-### **Turn fragmented engineering evidence into cited operational decisions.**
-
-**Evidence-grounded intelligence for engineering, reliability, maintenance, quality, safety, and compliance teams.**
+> Turn fragmented engineering evidence into cited, explainable operational decisions.
 
 <br/>
 
@@ -79,36 +40,193 @@ Rail Evidence
 <img src="https://img.shields.io/badge/Azure_AI-Search-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
 <img src="https://img.shields.io/badge/Microsoft-Foundry-7C3AED?style=flat-square" />
 
-<br/><br/>
-
-<a href="#-running-locally">🚀 <b>Quick Start</b></a>
-&nbsp;·&nbsp;
-<a href="#-guided-product-demo">🎬 <b>Guided Demo</b></a>
-&nbsp;·&nbsp;
-<a href="#️-architecture-summary">🏗️ <b>Architecture</b></a>
-&nbsp;·&nbsp;
-<a href="#-evaluation-evidence">📊 <b>Evaluation</b></a>
-&nbsp;·&nbsp;
-<a href="#-safety--human-control">🛡️ <b>Safety</b></a>
-
 </div>
 
 ---
-">
 
-## ⚡ ForgeMind AI — Evidence to Decision Flow
+# 🚆 ForgeMind Rail — Omnikon National Hackathon 2026
 
-<img
-  src="docs/assets/forgemind-demo.gif"
-  alt="ForgeMind AI evidence-grounded operational intelligence workflow"
-  width="100%"
-/>
+**Domain:** Transportation & Logistics
 
-<br/>
+**Problem Statement:** `Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure`
 
-**Ingest Evidence → Preserve Lineage → Extract Entities → Build Operational Graph → Retrieve Authorized Evidence → Cite → Human Review**
+**Hackathon Application:** ForgeMind Rail
+
+> ForgeMind Rail applies ForgeMind AI's evidence-grounded intelligence architecture to rail maintenance—connecting inspection, usage, failure, maintenance, and engineering evidence so teams can identify emerging maintenance priorities before infrastructure failure.
+
+**Predict earlier. Explain why. Let engineers decide.**
+
+> [!IMPORTANT]
+> ForgeMind Rail is currently an Omnikon hackathon application profile
+> demonstrated using synthetic rail data. It does not represent a production
+> railway deployment, autonomous train control, or certified railway safety system.
+
+---
+
+## The Rail Maintenance Problem
+
+- Rail assets generate inspection, usage, failure, and maintenance evidence across disconnected systems and documents.
+- Early warning signals can remain fragmented across inspection reports, work orders, asset histories, and engineering procedures.
+- A maintenance score without supporting evidence is difficult for engineers to trust and act upon.
+- Critical maintenance decisions require traceability and human engineering judgment.
+
+---
+
+## The ForgeMind Rail Approach
+
+```mermaid
+flowchart TD
+    A["🚆 Rail Assets & Evidence"] --> B["🔍 Inspection + Usage Signals"]
+    B --> C["⚙️ Asset & Failure Context"]
+    C --> D["🕸️ Operational Knowledge Graph"]
+    D --> E["📊 Maintenance Risk Prioritization"]
+    E --> F["📚 Supporting Evidence & Citations"]
+    F --> G["👤 Authorized Human Engineer"]
+```
+
+> **The goal is not simply to produce a risk score. The goal is to explain why an asset requires attention and show the evidence behind that recommendation.**
+
+---
+
+## Why ForgeMind Rail Is Different
+
+### 1. Risk + Evidence
+Maintenance priority is connected to the inspection, usage, failure, work-order, and engineering evidence behind it.
+
+### 2. Asset-Centric Intelligence
+ForgeMind connects fragmented records around the asset rather than treating documents as isolated files.
+
+### 3. Explainability by Design
+Analytical and AI-assisted outputs trace back to supporting evidence through inline citations and confidence metadata.
+
+### 4. Human Decision Boundary
+ForgeMind supports engineers; it does not autonomously authorize maintenance or control railway equipment.
+
+> **Decision-support boundary:** ForgeMind Rail does not control trains, actuate railway equipment, automatically authorize maintenance, or replace qualified railway engineers.
+
+---
+
+## ⚡ 5-Minute Judge Path
+
+| Step | What to review | Where |
+|------|----------------|-------|
+| 1 | Understand the rail maintenance problem | ↑ [The Rail Maintenance Problem](#the-rail-maintenance-problem) |
+| 2 | Review the evidence-to-maintenance workflow | ↑ [The ForgeMind Rail Approach](#the-forgemind-rail-approach) |
+| 3 | Inspect the synthetic rail demonstration dataset | [`demo-data/rail/`](demo-data/rail/) |
+| 4 | Review Asset 360, maintenance, and RCA capabilities | ↓ [Key Capabilities](#-key-capabilities) |
+| 5 | Examine evidence-grounded citations and traceability | ↓ [Verified Operational Evidence](#-verified-operational-evidence) |
+| 6 | Review security, RBAC, and human decision boundaries | [`SECURITY.md`](SECURITY.md) · ↓ [Safety & Human Control](#-safety--human-control) |
+| 7 | Review Omnikon-specific documentation | [`docs/OMNIKON_2026.md`](docs/OMNIKON_2026.md) |
+
+---
+
+## Built on the Existing ForgeMind AI Platform
+
+ForgeMind Rail is not a standalone concept. It is an application profile built on the existing ForgeMind AI industrial intelligence platform—a working evidence-grounded decision-support system with verified ingestion, retrieval, entity extraction, knowledge graph, asset intelligence, maintenance intelligence, root-cause analysis, citations, RBAC, and human review.
+
+<div align="center">
+
+### 📄 Documents → ⚙️ Assets → 🔧 Failures → 📋 Procedures → 🛠️ Work Orders → 🔍 Inspections → ⚖️ Regulations → 🧠 Cited Decisions
 
 </div>
+
+### Verified platform workflow
+
+1. 📥 Ingest PDF, text, image, spreadsheet, and CSV evidence
+2. 🔐 Record SHA-256 lineage and prevent duplicate ingestion
+3. 🧩 Extract text, chunks, entities, and relationships
+4. 🕸️ Connect assets, failures, procedures, inspections, work orders, and regulations
+5. 🔒 Retrieve role-authorized evidence **before generation**
+6. 📚 Produce responses with citations and confidence metadata
+7. 🛑 Abstain when evidence is insufficient
+8. 👤 Stop at an explicit human authorization boundary
+
+---
+
+## ForgeMind Rail Demonstration Status
+
+| Component | Status |
+|---|---|
+| ForgeMind AI core platform | ✅ Local verified |
+| Rail application profile | 🚆 Omnikon prototype |
+| Rail demonstration dataset | 📋 Synthetic |
+| Rail production deployment | ⏳ Not deployed |
+| Azure architecture | ✅ Validated architecture |
+| Autonomous maintenance control | 🚫 Not provided |
+
+### Synthetic rail data
+
+The [`demo-data/rail/`](demo-data/rail/) directory contains a small synthetic dataset of 8 linked rail assets with inspection, usage, failure, and work-order records.
+
+> The rail dataset is synthetic and was created solely to demonstrate the Omnikon use case reproducibly without representing any real railway or metro operator.
+
+---
+
+## Existing ForgeMind Technical Baseline
+
+<div align="center">
+
+| Evidence Type           | Verified Count |
+| ----------------------- | -------------: |
+| 📄 Documents            |         **29** |
+| 🧩 Chunks               |        **969** |
+| 🏷️ Entities            |        **552** |
+| 🔗 Entity relationships |        **122** |
+| 📚 Citations            |        **124** |
+| ⚙️ Assets               |         **12** |
+| ⚠️ Failures             |         **16** |
+| 🛠️ Work orders         |          **5** |
+| 🔍 Inspections          |          **6** |
+| 📋 Procedures           |          **2** |
+| ⚖️ Regulations          |         **10** |
+
+</div>
+
+> These are verified counts from the existing local ForgeMind demonstration corpus. They are not rail-specific predictive-maintenance performance metrics.
+
+> A ForgeMind citation is a traceable reference from generated or analytical output to supporting ingested evidence. It is not an academic reference count.
+
+Additional migration verification:
+
+* ✅ All 29 document paths relinked
+* ✅ 52 compared files byte-identical
+* ✅ Zero migration conflicts
+* ✅ Zero unresolved document paths
+
+See the [Migration Report](docs/MIGRATION_REPORT.md).
+
+Runtime databases, generated reports, migrated snapshots, and binary evidence remain deliberately excluded from the public repository.
+
+---
+
+# 🔎 Evaluation Evidence
+
+> [!NOTE]
+> The bundled eight-case local corpus is a **development smoke test**, not a conference-quality benchmark.
+
+| Metric                         | Verified local result |
+| ------------------------------ | --------------------: |
+| ✅ Cases passed                 |             **8 / 8** |
+| 🎯 Positive retrieval cases    |                 **6** |
+| 🛑 Negative abstention cases   |                 **2** |
+| 📈 Mean Recall@5               |              **1.00** |
+| 🥇 Mean reciprocal rank        |              **1.00** |
+| ✅ Negative abstention accuracy |              **1.00** |
+| ⚡ Retrieval latency p50        |           **1.68 ms** |
+| ⚡ Retrieval latency p95        |           **1.73 ms** |
+
+> The 8/8 result is an existing ForgeMind development retrieval smoke test. It is not rail predictive-maintenance accuracy.
+
+Evaluation results:
+
+```text
+backend/evaluation/results/local_phase3.json
+```
+
+Research methodology:
+
+📘 [Conference Research Plan](docs/CONFERENCE_RESEARCH_PLAN.md)
+
 ---
 
 # 🎬 ForgeMind AI — Product Demo
@@ -162,71 +280,76 @@ industrial intelligence workflow, including:
 </div>
 
 ---
-# 🌐 Deployment Status
 
-| Environment           | Status                        | Evidence                                                                                            |
-| --------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------- |
-| 💻 Local              | ✅ `IMPLEMENTED_AND_VERIFIED`  | Complete deterministic workflow, migrated evidence access, reproducible validation                  |
-| ☁️ Azure architecture | ✅ `IMPLEMENTED_AND_VALIDATED` | Bicep, identity, networking, data, AI, observability, containers, OIDC deployment definitions       |
-| 🌍 Azure runtime      | ⏳ `NOT_DEPLOYED`              | Subscription deployment, quota validation, resource creation, and live smoke testing remain pending |
+# ✨ Key Capabilities
 
-> [!WARNING]
-> **There is currently no public Azure ForgeMind product URL.**
->
-> Repository infrastructure definitions demonstrate deployment readiness. They are **not proof of a running Azure environment**.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-### Verified local application
+## 📚 Evidence Intelligence
 
-```text
-Product
-http://localhost:3000/
+* Multi-format ingestion
+* PDF, text, image, CSV, spreadsheet support
+* SHA-256 lineage
+* Duplicate prevention
+* Chunk extraction
+* Entity extraction
+* Relationship extraction
+* Inline citations
+* Confidence metadata
+* Evidence insufficiency detection
+* Abstention
 
-Executive Cockpit
-http://localhost:3000/platform/dashboard
+</td>
+<td width="50%" valign="top">
 
-FastAPI documentation
-http://localhost:8000/docs
-```
+## ⚙️ Operational Intelligence
 
-No Azure resources or charges were created during repository preparation.
+* Asset 360
+* Operational knowledge graph
+* Maintenance history
+* Failure pattern intelligence
+* Repeated-failure analysis
+* Root cause analysis
+* Work-order context
+* Inspection intelligence
+* Risk ranking
 
----
+</td>
+</tr>
 
-# 🎯 What is ForgeMind AI?
+<tr>
+<td width="50%" valign="top">
 
-ForgeMind AI is a conference-ready industrial knowledge and decision-support platform designed to transform disconnected engineering evidence into a governed operational intelligence layer.
+## 🛡️ Governance
 
-<div align="center">
+* JWT authentication
+* Backend-authoritative RBAC
+* Role filtering before retrieval
+* Evidence sufficiency gates
+* Human review
+* Auditability
+* Source lineage
+* Explicit non-execution boundary
 
-### 📄 Documents → ⚙️ Assets → 🔧 Failures → 📋 Procedures → 🛠️ Work Orders → 🔍 Inspections → ⚖️ Regulations → 🧠 Cited Decisions
+</td>
+<td width="50%" valign="top">
 
-</div>
+## ⚖️ Compliance & Reporting
 
-ForgeMind connects engineering manuals, work orders, inspection reports, SOPs, incidents, quality records, compliance evidence, and asset history while preserving evidence lineage and enforcing role-aware access before AI generation.
+* Compliance gap views
+* Applicable obligations
+* Evidence packages
+* Inspection evidence
+* Root-cause reports
+* PDF report generation
+* Lessons learned
+* Executive insights
 
-### Verified workflow
-
-1. 📥 Ingest PDF, text, image, spreadsheet, and CSV evidence
-2. 🔐 Record SHA-256 lineage and prevent duplicate ingestion
-3. 🧩 Extract text, chunks, entities, and relationships
-4. 🕸️ Connect assets, failures, procedures, inspections, work orders, and regulations
-5. 🔒 Retrieve role-authorized evidence **before generation**
-6. 📚 Produce responses with citations and confidence metadata
-7. 🛑 Abstain when evidence is insufficient
-8. 👤 Stop at an explicit human authorization boundary
-
----
-
-# 💡 Enterprise Value
-
-| Enterprise signal                  | ForgeMind evidence                                                                        |
-| ---------------------------------- | ----------------------------------------------------------------------------------------- |
-| ⚡ Faster engineering investigation | Unified search across manuals, SOPs, incidents, inspections, and work orders              |
-| 🔎 Traceable AI                    | Source documents, chunks, citations, confidence, and lineage retained with each answer    |
-| ⚙️ Asset intelligence              | Operational graph, Asset 360, failure patterns, maintenance history, and risk ranking     |
-| 🛡️ Compliance readiness           | Evidence gaps, applicable obligations, inspections, and exportable RCA reports            |
-| 👤 Bounded authority               | Role filtering precedes retrieval; unsupported questions abstain; humans retain authority |
-| ☁️ Cloud portability               | Deterministic local adapters plus a separate Azure-native runtime profile                 |
+</td>
+</tr>
+</table>
 
 ---
 
@@ -356,146 +479,46 @@ ForgeMind includes an orchestrator and bounded specialist agents.
 
 ---
 
-# 🗄️ Verified Operational Evidence
+# 🌐 Deployment Status
 
-<div align="center">
+| Environment           | Status                        | Evidence                                                                                            |
+| --------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------- |
+| 💻 Local              | ✅ `IMPLEMENTED_AND_VERIFIED`  | Complete deterministic workflow, migrated evidence access, reproducible validation                  |
+| ☁️ Azure architecture | ✅ `IMPLEMENTED_AND_VALIDATED` | Bicep, identity, networking, data, AI, observability, containers, OIDC deployment definitions       |
+| 🌍 Azure runtime      | ⏳ `NOT_DEPLOYED`              | Subscription deployment, quota validation, resource creation, and live smoke testing remain pending |
 
-| Evidence Type           | Verified Count |
-| ----------------------- | -------------: |
-| 📄 Documents            |         **29** |
-| 🧩 Chunks               |        **969** |
-| 🏷️ Entities            |        **552** |
-| 🔗 Entity relationships |        **122** |
-| 📚 Citations            |        **124** |
-| ⚙️ Assets               |         **12** |
-| ⚠️ Failures             |         **16** |
-| 🛠️ Work orders         |          **5** |
-| 🔍 Inspections          |          **6** |
-| 📋 Procedures           |          **2** |
-| ⚖️ Regulations          |         **10** |
+> [!WARNING]
+> **There is currently no public Azure ForgeMind product URL.**
+>
+> Repository infrastructure definitions demonstrate deployment readiness. They are **not proof of a running Azure environment**.
 
-</div>
-
-> These are verified counts from the existing local ForgeMind demonstration
-> corpus. They are not rail-specific predictive-maintenance performance metrics.
-
-> A ForgeMind citation is a traceable reference from generated or analytical
-> output back to supporting ingested evidence. The citation count is not an
-> academic reference count.
-
-Additional migration verification:
-
-* ✅ All 29 document paths relinked
-* ✅ 52 compared files byte-identical
-* ✅ Zero migration conflicts
-* ✅ Zero unresolved document paths
-
-See the [Migration Report](docs/MIGRATION_REPORT.md).
-
-Runtime databases, generated reports, migrated snapshots, and binary evidence remain deliberately excluded from the public repository.
-
----
-
-# ✨ Key Capabilities
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-## 📚 Evidence Intelligence
-
-* Multi-format ingestion
-* PDF, text, image, CSV, spreadsheet support
-* SHA-256 lineage
-* Duplicate prevention
-* Chunk extraction
-* Entity extraction
-* Relationship extraction
-* Inline citations
-* Confidence metadata
-* Evidence insufficiency detection
-* Abstention
-
-</td>
-<td width="50%" valign="top">
-
-## ⚙️ Operational Intelligence
-
-* Asset 360
-* Operational knowledge graph
-* Maintenance history
-* Failure pattern intelligence
-* Repeated-failure analysis
-* Root cause analysis
-* Work-order context
-* Inspection intelligence
-* Risk ranking
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-## 🛡️ Governance
-
-* JWT authentication
-* Backend-authoritative RBAC
-* Role filtering before retrieval
-* Evidence sufficiency gates
-* Human review
-* Auditability
-* Source lineage
-* Explicit non-execution boundary
-
-</td>
-<td width="50%" valign="top">
-
-## ⚖️ Compliance & Reporting
-
-* Compliance gap views
-* Applicable obligations
-* Evidence packages
-* Inspection evidence
-* Root-cause reports
-* PDF report generation
-* Lessons learned
-* Executive insights
-
-</td>
-</tr>
-</table>
-
----
-
-# 🔎 Evaluation Evidence
-
-> [!NOTE]
-> The bundled eight-case local corpus is a **development smoke test**, not a conference-quality benchmark.
-
-| Metric                         | Verified local result |
-| ------------------------------ | --------------------: |
-| ✅ Cases passed                 |             **8 / 8** |
-| 🎯 Positive retrieval cases    |                 **6** |
-| 🛑 Negative abstention cases   |                 **2** |
-| 📈 Mean Recall@5               |              **1.00** |
-| 🥇 Mean reciprocal rank        |              **1.00** |
-| ✅ Negative abstention accuracy |              **1.00** |
-| ⚡ Retrieval latency p50        |           **1.68 ms** |
-| ⚡ Retrieval latency p95        |           **1.73 ms** |
-
-> The 8/8 result is an existing ForgeMind development smoke test and should
-> not be interpreted as rail predictive-maintenance accuracy.
-
-Evaluation results:
+### Verified local application
 
 ```text
-backend/evaluation/results/local_phase3.json
+Product
+http://localhost:3000/
+
+Executive Cockpit
+http://localhost:3000/platform/dashboard
+
+FastAPI documentation
+http://localhost:8000/docs
 ```
 
-Research methodology:
+No Azure resources or charges were created during repository preparation.
 
-📘 [Conference Research Plan](docs/CONFERENCE_RESEARCH_PLAN.md)
+---
+
+# 💡 Enterprise Value
+
+| Enterprise signal                  | ForgeMind evidence                                                                        |
+| ---------------------------------- | ----------------------------------------------------------------------------------------- |
+| ⚡ Faster engineering investigation | Unified search across manuals, SOPs, incidents, inspections, and work orders              |
+| 🔎 Traceable AI                    | Source documents, chunks, citations, confidence, and lineage retained with each answer    |
+| ⚙️ Asset intelligence              | Operational graph, Asset 360, failure patterns, maintenance history, and risk ranking     |
+| 🛡️ Compliance readiness           | Evidence gaps, applicable obligations, inspections, and exportable RCA reports            |
+| 👤 Bounded authority               | Role filtering precedes retrieval; unsupported questions abstain; humans retain authority |
+| ☁️ Cloud portability               | Deterministic local adapters plus a separate Azure-native runtime profile                 |
 
 ---
 
@@ -1007,6 +1030,7 @@ az bicep build --file infra/main.bicep
 
 | Document                                                        | Purpose                                                         |
 | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| 🚆 [Omnikon 2026](docs/OMNIKON_2026.md)                         | ForgeMind Rail hackathon problem statement and solution          |
 | 🏗️ [Azure Architecture](docs/AZURE_ARCHITECTURE.md)            | Trust boundaries, identity, networking, persistence, AI, safety |
 | ☁️ [Infrastructure Guide](infra/README.md)                      | Azure deployment and GitHub Actions                             |
 | 🚦 [Deployment Status](docs/DEPLOYMENT_STATUS.md)               | Verified, ready, pending, and external prerequisites            |
@@ -1039,70 +1063,6 @@ ForgeMind intentionally documents its current boundaries.
 
 ---
 
-# 🎨 Recommended Visual Asset Pack
-
-For the full visual repository experience, create:
-
-```text
-docs/assets/
-│
-├── forgemind-hero.gif
-├── forgemind-product-flow.gif
-├── forgemind-demo-flow.gif
-├── forgemind-azure-architecture.png
-├── forgemind-knowledge-graph.png
-├── forgemind-copilot-demo.png
-├── forgemind-dashboard.png
-└── forgemind-evidence-metrics.png
-```
-
-### Hero GIF concept
-
-The hero GIF should animate through:
-
-```text
-Engineering Documents
-        ↓
-Evidence Lineage
-        ↓
-Entity Extraction
-        ↓
-Operational Graph
-        ↓
-Authorized Retrieval
-        ↓
-Cited Intelligence
-        ↓
-Human Decision
-```
-
-End frame:
-
-```text
-ForgeMind AI
-Azure-Native Industrial Intelligence
-
-Connect evidence.
-Understand operations.
-Decide with confidence.
-```
-
-Keep the animation elegant and subtle.
-
-Recommended duration:
-
-**8–12 seconds looping**
-
-Recommended resolution:
-
-**1600 × 600**
-
-Recommended file size:
-
-**under 8–10 MB where possible**
-
----
-
 ## Team — Omnikon National Hackathon 2026
 
 - **Janice Benita F** — Team Leader
@@ -1121,11 +1081,15 @@ responsibility remain with the registered team.
 
 ---
 
-# 👤 Author
+# 👤 Author & Hackathon Team
 
 <div align="center">
 
-## Built by **Janice Benita F**
+### ForgeMind AI — created by **Janice Benita F**
+
+### Omnikon 2026 submission team: **Janice Benita F** & **Tytus Glastin**
+
+<br/>
 
 ### 🧠 ForgeMind AI
 
