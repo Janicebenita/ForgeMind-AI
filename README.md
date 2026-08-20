@@ -1,3 +1,40 @@
+# 🚆 ForgeMind Rail — Omnikon National Hackathon 2026
+
+**Domain:** Transportation & Logistics
+
+**Problem Statement:** Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure
+
+**Hackathon Application:** ForgeMind Rail
+
+ForgeMind Rail is a rail-specific application profile built on the existing
+ForgeMind AI industrial intelligence platform.
+
+Its purpose is to connect fragmented rail asset records, inspections,
+usage information, failure histories, maintenance work orders, manuals,
+and procedures so engineers can identify maintenance priorities before
+failure.
+
+### Workflow
+
+```text
+Rail Evidence
+→ Asset Context
+→ Inspection & Usage Signals
+→ Failure Pattern Intelligence
+→ Maintenance Risk Prioritization
+→ Supporting Evidence & Citations
+→ Human Engineer Review
+```
+
+**Predict earlier. Explain why. Let engineers decide.**
+
+> [!IMPORTANT]
+> ForgeMind Rail is currently an Omnikon hackathon application profile
+> demonstrated using synthetic rail data. It does not represent a production
+> railway deployment, autonomous train control, or certified railway safety system.
+
+---
+
 <div align="center">
 
 <img
@@ -339,6 +376,13 @@ ForgeMind includes an orchestrator and bounded specialist agents.
 
 </div>
 
+> These are verified counts from the existing local ForgeMind demonstration
+> corpus. They are not rail-specific predictive-maintenance performance metrics.
+
+> A ForgeMind citation is a traceable reference from generated or analytical
+> output back to supporting ingested evidence. The citation count is not an
+> academic reference count.
+
 Additional migration verification:
 
 * ✅ All 29 document paths relinked
@@ -439,6 +483,9 @@ Runtime databases, generated reports, migrated snapshots, and binary evidence re
 | ✅ Negative abstention accuracy |              **1.00** |
 | ⚡ Retrieval latency p50        |           **1.68 ms** |
 | ⚡ Retrieval latency p95        |           **1.73 ms** |
+
+> The 8/8 result is an existing ForgeMind development smoke test and should
+> not be interpreted as rail predictive-maintenance accuracy.
 
 Evaluation results:
 
@@ -1053,6 +1100,25 @@ Recommended resolution:
 Recommended file size:
 
 **under 8–10 MB where possible**
+
+---
+
+## Team — Omnikon National Hackathon 2026
+
+- **Janice Benita F** — Team Leader
+- **Tytus Glastin** — Team Member
+  - GitHub username: TO BE VERIFIED BEFORE SUBMISSION
+
+---
+
+## Generative AI Usage Disclosure
+
+Generative AI tools, including OpenAI Codex and other AI-assisted software
+engineering tools, were used during development for assistance with code,
+refactoring, documentation, and testing.
+
+All architecture decisions, review, validation, and hackathon submission
+responsibility remain with the registered team.
 
 ---
 

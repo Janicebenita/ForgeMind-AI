@@ -1,0 +1,9 @@
+failure_id,asset_id,failure_date,failure_type,description,severity,root_cause,downtime_hours
+FAIL-001,TRM-006,2025-06-12,Electrical,Earth fault on traction motor winding,HIGH,Insulation degradation from moisture ingress,18
+FAIL-002,PM-003,2025-04-08,Mechanical,Point machine failed to complete stroke,MEDIUM,Hydraulic seal wear,6
+FAIL-003,SW-002,2025-08-19,Mechanical,Loose stock rail detected during patrol,MEDIUM,Fastener fatigue from high cycle count,4
+FAIL-004,BRG-005,2024-12-01,Mechanical,Hot box alarm triggered during run,HIGH,Bearing cage crack — fatigue,24
+FAIL-005,TRM-006,2024-09-20,Electrical,Commutator flashover,MEDIUM,Carbon brush wear beyond limit,12
+FAIL-006,SIG-004,2024-06-15,Electrical,Intermittent relay drop — signal showing wrong aspect,CRITICAL,Contact contamination,8
+FAIL-007,OCS-008,2025-02-10,Mechanical,Contact wire break at tensioner,HIGH,Fatigue crack at clamp point,36
+FAIL-008,TRM-006,2025-09-28,Electrical,Motor overheating — forced withdrawal,HIGH,Insulation deterioration,14

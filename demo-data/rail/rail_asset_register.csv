@@ -1,0 +1,9 @@
+asset_id,asset_type,description,location,install_date,criticality,status
+TRK-001,Track Section,Main line track section 12A — 1676mm BG,Section 12A km 45.2–46.8,2019-03-15,HIGH,OPERATIONAL
+SW-002,Turnout,#12 turnout at junction yard entry,Junction Yard North,2020-07-22,HIGH,OPERATIONAL
+PM-003,Point Machine,Electro-hydraulic point machine for SW-002,Junction Yard North,2020-07-22,HIGH,OPERATIONAL
+SIG-004,Signal Relay,Q-type vital relay — home signal S14,Signal Cabin 3,2018-11-10,CRITICAL,OPERATIONAL
+BRG-005,Axle Bearing,Roller bearing assembly — coach bogie,Maintenance Depot,2021-05-18,MEDIUM,OPERATIONAL
+TRM-006,Traction Motor,DC traction motor 750V — EMU car M1,EMU Shed,2017-09-01,HIGH,UNDER_MONITORING
+WHL-007,Wheelset,Wheel-axle assembly — trailer bogie,Wheel Shop,2022-01-12,MEDIUM,OPERATIONAL
+OCS-008,Overhead Line Component,Contact wire tensioner — section 12A,Section 12A km 45.5,2019-03-15,HIGH,OPERATIONAL

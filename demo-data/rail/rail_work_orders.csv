@@ -1,0 +1,9 @@
+work_order_id,asset_id,created_date,priority,description,status,completed_date,technician
+WO-001,TRM-006,2025-06-13,URGENT,Rewinding and insulation repair — traction motor TRM-006,COMPLETED,2025-06-28,V. Rao
+WO-002,PM-003,2025-04-09,HIGH,Replace hydraulic seals — point machine PM-003,COMPLETED,2025-04-12,S. Mehta
+WO-003,BRG-005,2024-12-02,URGENT,Replace bearing assembly — axle bearing BRG-005,COMPLETED,2024-12-05,A. Singh
+WO-004,SIG-004,2024-06-16,URGENT,Clean and test relay contacts — signal relay SIG-004,COMPLETED,2024-06-17,P. Sharma
+WO-005,OCS-008,2025-02-11,URGENT,Replace contact wire and tensioner clamp — OCS-008,COMPLETED,2025-02-14,R. Kumar
+WO-006,SW-002,2025-08-20,HIGH,Replace fasteners and re-torque — turnout SW-002,COMPLETED,2025-08-22,S. Mehta
+WO-007,TRM-006,2025-10-01,HIGH,Insulation treatment and brush replacement — TRM-006,IN_PROGRESS,,V. Rao
+WO-008,BRG-005,2025-12-19,MEDIUM,Vibration investigation and bearing inspection — BRG-005,PLANNED,,A. Singh

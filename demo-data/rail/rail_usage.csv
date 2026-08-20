@@ -1,0 +1,12 @@
+usage_id,asset_id,period,metric,value,unit
+USG-001,TRK-001,2025-Q3,Gross Tonnage,12500000,tonnes
+USG-002,TRK-001,2025-Q4,Gross Tonnage,13200000,tonnes
+USG-003,SW-002,2025-Q3,Operations Count,18400,cycles
+USG-004,SW-002,2025-Q4,Operations Count,19100,cycles
+USG-005,PM-003,2025-Q3,Operations Count,18400,cycles
+USG-006,PM-003,2025-Q4,Operations Count,19100,cycles
+USG-007,SIG-004,2025-Q4,Relay Actuations,42000,cycles
+USG-008,BRG-005,2025-Q4,Distance Run,85000,km
+USG-009,TRM-006,2025-Q4,Motor Hours,3200,hours
+USG-010,WHL-007,2025-Q4,Distance Run,85000,km
+USG-011,OCS-008,2025-Q4,Pantograph Passes,16000,passes

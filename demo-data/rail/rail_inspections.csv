@@ -1,0 +1,11 @@
+inspection_id,asset_id,inspection_date,inspector,inspection_type,finding,severity,next_due
+INSP-001,TRK-001,2025-11-10,R. Kumar,Visual Track Patrol,Minor rail surface defect noted at km 45.6,LOW,2025-12-10
+INSP-002,SW-002,2025-10-25,S. Mehta,Turnout Geometry Check,Gauge widening 3mm beyond tolerance at switch toe,MEDIUM,2025-11-25
+INSP-003,PM-003,2025-11-01,S. Mehta,Point Machine Function Test,Slow operation detected — 7.2s vs 5s norm,MEDIUM,2025-12-01
+INSP-004,SIG-004,2025-09-15,P. Sharma,Relay Room Inspection,Contact resistance within limits — marginal on pick-up,LOW,2026-03-15
+INSP-005,BRG-005,2025-11-20,A. Singh,Bearing Temperature Check,Bearing temp 72°C — within limit but rising trend,MEDIUM,2025-12-20
+INSP-006,TRM-006,2025-10-05,V. Rao,Motor Insulation Test,Insulation resistance 1.8 MΩ — below 2.0 MΩ threshold,HIGH,2025-11-05
+INSP-007,WHL-007,2025-11-15,A. Singh,Wheel Profile Measurement,Flange wear 1.2mm — within condemning limit,LOW,2026-05-15
+INSP-008,OCS-008,2025-10-18,R. Kumar,OHE Visual Inspection,Contact wire height within range — minor sag at anchor,LOW,2026-04-18
+INSP-009,TRM-006,2025-11-08,V. Rao,Motor Insulation Retest,Insulation resistance dropped to 1.5 MΩ,HIGH,2025-11-22
+INSP-010,BRG-005,2025-12-18,A. Singh,Bearing Vibration Analysis,Vibration 4.2 mm/s — elevated above 3.5 baseline,MEDIUM,2026-01-18
