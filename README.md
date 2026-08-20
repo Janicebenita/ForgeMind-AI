@@ -262,10 +262,11 @@ Cited Intelligence → Asset & Maintenance Context → RCA → Compliance → Hu
 
 </div>
 
-### What the demo shows
+### Existing ForgeMind AI Platform Capabilities
 
-The ForgeMind AI product demonstration walks through the verified local
-industrial intelligence workflow, including:
+ForgeMind Rail is built on the existing ForgeMind AI industrial intelligence
+platform. The underlying platform provides the following locally verified
+capabilities that support the rail-maintenance use case:
 
 - 📊 **Executive Cockpit** — enterprise operational intelligence at a glance
 - 📄 **Engineering Documents** — evidence ingestion, document lineage, and source integrity
@@ -281,8 +282,7 @@ industrial intelligence workflow, including:
 > [!IMPORTANT]
 > **OPERATIONAL ACTION: NOT EXECUTED**
 >
-> The demonstration shows ForgeMind AI as an evidence-grounded
-> decision-support platform. It does not demonstrate autonomous control
+> ForgeMind AI is an evidence-grounded decision-support platform. It does not demonstrate autonomous control
 > or execution of industrial actions.
 >
 > **Models explain. Evidence supports. Backend gates. Humans authorize.**
