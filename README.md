@@ -239,7 +239,21 @@ Research methodology:
 
 <br/>
 
-[▶️ **WATCH THE FORGEMIND AI PRODUCT DEMO**](docs/demo/forgemind-product-demo.mp4)
+<p align="center">
+  <img
+    src="docs/assets/forgemind-rail-demo-status.gif"
+    alt="ForgeMind Rail demonstration status — under construction"
+    width="100%"
+  />
+</p>
+
+<p align="center">
+  <strong>🚧 ForgeMind Rail Interactive Demo — Under Construction</strong><br/>
+  The Round 1 repository currently demonstrates the rail use case through
+  synthetic rail evidence, architecture, documented workflows, and
+  evidence-grounded decision support. The dedicated ForgeMind Rail
+  interactive demonstration is currently under development.
+</p>
 
 <br/>
 
@@ -275,7 +289,6 @@ industrial intelligence workflow, including:
 
 <div align="center">
 
-### ▶️ [Watch the full product demonstration](docs/demo/forgemind-product-demo.mp4)
 
 </div>
 
