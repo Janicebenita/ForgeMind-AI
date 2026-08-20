@@ -65,7 +65,7 @@ def _risk_drivers(failures: list[dict[str, Any]], inspections: list[dict[str, An
                 is_high = True
             
             if is_high:
-                drivers.append(f"High usage context: {metric} reached {val:,.0f} {unit} in {period}")
+                drivers.append(f"Prototype heuristic maintenance-priority rule: High usage context ({metric} reached {val:,.0f} {unit} in {period})")
                 
     return drivers or ["No critical repeated patterns in available evidence"]
 
@@ -80,11 +80,13 @@ def maintenance_dashboard() -> dict[str, Any]:
         counts = query("SELECT COUNT(*) AS count FROM work_orders WHERE asset_tag = ?", (asset["tag"],))[0]["count"]
         if counts == 0:
             incomplete.append(asset["tag"])
+    inspections = query("SELECT * FROM inspections ORDER BY next_due ASC LIMIT 6")
     return {
         "assets": assets,
         "failure_patterns": [{"failure_mode": name, "count": count} for name, count in failure_counts.most_common()],
         "incomplete_maintenance_history": incomplete,
         "high_risk_assets": [asset for asset in assets if asset["risk_score"] >= 70],
+        "inspections": inspections,
     }
 
 
