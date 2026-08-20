@@ -1069,6 +1069,14 @@ responsibility remain with the registered team.
 
 ---
 
+## 📄 License
+
+ForgeMind AI is released under the [MIT License](LICENSE).
+
+Third-party libraries, services, trademarks, datasets, and external materials remain subject to their respective licenses and terms.
+
+---
+
 # 👤 Author & Hackathon Team
 
 <div align="center">
