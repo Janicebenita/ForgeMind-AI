@@ -239,7 +239,21 @@ Research methodology:
 
 <br/>
 
-[▶️ **WATCH THE FORGEMIND AI PRODUCT DEMO**](docs/demo/forgemind-product-demo.mp4)
+<p align="center">
+  <img
+    src="docs/assets/forgemind-rail-demo-status.gif"
+    alt="ForgeMind Rail demonstration status — under construction"
+    width="100%"
+  />
+</p>
+
+<p align="center">
+  <strong>🚧 ForgeMind Rail Interactive Demo — Under Construction</strong><br/>
+  The Round 1 repository currently demonstrates the rail use case through
+  synthetic rail evidence, architecture, documented workflows, and
+  evidence-grounded decision support. The dedicated ForgeMind Rail
+  interactive demonstration is currently under development.
+</p>
 
 <br/>
 
@@ -248,10 +262,11 @@ Cited Intelligence → Asset & Maintenance Context → RCA → Compliance → Hu
 
 </div>
 
-### What the demo shows
+### Existing ForgeMind AI Platform Capabilities
 
-The ForgeMind AI product demonstration walks through the verified local
-industrial intelligence workflow, including:
+ForgeMind Rail is built on the existing ForgeMind AI industrial intelligence
+platform. The underlying platform provides the following locally verified
+capabilities that support the rail-maintenance use case:
 
 - 📊 **Executive Cockpit** — enterprise operational intelligence at a glance
 - 📄 **Engineering Documents** — evidence ingestion, document lineage, and source integrity
@@ -267,15 +282,13 @@ industrial intelligence workflow, including:
 > [!IMPORTANT]
 > **OPERATIONAL ACTION: NOT EXECUTED**
 >
-> The demonstration shows ForgeMind AI as an evidence-grounded
-> decision-support platform. It does not demonstrate autonomous control
+> ForgeMind AI is an evidence-grounded decision-support platform. It does not demonstrate autonomous control
 > or execution of industrial actions.
 >
 > **Models explain. Evidence supports. Backend gates. Humans authorize.**
 
 <div align="center">
 
-### ▶️ [Watch the full product demonstration](docs/demo/forgemind-product-demo.mp4)
 
 </div>
 
