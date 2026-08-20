@@ -355,12 +355,6 @@ industrial intelligence workflow, including:
 
 # 🏗️ Architecture Summary
 
-<div align="center">
-
-<img src="docs/assets/forgemind-azure-architecture.png" alt="ForgeMind AI Azure architecture" width="100%" />
-
-</div>
-
 ```mermaid
 flowchart LR
     U["👷 Engineer / Operator / Auditor"] --> W["🌐 Next.js Web"]
@@ -523,12 +517,6 @@ No Azure resources or charges were created during repository preparation.
 ---
 
 # 🎬 Guided Product Demo
-
-<div align="center">
-
-<img src="docs/assets/forgemind-demo-flow.gif" alt="ForgeMind AI guided product demonstration" width="100%" />
-
-</div>
 
 ## Recommended Five-Minute Judge Flow
 
