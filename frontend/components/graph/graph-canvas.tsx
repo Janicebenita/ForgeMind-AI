@@ -4,7 +4,7 @@ import ReactFlow, { Background, Controls, MiniMap, Node, Edge } from "reactflow"
 import "reactflow/dist/style.css";
 
 const nodes: Node[] = [
-  { id: "P101", position: { x: 420, y: 240 }, data: { label: "Asset · P101" }, style: nodeStyle("#3B82F6") },
+  { id: "TRK-001", position: { x: 420, y: 240 }, data: { label: "Asset · TRK-001" }, style: nodeStyle("#3B82F6") },
   { id: "WO", position: { x: 120, y: 80 }, data: { label: "WO-10877" }, style: nodeStyle("#06B6D4") },
   { id: "RCA", position: { x: 720, y: 80 }, data: { label: "RCA Draft" }, style: nodeStyle("#8B5CF6") },
   { id: "Seal", position: { x: 120, y: 310 }, data: { label: "Seal Failure" }, style: nodeStyle("#EF4444") },
@@ -14,11 +14,11 @@ const nodes: Node[] = [
 ];
 
 const edges: Edge[] = [
-  { id: "e1", source: "P101", target: "WO", animated: true, label: "ASSET_HAS_DOCUMENT" },
-  { id: "e2", source: "P101", target: "Seal", animated: true, label: "ASSET_FAILED_WITH" },
+  { id: "e1", source: "TRK-001", target: "WO", animated: true, label: "ASSET_HAS_DOCUMENT" },
+  { id: "e2", source: "TRK-001", target: "Seal", animated: true, label: "ASSET_FAILED_WITH" },
   { id: "e3", source: "Seal", target: "Cav", animated: true, label: "FAILURE_CAUSED_BY" },
-  { id: "e4", source: "SOP", target: "P101", animated: true, label: "PROCEDURE_REFERENCES_ASSET" },
-  { id: "e5", source: "RCA", target: "P101", animated: true, label: "INCIDENT_RELATED_TO" },
+  { id: "e4", source: "SOP", target: "TRK-001", animated: true, label: "PROCEDURE_REFERENCES_ASSET" },
+  { id: "e5", source: "RCA", target: "TRK-001", animated: true, label: "INCIDENT_RELATED_TO" },
   { id: "e6", source: "NFPA", target: "SOP", animated: true, label: "REGULATION_APPLIES_TO" }
 ];
 

@@ -62,12 +62,12 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "86%",
     evidence: "High",
     answer:
-      "Pump P101 shows repeated seal failure and vibration anomaly patterns. The strongest cited contributors are low suction pressure, suction strainer fouling, cavitation, and possible shaft misalignment after prior maintenance. Field technicians should first verify suction strainer differential pressure, seal flush flow, coupling alignment, and vibration trend history before replacing the seal again.",
-    context: ["P101 - Condensate Transfer Pump", "Risk score 88", "Open RCA requested", "ISO-14224 partial evidence"],
+      "Pump TRK-001 shows repeated seal failure and vibration anomaly patterns. The strongest cited contributors are low track condition pressure, track condition strainer fouling, cavitation, and possible shaft misalignment after prior maintenance. Field technicians should first verify track condition strainer differential pressure, seal flush flow, coupling alignment, and vibration trend history before replacing the seal again.",
+    context: ["TRK-001 - Condensate Transfer Pump", "Risk score 88", "Open RCA requested", "ISO-14224 partial evidence"],
     citations: [
-      { title: "WO-10877_P101_vibration_repeat.pdf", page: "p.1", confidence: 92, quote: "Repeated vibration and seal failure observed. Operator reported intermittent cavitation noise and suction strainer fouling." },
-      { title: "WO-10421_mechanical_seal.pdf", page: "p.2", confidence: 88, quote: "Root cause note: possible shaft misalignment after prior outage and low suction pressure causing cavitation." },
-      { title: "FlowServe_P101_Manual.txt", page: "Troubleshooting", confidence: 94, quote: "High vibration may be caused by cavitation, misalignment, bearing wear, impeller imbalance, suction restriction, or operation outside preferred operating range." }
+      { title: "WO-10877_TRK-001_vibration_repeat.pdf", page: "p.1", confidence: 92, quote: "Repeated vibration and seal failure observed. Operator reported intermittent cavitation noise and track condition strainer fouling." },
+      { title: "WO-10421_mechanical_seal.pdf", page: "p.2", confidence: 88, quote: "Root cause note: possible shaft misalignment after prior outage and low track condition pressure causing cavitation." },
+      { title: "FlowServe_TRK-001_Manual.txt", page: "Troubleshooting", confidence: 94, quote: "High vibration may be caused by cavitation, misalignment, rail component wear, alignment deviation, track geometry restriction, or operation outside preferred operating range." }
     ]
   },
   vessel: {
@@ -75,12 +75,12 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "91%",
     evidence: "High",
     answer:
-      "Before opening Pressure Vessel V203, the applicable procedure is SOP-VES-203 Vessel Opening and Confined Space Entry, supported by the plant LOTO procedure and permit-to-work requirements. The work pack must include isolation blinds, zero pressure verification, gas test, confined space permit, rescue plan, and safety officer approval. The evidence also shows an OISD/API pressure vessel inspection gap, so the inspection certificate should be attached before release.",
-    context: ["V203 - Knockout Drum", "Permit required", "Confined space controls", "Pressure test evidence partial"],
+      "Before opening Track Asset TRK-003, the applicable procedure is SOP-VES-203 Track Possession and Confined Space Entry, supported by the plant track possession safety control procedure and permit-to-work requirements. The work pack must include isolation blinds, zero pressure verification, gas test, confined space permit, rescue plan, and safety officer approval. The evidence also shows an OISD/API track asset inspection gap, so the inspection certificate should be attached before release.",
+    context: ["TRK-003 - Knockout Drum", "Permit required", "Confined space controls", "Pressure test evidence partial"],
     citations: [
-      { title: "SOP-VES-203_pressure_vessel_entry.txt", page: "Revision 4", confidence: 94, quote: "Before opening vessel V-203, safety officer must verify isolation blinds, gas test, confined space permit, rescue plan, and zero pressure." },
-      { title: "near_miss_report.txt", page: "NM-2026-07", confidence: 86, quote: "Maintenance crew approached V203 for opening activity before rescue plan evidence was attached to the permit-to-work package." },
-      { title: "OISD_Checklist.csv", page: "OISD-STD-118", confidence: 89, quote: "Pressure vessel inspection and test evidence must be current. Applies to V203. Evidence status: Missing." }
+      { title: "SOP-VES-203_pressure_vessel_entry.txt", page: "Revision 4", confidence: 94, quote: "Before opening vessel TRK-003, safety officer must verify isolation blinds, gas test, confined space permit, rescue plan, and zero pressure." },
+      { title: "near_miss_report.txt", page: "NM-2026-07", confidence: 86, quote: "Maintenance crew approached TRK-003 for opening activity before rescue plan evidence was attached to the permit-to-work package." },
+      { title: "OISD_Checklist.csv", page: "OISD-STD-118", confidence: 89, quote: "Pressure vessel inspection and test evidence must be current. Applies to TRK-003. Evidence status: Missing." }
     ]
   },
   technician: {
@@ -88,12 +88,12 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "84%",
     evidence: "Medium-High",
     answer:
-      "For a field technician responding to Pump P101, the first checks should be safety isolation readiness, suction strainer differential pressure, suction pressure/NPSH condition, seal flush flow, visible leakage around the mechanical seal, and vibration trend. Do not open the casing until lockout tagout, valve isolation, drain verification, zero pressure, and permit-to-work evidence are complete.",
-    context: ["P101 first-response checklist", "LOTO mandatory", "Seal flush and suction checks", "Technician sign-off required"],
+      "For a field technician responding to Pump TRK-001, the first checks should be safety isolation readiness, track condition strainer differential pressure, track condition pressure/NPSH condition, seal flush flow, visible leakage around the mechanical seal, and vibration trend. Do not open the casing until lockout tagout, valve isolation, drain verification, zero pressure, and permit-to-work evidence are complete.",
+    context: ["TRK-001 first-response checklist", "track possession safety control mandatory", "Seal flush and track condition checks", "Technician sign-off required"],
     citations: [
-      { title: "SOP_22_Pump_Isolation.txt", page: "Steps 1-7", confidence: 96, quote: "Apply lockout tagout, close suction and discharge isolation valves, drain casing, verify zero pressure, and isolate seal flush line." },
-      { title: "inspection_report_P101.txt", page: "Process parameters", confidence: 87, quote: "Suction pressure was 1.2 bar, vibration was 7.8 mm/s RMS, and seal flush flow was below OEM recommendation." },
-      { title: "FlowServe_P101_Manual.txt", page: "Preventive maintenance", confidence: 91, quote: "Inspect suction strainer differential pressure, verify mechanical seal flush, inspect impeller wear, and trend vibration monthly." }
+      { title: "SOP_22_Pump_Isolation.txt", page: "Steps 1-7", confidence: 96, quote: "Apply lockout tagout, close track condition and discharge isolation valves, drain casing, verify zero pressure, and isolate seal flush line." },
+      { title: "inspection_report_TRK-001.txt", page: "Process parameters", confidence: 87, quote: "Track Condition pressure was 1.2 bar, vibration was 7.8 mm/s RMS, and seal flush flow was below OEM recommendation." },
+      { title: "FlowServe_TRK-001_Manual.txt", page: "Preventive maintenance", confidence: 91, quote: "Inspect track condition strainer differential pressure, verify mechanical seal flush, inspect impeller wear, and trend vibration monthly." }
     ]
   },
   compliance: {
@@ -101,11 +101,11 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "79%",
     evidence: "Moderate",
     answer:
-      "The uncovered or partially covered regulatory requirements are OISD-STD-118 for V203 pressure vessel inspection/test evidence, OISD-244-ELECT for EP501 energized electrical work and arc flash evidence, OISD-INS-HX for HX401 heat exchanger corrosion closure, and partial OISD-105-PTW evidence for P101 permit-to-work. These should be treated as audit readiness gaps until source documents are attached.",
-    context: ["4 compliance gaps", "V203, EP501, HX401, P101", "Audit readiness partial", "Evidence package required"],
+      "The uncovered or partially covered regulatory requirements are OISD-STD-118 for TRK-003 track asset inspection/test evidence, OISD-244-ELECT for EP501 energized electrical work and rail electrical safety evidence, OISD-INS-HX for HX401 heat exchanger corrosion closure, and partial OISD-105-PTW evidence for TRK-001 permit-to-work. These should be treated as audit readiness gaps until source documents are attached.",
+    context: ["4 compliance gaps", "TRK-003, EP501, HX401, TRK-001", "Audit readiness partial", "Evidence package required"],
     citations: [
-      { title: "OISD_Checklist.csv", page: "Checklist rows", confidence: 90, quote: "V203 pressure vessel inspection evidence missing, EP501 electrical controls missing, HX401 inspection closure partial, and P101 permit-to-work partial." },
-      { title: "Factory_Act_Requirements.txt", page: "Detected gaps", confidence: 82, quote: "V203 pressure test evidence missing. EP501 arc flash evidence missing. HX401 quality non-conformance QA12 remains open." },
+      { title: "OISD_Checklist.csv", page: "Checklist rows", confidence: 90, quote: "TRK-003 track asset inspection evidence missing, EP501 electrical controls missing, HX401 inspection closure partial, and TRK-001 permit-to-work partial." },
+      { title: "Factory_Act_Requirements.txt", page: "Detected gaps", confidence: 82, quote: "TRK-003 pressure test evidence missing. EP501 rail electrical safety evidence missing. HX401 quality non-conformance QA12 remains open." },
       { title: "quality_issue_QA12.txt", page: "QA12", confidence: 78, quote: "Inspection non-conformance remains open. Pressure test documentation and coating repair photographs are required." }
     ]
   }
@@ -143,13 +143,13 @@ function inferRecommendedSop(question: string, answer: string, documents: string
     return sopDocument;
   }
   if (sourceText.includes("v203") || sourceText.includes("v-203") || sourceText.includes("vessel")) {
-    return "SOP-VES-203 Pressure Vessel Opening and Confined Space Entry";
+    return "SOP-VES-203 Pressure Track Possession and Confined Space Entry";
   }
   if (sourceText.includes("p101") || sourceText.includes("p-101") || sourceText.includes("pump")) {
     return "SOP_22_Pump_Isolation.txt";
   }
-  if (sourceText.includes("electrical") || sourceText.includes("arc flash") || sourceText.includes("ep501")) {
-    return "LOTO_Procedure.txt";
+  if (sourceText.includes("electrical") || sourceText.includes("rail electrical safety") || sourceText.includes("ep501")) {
+    return "track possession safety control_Procedure.txt";
   }
   if (sourceText.includes("method statement") || sourceText.includes("mst") || sourceText.includes("coating repair") || sourceText.includes("surface profile")) {
     return "Method Statement for CS Pipe Internal Field Joint Coating & Coating Repair";
@@ -177,7 +177,7 @@ function buildAnswerSection({
     ? []
     : response?.related_assets?.length
     ? response.related_assets
-    : fallback.context.filter((item) => /\b(P|C|B|HX|V|EP)-?\d{3}\b|P101|V203|EP501|HX401|C201|B203/i.test(item));
+    : fallback.context.filter((item) => /\b(P|C|B|HX|V|EP)-?\d{3}\b|TRK-001|TRK-003|EP501|HX401|SW-002|B203/i.test(item));
   const evidence = citations.length
     ? citations.slice(0, 3).map((citation) => `${citation.title}: ${clipText(citation.quote)}`)
     : ["No source citation was returned. Ask a narrower question or upload the missing evidence document."];
@@ -250,7 +250,7 @@ function InsufficientEvidencePanel({ answer, actions }: { answer: string; action
 
 export default function CopilotPage() {
   const searchParams = useSearchParams();
-  const [question, setQuestion] = useState("Why has Pump P101 failed repeatedly?");
+  const [question, setQuestion] = useState("Why has Pump TRK-001 failed repeatedly?");
   const [asked, setAsked] = useState(false);
   const [response, setResponse] = useState<CopilotResponse | null>(null);
   const [isAsking, setIsAsking] = useState(false);

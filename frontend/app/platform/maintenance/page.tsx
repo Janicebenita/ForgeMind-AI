@@ -44,7 +44,7 @@ export default async function MaintenancePage() {
   // Fallback to demo items if database lacks inspections
   const displaySchedule = scheduleItems.length > 0 
     ? scheduleItems 
-    : ["P101 suction strainer inspection · 48h (Demo)", "C201 oil contamination retest · 5d (Demo)", "HX401 pressure test · 12d (Demo)"];
+    : ["TRK-001 track condition strainer inspection · 48h (Demo)", "SW-002 oil contamination retest · 5d (Demo)", "HX401 pressure test · 12d (Demo)"];
 
   return (
     <div className="grid gap-5">

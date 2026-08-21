@@ -41,7 +41,7 @@ export default async function AssetsPage({
   searchParams: Promise<{ tag?: string }>;
 }) {
   const params = await searchParams;
-  const activeTag = params.tag || "P101";
+  const activeTag = params.tag || "TRK-001";
   
   const assetData = await loadAsset(activeTag);
   const allAssets = await loadAllAssets() || fallbackAssets;
@@ -52,7 +52,7 @@ export default async function AssetsPage({
   const failures = assetData?.failures || [];
   const workOrders = assetData?.work_orders || [];
   const inspections = assetData?.inspections || [];
-  const riskDrivers = assetData?.risk_drivers || [activeAsset.nextAction || "Inspect asset and verify LOTO evidence."];
+  const riskDrivers = assetData?.risk_drivers || [activeAsset.nextAction || "Inspect asset and verify track possession safety control evidence."];
 
   // Build a timeline dynamically from failures and inspections
   const timeline = failures.map((f: any) => ({

@@ -14,7 +14,7 @@ export default function GraphPage() {
         <GraphCanvas />
       </GlassCard>
       <aside className="grid h-fit gap-4">
-        <GlassCard><h2 className="mb-3 font-semibold">Selected Node</h2><p className="text-xl font-bold">P101</p><p className="text-sm text-slate-400">Condensate Transfer Pump · Unit A</p><div className="mt-4"><SeverityBadge value="Critical" /></div></GlassCard>
+        <GlassCard><h2 className="mb-3 font-semibold">Selected Node</h2><p className="text-xl font-bold">TRK-001</p><p className="text-sm text-slate-400">Condensate Transfer Pump · Unit A</p><div className="mt-4"><SeverityBadge value="Critical" /></div></GlassCard>
         <GlassCard><h2 className="mb-3 font-semibold">Filters</h2>{["Equipment", "Documents", "Failures", "SOPs", "Inspections", "Regulations", "Engineers", "Spare Parts", "Compliance Gaps"].map((item) => <label key={item} className="mb-2 flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" defaultChecked /> {item}</label>)}</GlassCard>
       </aside>
     </div>

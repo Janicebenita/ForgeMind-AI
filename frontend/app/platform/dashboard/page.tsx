@@ -41,7 +41,7 @@ async function loadDashboard(): Promise<DashboardPayload | null> {
 }
 const demoSteps = [
   { title: "Load Evidence", body: "Manuals, SOPs, NCR, QA/QC, tender, inspections.", href: "/platform/admin", icon: Database },
-  { title: "Ask P101 RCA", body: "Cited cause analysis for repeated seal failure.", href: "/platform/copilot", icon: BrainCircuit },
+  { title: "Ask TRK-001 RCA", body: "Cited cause analysis for repeated seal failure.", href: "/platform/copilot", icon: BrainCircuit },
   { title: "Asset 360", body: "Risk, history, documents, open actions.", href: "/platform/assets", icon: FileSearch },
   { title: "Compliance", body: "Gaps, overdue evidence, audit readiness.", href: "/platform/compliance", icon: ShieldCheck },
   { title: "Export RCA", body: "Timeline, root causes, corrective actions.", href: "/platform/rca", icon: ClipboardCheck },
@@ -89,7 +89,7 @@ export default async function DashboardPage() {
             <h1 className="max-w-4xl text-base font-semibold tracking-normal leading-relaxed">Transform Industrial Knowledge Into Operational Intelligence</h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">The operating system for Plant A: cited AI, asset intelligence, maintenance decisions, compliance evidence, and executive control in one calm command surface.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/platform/copilot?question=Why%20has%20Pump%20P101%20failed%20repeatedly%3F" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-500 px-5 text-sm font-bold text-white shadow-[0_0_32px_rgba(59,130,246,0.35)] transition hover:bg-cyan-500"><PlayCircle size={18} /> Run flagship demo</Link>
+              <Link href="/platform/copilot?question=Why%20has%20Pump%20TRK-001%20failed%20repeatedly%3F" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-500 px-5 text-sm font-bold text-white shadow-[0_0_32px_rgba(59,130,246,0.35)] transition hover:bg-cyan-500"><PlayCircle size={18} /> Run flagship demo</Link>
               <Link href="/platform/evaluation" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-cyan-300/25 bg-cyan-300/10 px-5 text-sm font-bold text-cyan-100 transition hover:bg-cyan-300/15"><TrendingUp size={18} /> Show evidence metrics</Link>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default async function DashboardPage() {
                 </div>
               ))}
             </div>
-            <p className="text-sm leading-6 text-slate-300">Latest finding: Pump P101 shows repeated seal failure pattern with cavitation evidence and incomplete ISO-14224 taxonomy linkage.</p>
+            <p className="text-sm leading-6 text-slate-300">Latest finding: Pump TRK-001 shows repeated seal failure pattern with cavitation evidence and incomplete ISO-14224 taxonomy linkage.</p>
           </div>
           <div className="radar-ring min-h-[260px] rounded-[1.75rem] border border-cyan-300/15 bg-cyan-300/[0.045]">
             <div className="relative z-[1] text-center">
@@ -219,10 +219,10 @@ export default async function DashboardPage() {
 
       <section className="grid gap-4 md:grid-cols-4">
         {([
-          ["Repeated failure patterns", "P101 seal failure and cavitation recurrence", AlertTriangle],
+          ["Repeated failure patterns", "TRK-001 seal failure and cavitation recurrence", AlertTriangle],
           ["Citation coverage", "97% of AI answers include source documents", CheckCircle2],
           ["Time saved", "418 engineering hours recovered this quarter", Clock],
-          ["Critical evidence gaps", "NFPA-70E and API-510 packages need owners", FileSearch]
+          ["Critical evidence gaps", "Rail Safety Standard and API-510 packages need owners", FileSearch]
         ] as Array<[string, string, LucideIcon]>).map(([title, body, ItemIcon]) => <GlassCard key={title}><ItemIcon className="mb-4 text-cyan-300" /><h3 className="font-bold">{title}</h3><p className="mt-2 text-sm text-slate-400">{body}</p></GlassCard>)}
       </section>
     </div>

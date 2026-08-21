@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { BrainCircuit, Download, FileText, GitBranch, LucideIcon, ShieldAlert } from "lucide-react";
@@ -46,7 +46,7 @@ export default function RcaPage() {
         <GlassCard>
           <h2 className="text-xl font-black">Investigation Inputs</h2>
           <div className="mt-5 grid gap-3">
-            {["Asset: Pump P101", "Incident: repeated seal failure", "Failure description: high vibration and cavitation symptoms", "Evidence: WO-10877, WO-10421, SOP-MECH-014"].map((item) => <input key={item} defaultValue={item} className="rounded-xl border border-white/10 bg-white/[0.07] p-3 text-white" />)}
+            {["Asset: Pump TRK-001", "Incident: repeated seal failure", "Failure description: high vibration and cavitation symptoms", "Evidence: WO-10877, WO-10421, SOP-MECH-014"].map((item) => <input key={item} defaultValue={item} className="rounded-xl border border-white/10 bg-white/[0.07] p-3 text-white" />)}
             <button onClick={exportPdf} disabled={exporting} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 font-bold transition hover:bg-cyan-500 disabled:cursor-wait disabled:opacity-70">
               <Download size={18} /> {exporting ? "Exporting..." : "Export RCA PDF"}
             </button>
@@ -54,16 +54,16 @@ export default function RcaPage() {
           </div>
           <div className="mt-5 grid gap-3">
             {([
-              [BrainCircuit, "Hypothesis", "Cavitation and suction restriction likely initiated seal distress."],
+              [BrainCircuit, "Hypothesis", "Cavitation and track geometry restriction likely initiated rail defect."],
               [GitBranch, "Contributing Factor", "Possible shaft misalignment after prior maintenance window."],
-              [ShieldAlert, "Risk Control", "Verify LOTO and seal flush isolation before casing work."],
+              [ShieldAlert, "Risk Control", "Verify track possession safety control and seal flush isolation before casing work."],
               [FileText, "Evidence", "Attach work orders, SOP, and OEM troubleshooting references."]
             ] as Array<[LucideIcon, string, string]>).map(([ItemIcon, title, body]) => <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"><ItemIcon className="mb-3 text-cyan-300" /><h3 className="font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{body}</p></div>)}
           </div>
         </GlassCard>
         <GlassCard>
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><h2 className="text-xl font-bold">Professional RCA Report Preview</h2><SeverityBadge value="High" /></div>
-          <p className="leading-7 text-slate-300">Incident summary: Pump P101 experienced repeated seal failure after vibration alarms and cavitation-like operating conditions. Likely root causes include low suction pressure, suction strainer fouling, seal flush instability, and possible shaft misalignment.</p>
+          <p className="leading-7 text-slate-300">Incident summary: Pump TRK-001 experienced repeated seal failure after vibration alarms and cavitation-like operating conditions. Likely root causes include low track condition pressure, track condition strainer fouling, seal flush instability, and possible shaft misalignment.</p>
           <h3 className="mt-5 font-semibold text-cyan-200">Investigation Timeline</h3>
           {rcaTimeline.map((item) => <div key={item.time} className="mt-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4"><strong className="text-cyan-200">{item.time}</strong><p className="mt-1 text-sm leading-6 text-slate-400">{item.event}</p></div>)}
           <h3 className="mt-5 font-semibold text-cyan-200">Evidence Citations</h3>
