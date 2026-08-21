@@ -84,9 +84,9 @@ export default async function DashboardPage() {
         <div className="relative grid gap-8 xl:grid-cols-[minmax(0,1fr)_360px_360px] xl:items-center">
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-cyan-100">
-              <Sparkles size={14} /> ForgeMind AI
+              <Sparkles size={22} /> <span className="text-4xl md:text-5xl font-black tracking-wide">ForgeMind AI</span>
             </div>
-            <h1 className="max-w-4xl text-4xl font-black tracking-normal md:text-6xl">Transform Industrial Knowledge Into Operational Intelligence</h1>
+            <h1 className="max-w-4xl text-base font-semibold tracking-normal leading-relaxed">Transform Industrial Knowledge Into Operational Intelligence</h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">The operating system for Plant A: cited AI, asset intelligence, maintenance decisions, compliance evidence, and executive control in one calm command surface.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/platform/copilot?question=Why%20has%20Pump%20P101%20failed%20repeatedly%3F" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-500 px-5 text-sm font-bold text-white shadow-[0_0_32px_rgba(59,130,246,0.35)] transition hover:bg-cyan-500"><PlayCircle size={18} /> Run flagship demo</Link>
@@ -237,3 +237,4 @@ function SectionTitle({ eyebrow, title }: { eyebrow: string; title: string }) {
     </div>
   );
 }
+
