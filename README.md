@@ -43,6 +43,29 @@
 </div>
 
 ---
+## 🚀 Live Demo
+
+### ForgeMind Rail — AI-Powered Railway Intelligence Platform
+
+Experience the fully deployed ForgeMind Rail platform:
+
+### 👉 [Launch ForgeMind Rail](https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard)
+
+> **Deployment:** Google Cloud Run  
+> **Status:** Live Prototype  
+> **Platform:** AI-assisted railway asset intelligence and maintenance decision support
+
+ForgeMind Rail transforms fragmented railway engineering, inspection, maintenance, asset and compliance information into **evidence-backed operational intelligence**.
+
+---
+
+## 🎬 Product Demo Video
+
+> 🚧 **4-Minute Product Walkthrough — Coming Soon**
+
+A complete walkthrough will demonstrate the ForgeMind Rail workflow, including **Executive Cockpit, Knowledge Copilot, Engineering Documents, Knowledge Graph, Digital Twin, Maintenance AI, Root Cause Analysis, and evidence-backed human decision support**.
+
+---
 
 # 🚆 ForgeMind Rail — Omnikon National Hackathon 2026
 
