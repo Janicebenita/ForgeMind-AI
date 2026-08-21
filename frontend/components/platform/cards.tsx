@@ -1,4 +1,4 @@
-﻿import { ArrowUpRight, Minus, TrendingDown, TrendingUp } from "lucide-react";
+import { ArrowUpRight, Minus, TrendingDown, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Tone = "info" | "success" | "warning" | "critical" | string;

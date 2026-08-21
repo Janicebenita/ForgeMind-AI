@@ -57,28 +57,28 @@ const aiChips = [
 ];
 
 const answers: Record<string, StaticAnswer> = {
-  pump: {
-    match: ["trk-001", "failed repeatedly", "seal failure"],
+  track: {
+    match: ["trk-001", "failed repeatedly", "rail defect"],
     confidence: "86%",
     evidence: "High",
     answer:
-      "Pump TRK-001 shows repeated seal failure and vibration anomaly patterns. The strongest cited contributors are low track condition pressure, track condition strainer fouling, cavitation, and possible shaft misalignment after prior maintenance. Field technicians should first verify track condition strainer differential pressure, seal flush flow, coupling alignment, and vibration trend history before replacing the seal again.",
-    context: ["TRK-001 - Condensate Transfer Pump", "Risk score 88", "Open RCA requested", "ISO-14224 partial evidence"],
+      "TRK-001 Track Section shows repeated rail defect and geometry anomaly patterns. The strongest cited contributors are low track condition pressure, track condition strainer fouling, track geometry deviation, and possible rail alignment deviation after prior maintenance. Field technicians should first verify track condition strainer differential pressure, inspection follow-up flow, coupling alignment, and vibration trend history before replacing the seal again.",
+    context: ["TRK-001 - Mainline Track Section A", "Risk score 88", "Open RCA requested", "ISO-14224 partial evidence"],
     citations: [
-      { title: "WO-10877_TRK-001_vibration_repeat.pdf", page: "p.1", confidence: 92, quote: "Repeated vibration and seal failure observed. Operator reported intermittent cavitation noise and track condition strainer fouling." },
-      { title: "WO-10421_mechanical_seal.pdf", page: "p.2", confidence: 88, quote: "Root cause note: possible shaft misalignment after prior outage and low track condition pressure causing cavitation." },
-      { title: "FlowServe_TRK-001_Manual.txt", page: "Troubleshooting", confidence: 94, quote: "High vibration may be caused by cavitation, misalignment, rail component wear, alignment deviation, track geometry restriction, or operation outside preferred operating range." }
+      { title: "WO-10877_TRK-001_vibration_repeat.pdf", page: "p.1", confidence: 92, quote: "Repeated vibration and rail defect observed. Operator reported intermittent track geometry deviation noise and track condition strainer fouling." },
+      { title: "WO-10421_mechanical_seal.pdf", page: "p.2", confidence: 88, quote: "Root cause note: possible rail alignment deviation after prior outage and low track condition pressure causing track geometry deviation." },
+      { title: "FlowServe_TRK-001_Manual.txt", page: "Troubleshooting", confidence: 94, quote: "High vibration may be caused by track geometry deviation, misalignment, rail component wear, alignment deviation, track geometry restriction, or operation outside preferred operating range." }
     ]
   },
-  vessel: {
-    match: ["v203", "vessel", "opening"],
+  trackSection: {
+    match: ["trk-003", "track section", "opening"],
     confidence: "91%",
     evidence: "High",
     answer:
       "Before opening Track Asset TRK-003, the applicable procedure is SOP-VES-203 Track Possession and Confined Space Entry, supported by the plant track possession safety control procedure and permit-to-work requirements. The work pack must include isolation blinds, zero pressure verification, gas test, confined space permit, rescue plan, and safety officer approval. The evidence also shows an Rail Safety Standard/API track asset inspection gap, so the inspection certificate should be attached before release.",
     context: ["TRK-003 - Knockout Drum", "Permit required", "Confined space controls", "Pressure test evidence partial"],
     citations: [
-      { title: "SOP-VES-203_pressure_vessel_entry.txt", page: "Revision 4", confidence: 94, quote: "Before opening vessel TRK-003, safety officer must verify isolation blinds, gas test, confined space permit, rescue plan, and zero pressure." },
+      { title: "SOP-VES-203_pressure_track section_entry.txt", page: "Revision 4", confidence: 94, quote: "Before opening track section TRK-003, safety officer must verify isolation blinds, gas test, confined space permit, rescue plan, and zero pressure." },
       { title: "near_miss_report.txt", page: "NM-2026-07", confidence: 86, quote: "Maintenance crew approached TRK-003 for opening activity before rescue plan evidence was attached to the permit-to-work package." },
       { title: "rail_safety_checklist.csv", page: "Rail Safety Standard-STD-118", confidence: 89, quote: "Track inspection and safety certification evidence must be current. Applies to TRK-003. Evidence status: Missing." }
     ]
@@ -88,12 +88,12 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "84%",
     evidence: "Medium-High",
     answer:
-      "For a field technician responding to Pump TRK-001, the first checks should be safety isolation readiness, track condition strainer differential pressure, track condition pressure/NPSH condition, seal flush flow, visible leakage around the mechanical seal, and vibration trend. Do not open the casing until lockout tagout, valve isolation, drain verification, zero pressure, and permit-to-work evidence are complete.",
-    context: ["TRK-001 first-response checklist", "track possession safety control mandatory", "Seal flush and track condition checks", "Technician sign-off required"],
+      "For a field technician responding to TRK-001 Track Section, the first checks should be safety isolation readiness, track condition strainer differential pressure, track condition pressure/NPSH condition, inspection follow-up flow, visible leakage around the rail joint, and vibration trend. Do not open the casing until lockout tagout, valve isolation, drain verification, zero pressure, and permit-to-work evidence are complete.",
+    context: ["TRK-001 first-response checklist", "track possession safety control mandatory", "Track inspection and geometry checks", "Technician sign-off required"],
     citations: [
-      { title: "SOP_22_Pump_Isolation.txt", page: "Steps 1-7", confidence: 96, quote: "Apply lockout tagout, close track condition and discharge isolation valves, drain casing, verify zero pressure, and isolate seal flush line." },
-      { title: "inspection_report_TRK-001.txt", page: "Process parameters", confidence: 87, quote: "Track Condition pressure was 1.2 bar, vibration was 7.8 mm/s RMS, and seal flush flow was below OEM recommendation." },
-      { title: "FlowServe_TRK-001_Manual.txt", page: "Preventive maintenance", confidence: 91, quote: "Inspect track condition strainer differential pressure, verify mechanical seal flush, inspect impeller wear, and trend vibration monthly." }
+      { title: "rail_worksite_safety_procedure.pdf", page: "Steps 1-7", confidence: 96, quote: "Apply lockout tagout, close track condition and discharge isolation valves, drain casing, verify zero pressure, and isolate inspection follow-up line." },
+      { title: "inspection_report_TRK-001.txt", page: "Process parameters", confidence: 87, quote: "Track Condition pressure was 1.2 bar, vibration was 7.8 mm/s RMS, and inspection follow-up flow was below OEM recommendation." },
+      { title: "FlowServe_TRK-001_Manual.txt", page: "Preventive maintenance", confidence: 91, quote: "Inspect track condition strainer differential pressure, verify rail joint flush, inspect impeller wear, and trend vibration monthly." }
     ]
   },
   compliance: {
@@ -113,7 +113,7 @@ const answers: Record<string, StaticAnswer> = {
 
 function getFallbackAnswer(question: string) {
   const normalized = question.toLowerCase();
-  return Object.values(answers).find((answer) => answer.match.some((term) => normalized.includes(term))) || answers.pump;
+  return Object.values(answers).find((answer) => answer.match.some((term) => normalized.includes(term))) || answers.track;
 }
 
 function confidencePercent(value: number) {
@@ -142,11 +142,11 @@ function inferRecommendedSop(question: string, answer: string, documents: string
   if (sopDocument) {
     return sopDocument;
   }
-  if (sourceText.includes("v203") || sourceText.includes("v-203") || sourceText.includes("vessel")) {
-    return "SOP-VES-203 Pressure Track Possession and Confined Space Entry";
+  if (sourceText.includes("trk-003") || sourceText.includes("v-203") || sourceText.includes("track section")) {
+    return "rail_worksite_safety_procedure.pdf";
   }
-  if (sourceText.includes("p101") || sourceText.includes("p-101") || sourceText.includes("pump")) {
-    return "SOP_22_Pump_Isolation.txt";
+  if (sourceText.includes("trk-001") || sourceText.includes("trk-001") || sourceText.includes("rail asset")) {
+    return "rail_worksite_safety_procedure.pdf";
   }
   if (sourceText.includes("electrical") || sourceText.includes("rail electrical safety") || sourceText.includes("ep501")) {
     return "track possession safety control_Procedure.txt";
@@ -177,7 +177,7 @@ function buildAnswerSection({
     ? []
     : response?.related_assets?.length
     ? response.related_assets
-    : fallback.context.filter((item) => /\b(P|C|B|HX|V|EP)-?\d{3}\b|TRK-001|TRK-003|EP501|BRG-004|SW-002|B203/i.test(item));
+    : fallback.context.filter((item) => /\b(TRK|SW|SIG|PM|BRG|WHL|TRM|OCS|EP)-?\d{3}\b/i.test(item));
   const evidence = citations.length
     ? citations.slice(0, 3).map((citation) => `${citation.title}: ${clipText(citation.quote)}`)
     : ["No source citation was returned. Ask a narrower question or upload the missing evidence document."];
@@ -250,7 +250,7 @@ function InsufficientEvidencePanel({ answer, actions }: { answer: string; action
 
 export default function CopilotPage() {
   const searchParams = useSearchParams();
-  const [question, setQuestion] = useState("Why has Pump TRK-001 failed repeatedly?");
+  const [question, setQuestion] = useState("Why has TRK-001 Track Section failed repeatedly?");
   const [asked, setAsked] = useState(false);
   const [response, setResponse] = useState<CopilotResponse | null>(null);
   const [isAsking, setIsAsking] = useState(false);
@@ -358,7 +358,7 @@ export default function CopilotPage() {
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/20 text-cyan-200 shadow-[0_0_28px_rgba(0,212,255,0.18)]"><Bot /></div>
             <div className="min-w-0">
               <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">The AI Command Center</p>
-              <h1 className="break-words text-3xl font-black">Ask the Plant</h1>
+              <h1 className="break-words text-3xl font-black">Ask the Railway</h1>
               <p className="break-words text-sm text-slate-400">Conversational intelligence with cited evidence, confidence, and actions.</p>
             </div>
             </div>

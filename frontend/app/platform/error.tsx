@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { AlertTriangle, RotateCcw } from "lucide-react";
 import { GlassCard } from "@/components/platform/cards";

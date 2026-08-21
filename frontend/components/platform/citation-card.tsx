@@ -1,4 +1,4 @@
-﻿import { FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { ConfidenceBadge } from "@/components/platform/badges";
 
 export function CitationCard({ title, page, confidence, quote }: { title: string; page: string; confidence: number; quote: string }) {

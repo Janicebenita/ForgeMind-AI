@@ -1,4 +1,4 @@
-﻿import type { IndustrialAsset } from "@/lib/demo-data";
+import type { IndustrialAsset } from "@/lib/demo-data";
 import { RiskBadge, SeverityBadge } from "@/components/platform/badges";
 import { GlassCard } from "@/components/platform/cards";
 

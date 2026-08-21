@@ -1,4 +1,4 @@
-﻿import { LoadingSkeleton } from "@/components/platform/cards";
+import { LoadingSkeleton } from "@/components/platform/cards";
 
 export default function PlatformLoading() {
   return (

@@ -7,8 +7,8 @@ const nodes: Node[] = [
   { id: "TRK-001", position: { x: 420, y: 240 }, data: { label: "Asset · TRK-001" }, style: nodeStyle("#3B82F6") },
   { id: "WO", position: { x: 120, y: 80 }, data: { label: "WO-10877" }, style: nodeStyle("#06B6D4") },
   { id: "RCA", position: { x: 720, y: 80 }, data: { label: "RCA Draft" }, style: nodeStyle("#8B5CF6") },
-  { id: "Seal", position: { x: 120, y: 310 }, data: { label: "Seal Failure" }, style: nodeStyle("#EF4444") },
-  { id: "Cav", position: { x: 710, y: 320 }, data: { label: "Cavitation" }, style: nodeStyle("#F59E0B") },
+  { id: "Seal", position: { x: 120, y: 310 }, data: { label: "Rail Defect" }, style: nodeStyle("#EF4444") },
+  { id: "Cav", position: { x: 710, y: 320 }, data: { label: "Track Geometry Deviation" }, style: nodeStyle("#F59E0B") },
   { id: "SOP", position: { x: 410, y: 20 }, data: { label: "SOP-MECH-014" }, style: nodeStyle("#22C55E") },
   { id: "NFPA", position: { x: 410, y: 470 }, data: { label: "ISO-14224" }, style: nodeStyle("#94A3B8") }
 ];

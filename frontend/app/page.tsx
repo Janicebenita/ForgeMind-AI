@@ -45,7 +45,7 @@ export default function LandingPage() {
               <span className="text-xs font-semibold text-cyan-200">AI confidence 98%</span>
             </div>
             <div className="grid gap-4">
-              {["TRK-001 seal failure RCA", "TRK-003 track possession SOP", "Rail Safety Standard evidence gap", "BRG-004 structural condition trend"].map((item, index) => (
+              {["TRK-001 recurring rail defect RCA", "TRK-003 track possession SOP", "Rail Safety Standard evidence gap", "BRG-004 structural condition trend"].map((item, index) => (
                 <div key={item} className="rounded-lg border border-white/10 bg-white/[0.06] p-4">
                   <div className="flex items-center justify-between gap-4">
                     <span className="font-semibold">{item}</span>

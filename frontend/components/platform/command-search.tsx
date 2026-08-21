@@ -1,4 +1,4 @@
-﻿import { Command, Search } from "lucide-react";
+import { Command, Search } from "lucide-react";
 
 export function CommandSearch({ placeholder = "Search assets, SOPs, work orders, regulations, citations..." }: { placeholder?: string }) {
   return (

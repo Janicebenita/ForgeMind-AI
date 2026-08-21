@@ -1,4 +1,4 @@
-﻿import { FileSearch } from "lucide-react";
+import { FileSearch } from "lucide-react";
 import { ConfidenceBadge } from "@/components/platform/badges";
 
 export function EvidenceCard({ title, description, confidence = 90 }: { title: string; description: string; confidence?: number }) {

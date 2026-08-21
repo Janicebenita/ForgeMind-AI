@@ -1,4 +1,4 @@
-﻿import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const toneClass = {
   Low: "border-emerald-400/35 bg-emerald-400/12 text-emerald-100",
