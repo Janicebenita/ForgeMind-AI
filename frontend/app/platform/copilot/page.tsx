@@ -58,7 +58,7 @@ const aiChips = [
 
 const answers: Record<string, StaticAnswer> = {
   pump: {
-    match: ["pump p101", "failed repeatedly", "seal failure"],
+    match: ["trk-001", "gross tonnage", "rail defect"],
     confidence: "86%",
     evidence: "High",
     answer:
@@ -145,7 +145,7 @@ function inferRecommendedSop(question: string, answer: string, documents: string
   if (sourceText.includes("v203") || sourceText.includes("v-203") || sourceText.includes("vessel")) {
     return "SOP-VES-203 Pressure Track Possession and Confined Space Entry";
   }
-  if (sourceText.includes("p101") || sourceText.includes("p-101") || sourceText.includes("pump")) {
+  if (sourceText.includes("trk-001") || sourceText.includes("trk-001") || sourceText.includes("rail asset")) {
     return "SOP_22_Pump_Isolation.txt";
   }
   if (sourceText.includes("electrical") || sourceText.includes("rail electrical safety") || sourceText.includes("ep501")) {
@@ -358,7 +358,7 @@ export default function CopilotPage() {
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/20 text-cyan-200 shadow-[0_0_28px_rgba(0,212,255,0.18)]"><Bot /></div>
             <div className="min-w-0">
               <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">The AI Command Center</p>
-              <h1 className="break-words text-3xl font-black">Ask the Plant</h1>
+              <h1 className="break-words text-3xl font-black">Ask ForgeMind Rail</h1>
               <p className="break-words text-sm text-slate-400">Conversational intelligence with cited evidence, confidence, and actions.</p>
             </div>
             </div>

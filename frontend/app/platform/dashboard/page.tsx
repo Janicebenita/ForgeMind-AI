@@ -87,7 +87,7 @@ export default async function DashboardPage() {
               <Sparkles size={22} /> <span className="text-4xl md:text-5xl font-black tracking-wide">ForgeMind AI</span>
             </div>
             <h1 className="max-w-4xl text-base font-semibold tracking-normal leading-relaxed">Transform Industrial Knowledge Into Operational Intelligence</h1>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">The operating system for Plant A: cited AI, asset intelligence, maintenance decisions, compliance evidence, and executive control in one calm command surface.</p>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">The operating system for Rail Corridor A: cited AI, asset intelligence, maintenance decisions, compliance evidence, and executive control in one calm command surface.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/platform/copilot?question=Why%20has%20Pump%20TRK-001%20failed%20repeatedly%3F" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-500 px-5 text-sm font-bold text-white shadow-[0_0_32px_rgba(59,130,246,0.35)] transition hover:bg-cyan-500"><PlayCircle size={18} /> Run flagship demo</Link>
               <Link href="/platform/evaluation" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-cyan-300/25 bg-cyan-300/10 px-5 text-sm font-bold text-cyan-100 transition hover:bg-cyan-300/15"><TrendingUp size={18} /> Show evidence metrics</Link>

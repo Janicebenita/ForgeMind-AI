@@ -31,7 +31,7 @@ export default function LandingPage() {
               <span className="gradient-text">ForgeMind AI</span>
             </h1>
             <p className="mt-6 text-2xl font-semibold text-white">Transform Industrial Knowledge Into Operational Intelligence</p>
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">Ask the plant. Trace every answer. Convert industrial documents into cited decisions, RCA, compliance evidence, and next actions.</p>
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">Ask ForgeMind Rail. Trace every answer. Convert industrial documents into cited decisions, RCA, compliance evidence, and next actions.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/platform" className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-blue-500 px-5 font-bold text-white transition hover:bg-cyan-500">
                 Launch Platform <ArrowRight size={18} />
