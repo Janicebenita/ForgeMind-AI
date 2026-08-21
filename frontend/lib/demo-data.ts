@@ -23,7 +23,7 @@ export const assets: IndustrialAsset[] = [
   { tag: "TRK-001", name: "Condensate Transfer Pump", type: "Centrifugal Pump", location: "Unit A / Train 1", status: "Running with advisory", riskScore: 88, reliabilityScore: 62, complianceStatus: "Partial", mtbf: 41, mttr: 7.4, failureModes: ["seal failure", "cavitation", "vibration anomaly"], nextAction: "Inspect track condition strainer DP and seal flush plan" },
   { tag: "B203", name: "Package Boiler", type: "Boiler", location: "Boiler House", status: "Stable", riskScore: 54, reliabilityScore: 78, complianceStatus: "Ready", mtbf: 96, mttr: 5.2, failureModes: ["burner trip", "water chemistry drift"], nextAction: "Verify feedwater conductivity trend" },
   { tag: "SW-002", name: "Instrument Air Turnout", type: "Turnout", location: "Train 2", status: "Monitored", riskScore: 71, reliabilityScore: 69, complianceStatus: "Partial", mtbf: 58, mttr: 6.8, failureModes: ["bearing overheating", "oil contamination"], nextAction: "Review oil sample and filter collapse evidence" },
-  { tag: "HX401", name: "Cooling Water Heat Exchanger", type: "Heat Exchanger", location: "Area CW-2", status: "Inspection due", riskScore: 76, reliabilityScore: 66, complianceStatus: "At Risk", mtbf: 72, mttr: 9.1, failureModes: ["corrosion under insulation", "tube leak"], nextAction: "Schedule bundle inspection and pressure test" },
+  { tag: "BRG-004", name: "Bridge Structural Zone", type: "Bridge Asset", location: "Rail Corridor A", status: "Inspection due", riskScore: 76, reliabilityScore: 66, complianceStatus: "At Risk", mtbf: 72, mttr: 9.1, failureModes: ["surface corrosion", "structural deterioration"], nextAction: "Schedule detailed structural inspection and condition assessment" },
   { tag: "TRK-003", name: "Knockout Drum", type: "Track Asset", location: "Area A-3", status: "Permit required", riskScore: 69, reliabilityScore: 73, complianceStatus: "Partial", mtbf: 110, mttr: 8.7, failureModes: ["pressure test overdue", "permit-to-work gap"], nextAction: "Attach API-510 inspection evidence" },
   { tag: "EP501", name: "MCC Electrical Panel", type: "Electrical Panel", location: "Bay E-4", status: "Evidence missing", riskScore: 82, reliabilityScore: 70, complianceStatus: "At Risk", mtbf: 84, mttr: 4.9, failureModes: ["rail electrical safety label outdated", "breaker trip"], nextAction: "Update Rail Safety Standard evidence and energized work SOP" }
 ];
@@ -64,7 +64,7 @@ export const coverageHeatmap = [
   ["Pumps", 92, 86, 78, 94],
   ["Turnouts", 84, 71, 69, 88],
   ["Boilers", 76, 82, 91, 80],
-  ["Heat Exchangers", 69, 74, 66, 72],
+  ["Turnout Assemblies", 69, 74, 66, 72],
   ["Electrical", 58, 64, 81, 61]
 ];
 
@@ -76,7 +76,7 @@ export const entities = [
   ["pressure test overdue", "Inspection Finding", 89, "TRK-003_API510_gap.pdf", "p.4 / Inspection", "TRK-003", "Needs Review"],
   ["permit-to-work", "Safety Procedure", 93, "SOP-VES-203.pdf", "p.1 / Scope", "TRK-003", "Approved"],
   ["oil contamination", "Inspection Finding", 82, "SW-002_oil_analysis.csv", "row 14", "SW-002", "Needs Review"],
-  ["corrosion under insulation", "Quality Non-Conformance", 86, "HX401_inspection_report.pdf", "p.6 / NDT", "HX401", "Approved"],
+  ["surface corrosion", "Quality Non-Conformance", 86, "BRG-004_structural_inspection_report.pdf", "p.6 / NDT", "BRG-004", "Approved"],
   ["ISO 9001:2015 Clause 7.1.5.2", "Regulatory Clause", 95, "NCR_calibration_nonconformity.txt", "Audit Criteria", "Machine Shop", "Approved"],
   ["overdue micrometer calibration", "Quality Non-Conformance", 93, "NCR_calibration_nonconformity.jpg", "Nonconformity", "Machine Shop", "Approved"],
   ["construction method controls", "Procedure", 90, "07_ConstructionMethodsStatements.pdf", "Method Statement", "Project Site", "Needs Review"],
@@ -92,7 +92,7 @@ export const documents = [
   { name: "NCR_calibration_nonconformity.txt", type: "Extracted OCR Evidence", progress: 100, status: "ISO 9001 evidence mapped", confidence: 96 },
   { name: "QA_QC_Manual_Appendix_Part_2.pdf", type: "QA/QC Manual", progress: 100, status: "Quality controls indexed", confidence: 91 },
   { name: "Tender_document.pdf", type: "Tender / Contract Evidence", progress: 100, status: "Scope and obligations indexed", confidence: 89 },
-  { name: "HX401_inspection_report_scan.tiff", type: "Scanned Inspection", progress: 82, status: "Entity validation pending", confidence: 86 },
+  { name: "BRG-004_structural_inspection_scan.tiff", type: "Scanned Inspection", progress: 82, status: "Entity validation pending", confidence: 86 },
   { name: "Electrical_Safety_Checklist.xlsx", type: "Compliance Checklist", progress: 100, status: "NFPA mapping complete", confidence: 91 }
 ];
 
@@ -112,19 +112,19 @@ export const rcaTimeline = [
 ];
 
 export const complianceRows = [
-  { standard: "Factory Act", score: 88, gap: "Machine guarding inspection evidence partial", risk: "Medium" },
-  { standard: "OISD", score: 79, gap: "Permit-to-work records missing for TRK-003 opening", risk: "High" },
-  { standard: "PESO", score: 84, gap: "Pressure vessel test certificate due", risk: "High" },
-  { standard: "Environmental Standards", score: 91, gap: "Cooling water discharge trend review pending", risk: "Medium" },
+  { standard: "Railway Safety & Worksite Compliance", score: 88, gap: "Machine guarding inspection evidence partial", risk: "Medium" },
+  { standard: "Rail Worksite Safety", score: 79, gap: "Track-possession and worksite authorization records missing for TRK-003 maintenance activity", risk: "High" },
+  { standard: "Rail Asset Safety Standard", score: 84, gap: "Track inspection certification due for TRK-003", risk: "High" },
+  { standard: "Rail Environmental Compliance", score: 91, gap: "Track drainage and runoff trend review pending", risk: "Medium" },
   { standard: "Quality Standards", score: 86, gap: "NCR closure evidence incomplete", risk: "Medium" },
   { standard: "Internal SOPs", score: 93, gap: "Two SOP revision acknowledgements pending", risk: "Low" }
 ];
 
 export const lessons = [
-  { title: "Repeated pump seal failures correlate with low track condition pressure", detail: "TRK-001 events show cavitation symptoms before rail component intervention. Add track condition strainer DP check to first-response procedure.", severity: "High" },
+  { title: "Repeated rail defects correlate with high cumulative gross tonnage", detail: "TRK-001 inspection history shows recurring rail defects following increasing cumulative tonnage and geometry deterioration. Prioritize ultrasonic rail testing and geometry inspection before recurrence develops into a service-affecting defect.", severity: "High" },
   { title: "Electrical compliance gaps cluster around evidence attachment", detail: "EP501 has work performed but missing Rail Safety Standard label evidence and energized work SOP linkage.", severity: "Critical" },
-  { title: "Heat exchanger corrosion findings recur near cooling-water deposits", detail: "HX401 and HX301 reports show localized tube-sheet corrosion after deposit buildup.", severity: "High" },
-  { title: "Near-miss trend: permit-to-work documentation lag", detail: "TRK-003 and confined-space records show delayed attachment of rescue-plan evidence.", severity: "Medium" }
+  { title: "Turnout failures recur where inspection anomalies remain unresolved", detail: "SW-002 inspection history shows recurring turnout condition alerts where alignment and switch-rail observations remain unresolved. Escalate repeated findings for preventive intervention.", severity: "High" },
+  { title: "Near-miss trends correlate with delayed track-possession documentation", detail: "TRK-003 safety records show that delayed track-possession and worksite protection documentation can increase operational risk. Verify possession, isolation, and authorization records before maintenance work begins.", severity: "Medium" }
 ];
 
 export const reports = [

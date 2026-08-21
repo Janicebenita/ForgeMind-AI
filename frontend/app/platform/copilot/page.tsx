@@ -58,7 +58,7 @@ const aiChips = [
 
 const answers: Record<string, StaticAnswer> = {
   pump: {
-    match: ["trk-001", "gross tonnage", "rail defect"],
+    match: ["trk-001", "failed repeatedly", "seal failure"],
     confidence: "86%",
     evidence: "High",
     answer:
@@ -75,12 +75,12 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "91%",
     evidence: "High",
     answer:
-      "Before opening Track Asset TRK-003, the applicable procedure is SOP-VES-203 Track Possession and Confined Space Entry, supported by the plant track possession safety control procedure and permit-to-work requirements. The work pack must include isolation blinds, zero pressure verification, gas test, confined space permit, rescue plan, and safety officer approval. The evidence also shows an OISD/API track asset inspection gap, so the inspection certificate should be attached before release.",
+      "Before opening Track Asset TRK-003, the applicable procedure is SOP-VES-203 Track Possession and Confined Space Entry, supported by the plant track possession safety control procedure and permit-to-work requirements. The work pack must include isolation blinds, zero pressure verification, gas test, confined space permit, rescue plan, and safety officer approval. The evidence also shows an Rail Safety Standard/API track asset inspection gap, so the inspection certificate should be attached before release.",
     context: ["TRK-003 - Knockout Drum", "Permit required", "Confined space controls", "Pressure test evidence partial"],
     citations: [
       { title: "SOP-VES-203_pressure_vessel_entry.txt", page: "Revision 4", confidence: 94, quote: "Before opening vessel TRK-003, safety officer must verify isolation blinds, gas test, confined space permit, rescue plan, and zero pressure." },
       { title: "near_miss_report.txt", page: "NM-2026-07", confidence: 86, quote: "Maintenance crew approached TRK-003 for opening activity before rescue plan evidence was attached to the permit-to-work package." },
-      { title: "OISD_Checklist.csv", page: "OISD-STD-118", confidence: 89, quote: "Pressure vessel inspection and test evidence must be current. Applies to TRK-003. Evidence status: Missing." }
+      { title: "rail_safety_checklist.csv", page: "Rail Safety Standard-STD-118", confidence: 89, quote: "Track inspection and safety certification evidence must be current. Applies to TRK-003. Evidence status: Missing." }
     ]
   },
   technician: {
@@ -101,11 +101,11 @@ const answers: Record<string, StaticAnswer> = {
     confidence: "79%",
     evidence: "Moderate",
     answer:
-      "The uncovered or partially covered regulatory requirements are OISD-STD-118 for TRK-003 track asset inspection/test evidence, OISD-244-ELECT for EP501 energized electrical work and rail electrical safety evidence, OISD-INS-HX for HX401 heat exchanger corrosion closure, and partial OISD-105-PTW evidence for TRK-001 permit-to-work. These should be treated as audit readiness gaps until source documents are attached.",
-    context: ["4 compliance gaps", "TRK-003, EP501, HX401, TRK-001", "Audit readiness partial", "Evidence package required"],
+      "The unresolved or partially evidenced rail regulatory requirements are Rail Safety Standard-STD-118 for TRK-003 track asset inspection/test evidence, Rail Safety Standard-244-ELECT for EP501 energized electrical work and rail electrical safety evidence, rail inspection evidence for BRG-004 structural condition closure, and partial Rail Safety Standard-105-PTW evidence for TRK-001 permit-to-work. These should be treated as audit readiness gaps until source documents are attached.",
+    context: ["4 compliance gaps", "TRK-003, EP501, BRG-004, TRK-001", "Audit readiness partial", "Evidence package required"],
     citations: [
-      { title: "OISD_Checklist.csv", page: "Checklist rows", confidence: 90, quote: "TRK-003 track asset inspection evidence missing, EP501 electrical controls missing, HX401 inspection closure partial, and TRK-001 permit-to-work partial." },
-      { title: "Factory_Act_Requirements.txt", page: "Detected gaps", confidence: 82, quote: "TRK-003 pressure test evidence missing. EP501 rail electrical safety evidence missing. HX401 quality non-conformance QA12 remains open." },
+      { title: "rail_safety_checklist.csv", page: "Checklist rows", confidence: 90, quote: "TRK-003 track asset inspection evidence missing, EP501 electrical controls missing, BRG-004 inspection closure partial, and TRK-001 permit-to-work partial." },
+      { title: "Factory_Act_Requirements.txt", page: "Detected gaps", confidence: 82, quote: "TRK-003 pressure test evidence missing. EP501 rail electrical safety evidence missing. BRG-004 structural inspection non-conformance remains open." },
       { title: "quality_issue_QA12.txt", page: "QA12", confidence: 78, quote: "Inspection non-conformance remains open. Pressure test documentation and coating repair photographs are required." }
     ]
   }
@@ -145,7 +145,7 @@ function inferRecommendedSop(question: string, answer: string, documents: string
   if (sourceText.includes("v203") || sourceText.includes("v-203") || sourceText.includes("vessel")) {
     return "SOP-VES-203 Pressure Track Possession and Confined Space Entry";
   }
-  if (sourceText.includes("trk-001") || sourceText.includes("trk-001") || sourceText.includes("rail asset")) {
+  if (sourceText.includes("p101") || sourceText.includes("p-101") || sourceText.includes("pump")) {
     return "SOP_22_Pump_Isolation.txt";
   }
   if (sourceText.includes("electrical") || sourceText.includes("rail electrical safety") || sourceText.includes("ep501")) {
@@ -177,7 +177,7 @@ function buildAnswerSection({
     ? []
     : response?.related_assets?.length
     ? response.related_assets
-    : fallback.context.filter((item) => /\b(P|C|B|HX|V|EP)-?\d{3}\b|TRK-001|TRK-003|EP501|HX401|SW-002|B203/i.test(item));
+    : fallback.context.filter((item) => /\b(P|C|B|HX|V|EP)-?\d{3}\b|TRK-001|TRK-003|EP501|BRG-004|SW-002|B203/i.test(item));
   const evidence = citations.length
     ? citations.slice(0, 3).map((citation) => `${citation.title}: ${clipText(citation.quote)}`)
     : ["No source citation was returned. Ask a narrower question or upload the missing evidence document."];
@@ -358,7 +358,7 @@ export default function CopilotPage() {
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/20 text-cyan-200 shadow-[0_0_28px_rgba(0,212,255,0.18)]"><Bot /></div>
             <div className="min-w-0">
               <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">The AI Command Center</p>
-              <h1 className="break-words text-3xl font-black">Ask ForgeMind Rail</h1>
+              <h1 className="break-words text-3xl font-black">Ask the Plant</h1>
               <p className="break-words text-sm text-slate-400">Conversational intelligence with cited evidence, confidence, and actions.</p>
             </div>
             </div>

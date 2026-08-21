@@ -169,7 +169,7 @@ export default async function DashboardPage() {
           <ChartCard title="Asset Risk Distribution" subtitle="Risk and reliability by critical equipment"><RiskDistributionChart /></ChartCard>
         </div>
         <div className="pt-0 xl:pt-10">
-          <ChartCard title="Compliance Readiness Gauge" subtitle="Factory Act, OISD, PESO, SOP evidence coverage"><ComplianceGauge value={82} /></ChartCard>
+          <ChartCard title="Compliance Readiness Gauge" subtitle="Rail safety, inspection, environmental, quality, and SOP evidence coverage"><ComplianceGauge value={82} /></ChartCard>
         </div>
       </section>
 
