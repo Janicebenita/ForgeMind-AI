@@ -1,483 +1,609 @@
 <div align="center">
 
 <img
-  src="docs/assets/forgemind-hero.gif"
-  alt="ForgeMind AI — Azure-Native Industrial Intelligence Platform"
+  src="docs/assets/forgemind-rail-hero.gif"
+  alt="ForgeMind Rail — Evidence-Grounded AI for Predictive Rail Infrastructure Maintenance"
   width="100%"
 />
 
 <br/>
 
-# 🧠 ForgeMind AI
+# 🚆 ForgeMind Rail
 
-### Evidence-Grounded Industrial Intelligence Platform
+### 🧠 Evidence-Grounded AI for Predictive Rail Infrastructure Maintenance
 
-> Turn fragmented engineering evidence into cited, explainable operational decisions.
+**Omnikon National Hackathon 2026 · Transportation & Logistics**
+
+> ### **Predict earlier. Explain why. Let engineers decide.**
 
 <br/>
 
-<a href="docs/AZURE_ARCHITECTURE.md">
-  <img src="https://img.shields.io/badge/Azure-Native-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
+<a href="https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard">
+  <img src="https://img.shields.io/badge/LIVE_DEMO-Launch_ForgeMind_Rail-14B86A?style=for-the-badge" />
 </a>
-<a href="#-deployment-status">
-  <img src="https://img.shields.io/badge/Local-VERIFIED-14B8A6?style=for-the-badge" />
-</a>
-<a href="docs/AZURE_ARCHITECTURE.md">
-  <img src="https://img.shields.io/badge/Azure_Architecture-VALIDATED-2563EB?style=for-the-badge" />
-</a>
-<a href="docs/DEPLOYMENT_STATUS.md">
-  <img src="https://img.shields.io/badge/Azure_Runtime-NOT_DEPLOYED-F59E0B?style=for-the-badge" />
-</a>
+
+<img src="https://img.shields.io/badge/Google_Cloud_Run-LIVE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+
+<img src="https://img.shields.io/badge/Status-LIVE_PROTOTYPE-22C55E?style=for-the-badge" />
+
+<img src="https://img.shields.io/badge/Human_Control-REQUIRED-7C3AED?style=for-the-badge" />
 
 <br/><br/>
 
 <img src="https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-Azure-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Azure_AI-Search-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
-<img src="https://img.shields.io/badge/Microsoft-Foundry-7C3AED?style=flat-square" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+
+<br/><br/>
+
+### 🟢 **LIVE PROTOTYPE · GOOGLE CLOUD RUN**
+
+### 🛑 **OPERATIONAL ACTION: NOT EXECUTED**
 
 </div>
 
 ---
-## 🚀 Live Demo
 
-### ForgeMind Rail — AI-Powered Railway Intelligence Platform
+# 🚀 Live Demo
 
-Experience the fully deployed ForgeMind Rail platform:
+<table>
+<tr>
+<td width="64%" valign="top">
 
-### 👉 [Launch ForgeMind Rail](https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard)
+## 🌐 ForgeMind Rail Platform
 
-> **Deployment:** Google Cloud Run  
-> **Status:** Live Prototype  
-> **Platform:** AI-assisted railway asset intelligence and maintenance decision support
+ForgeMind Rail is deployed as a **working public prototype on Google Cloud Run**.
 
-ForgeMind Rail transforms fragmented railway engineering, inspection, maintenance, asset and compliance information into **evidence-backed operational intelligence**.
+The platform transforms fragmented railway engineering, inspection, usage, maintenance, failure, asset and compliance evidence into **traceable, evidence-grounded maintenance decision support**.
 
----
+### 👉 [**Launch ForgeMind Rail →**](https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard)
 
-## 🎬 Product Demo Video
+</td>
 
-> 🚧 **4-Minute Product Walkthrough — Coming Soon**
+<td width="36%" valign="top">
 
-A complete walkthrough will demonstrate the ForgeMind Rail workflow, including **Executive Cockpit, Knowledge Copilot, Engineering Documents, Knowledge Graph, Digital Twin, Maintenance AI, Root Cause Analysis, and evidence-backed human decision support**.
-
----
-
-# 🚆 ForgeMind Rail — Omnikon National Hackathon 2026
-
-**Domain:** Transportation & Logistics
-
-**Problem Statement:** `Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure`
-
-**Hackathon Application:** ForgeMind Rail
-
-> ForgeMind Rail applies ForgeMind AI's evidence-grounded intelligence architecture to rail maintenance—connecting inspection, usage, failure, maintenance, and engineering evidence so teams can identify emerging maintenance priorities before infrastructure failure.
-
-**Predict earlier. Explain why. Let engineers decide.**
-
-> [!IMPORTANT]
-> ForgeMind Rail is currently an Omnikon hackathon application profile
-> demonstrated using synthetic rail data. It does not represent a production
-> railway deployment, autonomous train control, or certified railway safety system.
-
----
-
-## The Rail Maintenance Problem
-
-- Rail assets generate inspection, usage, failure, and maintenance evidence across disconnected systems and documents.
-- Early warning signals can remain fragmented across inspection reports, work orders, asset histories, and engineering procedures.
-- A maintenance score without supporting evidence is difficult for engineers to trust and act upon.
-- Critical maintenance decisions require traceability and human engineering judgment.
-
----
-
-## The ForgeMind Rail Approach
-
-```mermaid
-flowchart TD
-    A["🚆 Rail Assets & Evidence"] --> B["🔍 Inspection + Usage Signals"]
-    B --> C["⚙️ Asset & Failure Context"]
-    C --> D["🕸️ Operational Knowledge Graph"]
-    D --> E["📊 Maintenance Risk Prioritization"]
-    E --> F["📚 Supporting Evidence & Citations"]
-    F --> G["👤 Authorized Human Engineer"]
-```
-
-> **The goal is not simply to produce a risk score. The goal is to explain why an asset requires attention and show the evidence behind that recommendation.**
-
----
-
-## Why ForgeMind Rail Is Different
-
-### 1. Risk + Evidence
-Maintenance priority is connected to the inspection, usage, failure, work-order, and engineering evidence behind it.
-
-### 2. Asset-Centric Intelligence
-ForgeMind connects fragmented records around the asset rather than treating documents as isolated files.
-
-### 3. Explainability by Design
-Analytical and AI-assisted outputs trace back to supporting evidence through inline citations and confidence metadata.
-
-### 4. Human Decision Boundary
-ForgeMind supports engineers; it does not autonomously authorize maintenance or control railway equipment.
-
-> **Decision-support boundary:** ForgeMind Rail does not control trains, actuate railway equipment, automatically authorize maintenance, or replace qualified railway engineers.
-
----
-
-## ⚡ 5-Minute Judge Path
-
-| Step | What to review | Where |
-|------|----------------|-------|
-| 1 | Understand the rail maintenance problem | ↑ [The Rail Maintenance Problem](#the-rail-maintenance-problem) |
-| 2 | Review the evidence-to-maintenance workflow | ↑ [The ForgeMind Rail Approach](#the-forgemind-rail-approach) |
-| 3 | Inspect the synthetic rail demonstration dataset | [`demo-data/rail/`](demo-data/rail/) |
-| 4 | Review Asset 360, maintenance, and RCA capabilities | ↓ [Key Capabilities](#-key-capabilities) |
-| 5 | Examine evidence-grounded citations and traceability | ↓ [Verified Operational Evidence](#-verified-operational-evidence) |
-| 6 | Review security, RBAC, and human decision boundaries | [`SECURITY.md`](SECURITY.md) · ↓ [Safety & Human Control](#-safety--human-control) |
-| 7 | Review Omnikon-specific documentation | [`docs/OMNIKON_2026.md`](docs/OMNIKON_2026.md) |
-
----
-
-## Built on the Existing ForgeMind AI Platform
-
-ForgeMind Rail is not a standalone concept. It is an application profile built on the existing ForgeMind AI industrial intelligence platform—a working evidence-grounded decision-support system with verified ingestion, retrieval, entity extraction, knowledge graph, asset intelligence, maintenance intelligence, root-cause analysis, citations, RBAC, and human review.
-
-<div align="center">
-
-### 📄 Documents → ⚙️ Assets → 🔧 Failures → 📋 Procedures → 🛠️ Work Orders → 🔍 Inspections → ⚖️ Regulations → 🧠 Cited Decisions
-
-</div>
-
-### Verified platform workflow
-
-1. 📥 Ingest PDF, text, image, spreadsheet, and CSV evidence
-2. 🔐 Record SHA-256 lineage and prevent duplicate ingestion
-3. 🧩 Extract text, chunks, entities, and relationships
-4. 🕸️ Connect assets, failures, procedures, inspections, work orders, and regulations
-5. 🔒 Retrieve role-authorized evidence **before generation**
-6. 📚 Produce responses with citations and confidence metadata
-7. 🛑 Abstain when evidence is insufficient
-8. 👤 Stop at an explicit human authorization boundary
-
----
-
-## ForgeMind Rail Demonstration Status
+### 🟢 Current Status
 
 | Component | Status |
 |---|---|
-| ForgeMind AI core platform | ✅ Local verified |
-| Rail application profile | 🚆 Omnikon prototype |
-| Rail demonstration dataset | 📋 Synthetic |
-| Rail production deployment | ⏳ Not deployed |
-| Azure architecture | ✅ Validated architecture |
-| Autonomous maintenance control | 🚫 Not provided |
-
-### Synthetic rail data
-
-The [`demo-data/rail/`](demo-data/rail/) directory contains a small synthetic dataset of 8 linked rail assets with inspection, usage, failure, and work-order records.
-
-> The rail dataset is synthetic and was created solely to demonstrate the Omnikon use case reproducibly without representing any real railway or metro operator.
-
----
-
-## Existing ForgeMind Technical Baseline
-
-<div align="center">
-
-| Evidence Type           | Verified Count |
-| ----------------------- | -------------: |
-| 📄 Documents            |         **29** |
-| 🧩 Chunks               |        **969** |
-| 🏷️ Entities            |        **552** |
-| 🔗 Entity relationships |        **122** |
-| 📚 Citations            |        **124** |
-| ⚙️ Assets               |         **12** |
-| ⚠️ Failures             |         **16** |
-| 🛠️ Work orders         |          **5** |
-| 🔍 Inspections          |          **6** |
-| 📋 Procedures           |          **2** |
-| ⚖️ Regulations          |         **10** |
-
-</div>
-
-> These are verified counts from the existing local ForgeMind demonstration corpus. They are not rail-specific predictive-maintenance performance metrics.
-
-> A ForgeMind citation is a traceable reference from generated or analytical output to supporting ingested evidence. It is not an academic reference count.
-
-Additional migration verification:
-
-* ✅ All 29 document paths relinked
-* ✅ 52 compared files byte-identical
-* ✅ Zero migration conflicts
-* ✅ Zero unresolved document paths
-
-See the [Migration Report](docs/MIGRATION_REPORT.md).
-
-Runtime databases, generated reports, migrated snapshots, and binary evidence remain deliberately excluded from the public repository.
-
----
-
-# 🔎 Evaluation Evidence
-
-> [!NOTE]
-> The bundled eight-case local corpus is a **development smoke test**, not a conference-quality benchmark.
-
-| Metric                         | Verified local result |
-| ------------------------------ | --------------------: |
-| ✅ Cases passed                 |             **8 / 8** |
-| 🎯 Positive retrieval cases    |                 **6** |
-| 🛑 Negative abstention cases   |                 **2** |
-| 📈 Mean Recall@5               |              **1.00** |
-| 🥇 Mean reciprocal rank        |              **1.00** |
-| ✅ Negative abstention accuracy |              **1.00** |
-| ⚡ Retrieval latency p50        |           **1.68 ms** |
-| ⚡ Retrieval latency p95        |           **1.73 ms** |
-
-> The 8/8 result is an existing ForgeMind development retrieval smoke test. It is not rail predictive-maintenance accuracy.
-
-Evaluation results:
-
-```text
-backend/evaluation/results/local_phase3.json
-```
-
-Research methodology:
-
-📘 [Conference Research Plan](docs/CONFERENCE_RESEARCH_PLAN.md)
-
----
-
-# 🎬 ForgeMind AI — Product Demo
-
-<div align="center">
-
-### See the complete evidence-to-decision workflow in action.
-
-**From fragmented industrial evidence to governed, cited operational intelligence.**
-
-<br/>
-
-<p align="center">
-  <img
-    src="docs/assets/forgemind-rail-demo-status.gif"
-    alt="ForgeMind Rail demonstration status — under construction"
-    width="100%"
-  />
-</p>
-
-<p align="center">
-  <strong>🚧 ForgeMind Rail Interactive Demo — Under Construction</strong><br/>
-  The Round 1 repository currently demonstrates the rail use case through
-  synthetic rail evidence, architecture, documented workflows, and
-  evidence-grounded decision support. The dedicated ForgeMind Rail
-  interactive demonstration is currently under development.
-</p>
-
-<br/>
-
-*Engineering Evidence → Lineage → Knowledge Graph → Authorized Retrieval →  
-Cited Intelligence → Asset & Maintenance Context → RCA → Compliance → Human Review*
-
-</div>
-
-### Existing ForgeMind AI Platform Capabilities
-
-ForgeMind Rail is built on the existing ForgeMind AI industrial intelligence
-platform. The underlying platform provides the following locally verified
-capabilities that support the rail-maintenance use case:
-
-- 📊 **Executive Cockpit** — enterprise operational intelligence at a glance
-- 📄 **Engineering Documents** — evidence ingestion, document lineage, and source integrity
-- 🧠 **Knowledge Copilot** — evidence-grounded answers with citations and confidence
-- 🕸️ **Knowledge Graph** — connected assets, failures, procedures, inspections, and work orders
-- ⚙️ **Asset 360** — unified asset and maintenance intelligence
-- 🔧 **Maintenance Intelligence** — repeated-failure and maintenance context
-- 🔍 **Root Cause Analysis** — evidence-supported investigation
-- 🛡️ **Compliance OS** — obligations, evidence gaps, and supporting records
-- 📈 **Evidence Metrics** — retrieval quality and abstention behavior
-- 👤 **Human Review** — the explicit operational decision boundary
-
-> [!IMPORTANT]
-> **OPERATIONAL ACTION: NOT EXECUTED**
->
-> ForgeMind AI is an evidence-grounded decision-support platform. It does not demonstrate autonomous control
-> or execution of industrial actions.
->
-> **Models explain. Evidence supports. Backend gates. Humans authorize.**
-
-<div align="center">
-
-
-</div>
-
----
-
-# ✨ Key Capabilities
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-## 📚 Evidence Intelligence
-
-* Multi-format ingestion
-* PDF, text, image, CSV, spreadsheet support
-* SHA-256 lineage
-* Duplicate prevention
-* Chunk extraction
-* Entity extraction
-* Relationship extraction
-* Inline citations
-* Confidence metadata
-* Evidence insufficiency detection
-* Abstention
-
-</td>
-<td width="50%" valign="top">
-
-## ⚙️ Operational Intelligence
-
-* Asset 360
-* Operational knowledge graph
-* Maintenance history
-* Failure pattern intelligence
-* Repeated-failure analysis
-* Root cause analysis
-* Work-order context
-* Inspection intelligence
-* Risk ranking
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-## 🛡️ Governance
-
-* JWT authentication
-* Backend-authoritative RBAC
-* Role filtering before retrieval
-* Evidence sufficiency gates
-* Human review
-* Auditability
-* Source lineage
-* Explicit non-execution boundary
-
-</td>
-<td width="50%" valign="top">
-
-## ⚖️ Compliance & Reporting
-
-* Compliance gap views
-* Applicable obligations
-* Evidence packages
-* Inspection evidence
-* Root-cause reports
-* PDF report generation
-* Lessons learned
-* Executive insights
+| 🌍 Public prototype | **LIVE** |
+| ☁️ Runtime | **Google Cloud Run** |
+| 🚆 Application | **ForgeMind Rail** |
+| 🧠 Intelligence | **AI-assisted** |
+| 👤 Final authority | **Human engineer** |
+| 🛑 Autonomous action | **Not provided** |
 
 </td>
 </tr>
 </table>
 
+> [!IMPORTANT]
+> **ForgeMind Rail is an engineering decision-support prototype.**
+>
+> It is not a production railway deployment, certified railway safety system, autonomous train-control system, or autonomous maintenance authority.
+
 ---
 
-# 🏗️ Architecture Summary
+# 🏆 Omnikon National Hackathon 2026
+
+| | |
+|---|---|
+| 🏁 **Hackathon** | Omnikon National Hackathon 2026 |
+| 🚚 **Domain** | Transportation & Logistics |
+| 🎯 **Problem Statement** | `Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure` |
+| 🚆 **Solution** | ForgeMind Rail |
+| 🧠 **Approach** | Evidence-grounded predictive maintenance intelligence |
+| ☁️ **Deployment** | Google Cloud Run |
+| 👤 **Decision Boundary** | Human governed |
+
+---
+
+# 🎯 The Rail Maintenance Problem
+
+Railway infrastructure produces large volumes of engineering evidence:
+
+- 🔍 inspection records
+- 📈 usage history
+- ⚠️ failure records
+- 🔧 maintenance history
+- 🛠️ work orders
+- 📄 engineering documents
+- 📋 procedures
+- ⚖️ compliance information
+
+Yet these records can remain distributed across documents, systems and teams.
+
+Important early-warning signals may therefore exist individually without being connected into a complete maintenance picture.
+
+> ### **The challenge is not merely collecting more data.**
+>
+> ### **The challenge is connecting the right evidence early enough to support better maintenance decisions.**
+
+A maintenance score alone is not enough.
+
+Engineers also need to understand:
+
+- **Which asset requires attention?**
+- **Why has the asset been prioritized?**
+- **What inspection evidence supports the concern?**
+- **What usage or loading history is relevant?**
+- **Has the failure occurred before?**
+- **Which work orders are connected?**
+- **What engineering evidence supports the recommendation?**
+- **How confident should the engineer be?**
+
+ForgeMind Rail is designed around these questions.
+
+---
+
+# 💡 The ForgeMind Rail Approach
+
+<div align="center">
+
+## **From fragmented rail evidence → to explainable maintenance intelligence**
+
+</div>
 
 ```mermaid
 flowchart LR
-    U["👷 Engineer / Operator / Auditor"] --> W["🌐 Next.js Web"]
-    W -->|"HttpOnly session + server proxy"| A["⚡ Private FastAPI"]
-    A --> P["🗄️ Azure PostgreSQL"]
-    A --> B["📦 Azure Blob Storage"]
-    A --> S["🔎 Azure AI Search"]
-    A --> F["🧠 Microsoft Foundry"]
-    A --> O["📊 Application Insights + Log Analytics"]
-    KV["🔐 Azure Key Vault"] --> A
-    MI["🪪 Managed Identity"] --> A
-    ACR["📦 Azure Container Registry"] --> W
-    ACR --> A
+    A["🚆 Rail Assets<br/>+ Evidence"]
+    B["📥 Ingest &<br/>Understand"]
+    C["🕸️ Operational<br/>Context"]
+    D["📊 Maintenance<br/>Intelligence"]
+    E["📚 Evidence &<br/>Citations"]
+    F["👤 Human<br/>Engineer"]
+
+    A --> B --> C --> D --> E --> F
+
+    style A fill:#EEF2FF,stroke:#6366F1,stroke-width:2px
+    style B fill:#ECFEFF,stroke:#06B6D4,stroke-width:2px
+    style C fill:#FFF7ED,stroke:#F97316,stroke-width:2px
+    style D fill:#F0FDF4,stroke:#22C55E,stroke-width:2px
+    style E fill:#EFF6FF,stroke:#3B82F6,stroke-width:2px
+    style F fill:#FAF5FF,stroke:#A855F7,stroke-width:2px
 ```
-
-Only the web application has public ingress in the Azure design.
-
-Browser requests to `/api/*` are proxied by Next.js to the internal FastAPI application.
-
-PostgreSQL uses delegated networking and private DNS.
-
-Key Vault references and managed identity keep Azure credentials out of application images.
 
 <div align="center">
 
-### 🔐 Backend access controls and evidence sufficiency remain authoritative.
-
-### ☁️ Azure architecture validated · Runtime not yet deployed
+### **Predict earlier → Explain why → Show the evidence → Let engineers decide**
 
 </div>
 
-📘 Full details: [Azure Architecture](docs/AZURE_ARCHITECTURE.md)
+---
+
+# ✨ Why ForgeMind Rail Is Different
+
+<table>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## 📚 01 · Evidence Before Answers
+
+ForgeMind Rail is designed around traceable engineering evidence rather than unsupported AI output.
+
+Insights are connected to source information wherever the application workflow provides supporting evidence.
+
+</td>
+
+<td width="50%" valign="top">
+
+## ⚙️ 02 · Asset-Centric Intelligence
+
+Inspection, usage, failure, maintenance and work-order information can be investigated around the railway asset instead of remaining isolated records.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## 🕸️ 03 · Connected Operational Context
+
+Entity relationships and knowledge-graph views help expose connections across assets, failures, procedures, inspections and work orders.
+
+</td>
+
+<td width="50%" valign="top">
+
+## 🔍 04 · Explainable Maintenance Support
+
+The objective is not simply to produce a risk indicator.
+
+ForgeMind Rail helps engineers investigate **why an asset is being surfaced and what evidence supports the concern**.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## 🛡️ 05 · Governance by Design
+
+Authentication, role-aware access, evidence sufficiency, citations, abstention and human review form part of the decision-support architecture.
+
+</td>
+
+<td width="50%" valign="top">
+
+## 👤 06 · Human Authority
+
+ForgeMind Rail supports engineering judgment.
+
+It does not autonomously approve maintenance, actuate railway equipment or control trains.
+
+</td>
+
+</tr>
+
+</table>
 
 ---
 
-# 🧠 Evidence-Grounded AI Lifecycle
+# 🔄 End-to-End Intelligence Workflow
+
+```mermaid
+flowchart TD
+
+    A["🚆 Rail Engineering Evidence"]
+    B["📥 Ingest & Normalize"]
+    C["🔗 Preserve Source Lineage"]
+    D["🏷️ Extract Entities & Relationships"]
+    E["🕸️ Build Operational Context"]
+    F["🔎 Retrieve Relevant Evidence"]
+    G["🧠 Generate Decision Support"]
+    H{"📚 Evidence Sufficient?"}
+    I["🛑 Abstain / Request More Evidence"]
+    J["📊 Maintenance Insight"]
+    K["📚 Evidence + Citations + Context"]
+    L["👤 Authorized Human Review"]
+    M["📝 Engineering Decision"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+
+    H -- "NO" --> I
+    H -- "YES" --> J
+
+    J --> K
+    K --> L
+    L --> M
+
+    style A fill:#EEF2FF,stroke:#6366F1
+    style H fill:#FFF7ED,stroke:#F97316
+    style I fill:#FEF2F2,stroke:#EF4444
+    style J fill:#F0FDF4,stroke:#22C55E
+    style L fill:#FAF5FF,stroke:#A855F7
+    style M fill:#ECFDF5,stroke:#10B981
+```
+
+---
+
+# 🧠 ForgeMind AI → 🚆 ForgeMind Rail
+
+**ForgeMind AI** provides the underlying evidence-grounded industrial intelligence foundation.
+
+**ForgeMind Rail** applies that foundation to the Omnikon predictive rail infrastructure maintenance challenge.
+
+```text
+🧠 ForgeMind AI
+│
+├── 📥 Evidence ingestion
+├── 🔗 Source lineage
+├── 🔎 Evidence retrieval
+├── 📚 Citations
+├── 🏷️ Entity intelligence
+├── 🕸️ Knowledge graph
+├── ⚙️ Asset intelligence
+├── 🔧 Maintenance intelligence
+├── 🔍 Root-cause analysis
+├── 🛡️ Governance
+└── 👤 Human review
+        │
+        ▼
+🚆 ForgeMind Rail
+│
+├── Rail asset context
+├── Inspection evidence
+├── Usage evidence
+├── Failure history
+├── Maintenance history
+├── Work-order context
+└── Predictive-maintenance decision support
+```
+
+---
+
+# 🌟 Key Capabilities
 
 <table>
+
 <tr>
-<td width="33%" valign="top">
 
-### 🧪 Local Deterministic Mode
+<td width="50%" valign="top">
 
-* SQLite persistence
-* Local document storage
-* Deterministic embeddings
-* Deterministic retrieval
-* Evidence-grounded responses
-* No paid AI credentials required
-* Reproducible testing
+## 🎛️ Executive Cockpit
 
-</td>
-<td width="33%" valign="top">
-
-### ☁️ Microsoft Foundry Mode
-
-* Microsoft Foundry chat models
-* Foundry embeddings
-* Azure AI Search
-* Hybrid/vector retrieval
-* Azure-native persistence
-* Managed identity
-* Enterprise cloud profile
-
-**Configured architecture — not currently deployed**
+- Operational overview
+- Rail asset context
+- Maintenance indicators
+- Risk visibility
+- Evidence statistics
+- Decision-support summaries
 
 </td>
-<td width="33%" valign="top">
 
-### 🛡️ Backend Authority
+<td width="50%" valign="top">
 
-FastAPI remains authoritative for:
+## 📄 Engineering Documents
 
-* Access control
-* Role filtering
-* Retrieval inputs
-* Evidence sufficiency
-* Document lineage
-* Graph queries
-* RCA
-* Compliance
-* Audit records
-* Report generation
+- Evidence ingestion
+- Source lineage
+- Document identity
+- SHA-256 integrity support
+- Chunk extraction
+- Evidence traceability
 
 </td>
+
 </tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## 🧠 Knowledge Copilot
+
+- Evidence-grounded responses
+- Context-aware retrieval
+- Supporting citations
+- Confidence context
+- Evidence insufficiency handling
+- Abstention behavior
+
+</td>
+
+<td width="50%" valign="top">
+
+## 🕸️ Knowledge Graph
+
+Connect:
+
+- assets
+- failures
+- procedures
+- inspections
+- work orders
+- regulations
+- engineering evidence
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## ⚙️ Asset 360
+
+- Unified asset context
+- Usage history
+- Inspection evidence
+- Failure history
+- Maintenance records
+- Work-order context
+- Related evidence
+
+</td>
+
+<td width="50%" valign="top">
+
+## 🔧 Maintenance Intelligence
+
+- Maintenance history
+- Repeated-failure context
+- Usage context
+- Maintenance prioritization
+- Risk-oriented investigation
+- Evidence-linked review
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## 🔍 Root Cause Analysis
+
+- Evidence-supported investigation
+- Failure relationships
+- Connected events
+- Supporting engineering records
+- Structured investigation workflow
+
+</td>
+
+<td width="50%" valign="top">
+
+## 🛡️ Compliance & Governance
+
+- Applicable evidence
+- Compliance context
+- Evidence gaps
+- Role-aware access
+- Auditability
+- Human review boundary
+
+</td>
+
+</tr>
+
 </table>
+
+---
+
+# ☁️ Live Architecture — Google Cloud Run
+
+> [!IMPORTANT]
+> The diagram below represents the **current public prototype deployment architecture**.
+>
+> It intentionally does not claim Cloud SQL, Vertex AI, Memorystore or other managed Google Cloud services that are not required by the current prototype.
+
+```mermaid
+flowchart LR
+
+    USER["👷 Engineer<br/>Reviewer"]
+
+    WEB["🌐 Next.js Frontend<br/>Google Cloud Run"]
+
+    API["⚡ FastAPI Backend<br/>Google Cloud Run"]
+
+    DB["🗄️ Seeded SQLite<br/>Ephemeral /tmp"]
+
+    DATA["🚆 Synthetic Rail<br/>Demo Dataset"]
+
+    INTEL["🧠 ForgeMind<br/>Intelligence Services"]
+
+    RESULT["📚 Evidence-Grounded<br/>Decision Support"]
+
+    HUMAN["👤 Human<br/>Engineering Review"]
+
+    USER --> WEB
+    WEB --> API
+
+    API --> DB
+    DATA --> API
+    API --> INTEL
+
+    DB --> INTEL
+
+    INTEL --> RESULT
+    RESULT --> WEB
+    WEB --> HUMAN
+
+    style WEB fill:#E8F0FE,stroke:#4285F4,stroke-width:3px
+    style API fill:#E8F0FE,stroke:#4285F4,stroke-width:3px
+    style DB fill:#FFF7ED,stroke:#F97316,stroke-width:2px
+    style INTEL fill:#F5F3FF,stroke:#8B5CF6,stroke-width:2px
+    style RESULT fill:#F0FDF4,stroke:#22C55E,stroke-width:2px
+    style HUMAN fill:#FAF5FF,stroke:#A855F7,stroke-width:2px
+```
+
+## ☁️ Current Deployment
+
+| Layer | Current Implementation |
+|---|---|
+| 🌐 Frontend | Next.js on **Google Cloud Run** |
+| ⚡ Backend | FastAPI on **Google Cloud Run** |
+| 🗄️ Demo database | Seeded SQLite |
+| 💾 Writable runtime location | `/tmp` |
+| 🔄 Cold-start recovery | Deterministic demo reseeding |
+| 📦 Container images | Docker |
+| 🏗️ Image repository | Google Artifact Registry |
+| 🔨 Build support | Google Cloud Build |
+| 🌍 Region | `asia-south1` |
+| 👤 Decision authority | Human |
+
+---
+
+# 🌐 Public Deployment
+
+<div align="center">
+
+## 🟢 **FORGEMIND RAIL IS LIVE**
+
+### ☁️ Google Cloud Run · `asia-south1`
+
+<br/>
+
+### 👉 [**OPEN LIVE PLATFORM**](https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard)
+
+<br/>
+
+**Public Frontend**
+
+`https://forgemind-web-911883042537.asia-south1.run.app`
+
+<br/>
+
+**Dashboard**
+
+`https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard`
+
+</div>
+
+---
+
+# 🔐 Evidence-Grounded AI Architecture
+
+```mermaid
+flowchart TB
+
+    UI["🌐 Product Experience"]
+
+    AUTH["🛡️ Authentication & Governance"]
+
+    API["⚡ Backend Authority"]
+
+    ING["📥 Ingestion & Lineage"]
+
+    RET["🔎 Evidence Retrieval"]
+
+    KG["🕸️ Knowledge Graph"]
+
+    ASSET["⚙️ Asset Intelligence"]
+
+    MAINT["🔧 Maintenance Intelligence"]
+
+    RCA["🔍 Root Cause Analysis"]
+
+    AI["🧠 AI-Assisted Reasoning"]
+
+    CITE["📚 Citations & Context"]
+
+    HUMAN["👤 Human Engineering Review"]
+
+    UI --> AUTH
+    AUTH --> API
+
+    API --> ING
+    API --> RET
+    API --> KG
+    API --> ASSET
+    API --> MAINT
+    API --> RCA
+
+    RET --> AI
+    KG --> AI
+    ASSET --> AI
+    MAINT --> AI
+    RCA --> AI
+
+    AI --> CITE
+    CITE --> HUMAN
+
+    style API fill:#ECFEFF,stroke:#06B6D4
+    style AI fill:#F5F3FF,stroke:#8B5CF6
+    style CITE fill:#EFF6FF,stroke:#3B82F6
+    style HUMAN fill:#F0FDF4,stroke:#22C55E
+```
 
 <div align="center">
 
@@ -485,461 +611,359 @@ FastAPI remains authoritative for:
 
 </div>
 
-No model can override access filters, fabricate permission, or execute industrial action.
-
----
-
-# 🤝 Intelligence-Agent Orchestration
-
-ForgeMind includes an orchestrator and bounded specialist agents.
-
-| Agent                                 | Responsibility                                    |
-| ------------------------------------- | ------------------------------------------------- |
-| 📄 **Document Intelligence Agent**    | Evidence extraction and document understanding    |
-| 🕸️ **Knowledge Graph Agent**         | Entity and relationship intelligence              |
-| 🔧 **Maintenance Intelligence Agent** | Maintenance history and repeated-failure analysis |
-| 🔍 **Root Cause Analysis Agent**      | Evidence-grounded causal investigation            |
-| 🛡️ **Compliance Agent**              | Obligations, gaps, and supporting evidence        |
-| 📚 **Lessons Learned Agent**          | Human-reviewed organizational learning            |
-| 📊 **Executive Insights Agent**       | Operational summaries and decision context        |
-
-> All agents operate on backend-produced evidence and structured outputs.
->
-> **Their findings are advisory and inherit ForgeMind's authorization, citation, and human-review constraints.**
-
----
-
-# 🌐 Deployment Status
-
-| Environment           | Status                        | Evidence                                                                                            |
-| --------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------- |
-| 💻 Local              | ✅ `IMPLEMENTED_AND_VERIFIED`  | Complete deterministic workflow, migrated evidence access, reproducible validation                  |
-| ☁️ Azure architecture | ✅ `IMPLEMENTED_AND_VALIDATED` | Bicep, identity, networking, data, AI, observability, containers, OIDC deployment definitions       |
-| 🌍 Azure runtime      | ⏳ `NOT_DEPLOYED`              | Subscription deployment, quota validation, resource creation, and live smoke testing remain pending |
-
-> [!WARNING]
-> **There is currently no public Azure ForgeMind product URL.**
->
-> Repository infrastructure definitions demonstrate deployment readiness. They are **not proof of a running Azure environment**.
-
-### Verified local application
-
-```text
-Product
-http://localhost:3000/
-
-Executive Cockpit
-http://localhost:3000/platform/dashboard
-
-FastAPI documentation
-http://localhost:8000/docs
-```
-
-No Azure resources or charges were created during repository preparation.
-
----
-
-# 💡 Enterprise Value
-
-| Enterprise signal                  | ForgeMind evidence                                                                        |
-| ---------------------------------- | ----------------------------------------------------------------------------------------- |
-| ⚡ Faster engineering investigation | Unified search across manuals, SOPs, incidents, inspections, and work orders              |
-| 🔎 Traceable AI                    | Source documents, chunks, citations, confidence, and lineage retained with each answer    |
-| ⚙️ Asset intelligence              | Operational graph, Asset 360, failure patterns, maintenance history, and risk ranking     |
-| 🛡️ Compliance readiness           | Evidence gaps, applicable obligations, inspections, and exportable RCA reports            |
-| 👤 Bounded authority               | Role filtering precedes retrieval; unsupported questions abstain; humans retain authority |
-| ☁️ Cloud portability               | Deterministic local adapters plus a separate Azure-native runtime profile                 |
-
----
-
-# 🎬 Guided Product Demo
-
-## Recommended Five-Minute Judge Flow
-
-### 1️⃣ Executive Cockpit
-
-`/platform/dashboard`
-
-Start with the enterprise operational picture.
-
-Show:
-
-* evidence totals
-* asset context
-* current intelligence
-* operational risk
-* decision-support summary
-
----
-
-### 2️⃣ Engineering Documents
-
-`/platform/documents`
-
-Demonstrate:
-
-* migrated evidence
-* document types
-* source lineage
-* SHA-256 identity
-* accessible evidence
-
----
-
-### 3️⃣ Knowledge Copilot
-
-`/platform/copilot`
-
-Ask an engineering question.
-
-Show:
-
-* authorized retrieval
-* evidence-grounded response
-* citations
-* confidence
-* abstention behavior
-
----
-
-### 4️⃣ Knowledge Graph
-
-`/platform/graph`
-
-Move from isolated evidence to connected operational context.
-
-Show relationships across:
-
-* assets
-* failures
-* procedures
-* inspections
-* work orders
-* regulations
-
----
-
-### 5️⃣ Entity Intelligence
-
-`/platform/entities`
-
-Explore extracted entities and their evidence context.
-
----
-
-### 6️⃣ Digital Twin / Asset 360
-
-`/platform/assets`
-
-Demonstrate:
-
-* asset history
-* maintenance context
-* failures
-* procedures
-* inspection evidence
-
----
-
-### 7️⃣ Maintenance AI
-
-`/platform/maintenance`
-
-Show repeated-failure and maintenance intelligence.
-
----
-
-### 8️⃣ Root Cause Analysis
-
-`/platform/rca`
-
-Demonstrate an evidence-supported investigation and report-generation workflow.
-
----
-
-### 9️⃣ Compliance OS
-
-`/platform/compliance`
-
-Show:
-
-* applicable obligations
-* supporting evidence
-* compliance gaps
-* inspection records
-
----
-
-### 🔟 Evidence Metrics
-
-`/platform/evaluation`
-
-Close with:
-
-* retrieval quality
-* abstention behavior
-* evidence grounding
-* governance
-
----
-
-### 👤 Final Boundary
-
-Finish by reinforcing:
-
-> **ForgeMind provides decision support.**
->
-> **Industrial action remains under authorized human control.**
-
-📘 Full walkthrough: [Demo Script](docs/DEMO_SCRIPT.md)
-
----
-
-# 🧭 Product Routes
-
-| Product area             | Route                   |
-| ------------------------ | ----------------------- |
-| 🏠 Landing page          | `/`                     |
-| 🎛️ Executive Cockpit    | `/platform/dashboard`   |
-| 🧠 Knowledge Copilot     | `/platform/copilot`     |
-| 📄 Engineering Documents | `/platform/documents`   |
-| 🕸️ Knowledge Graph      | `/platform/graph`       |
-| 🧩 Entity Intelligence   | `/platform/entities`    |
-| ⚙️ Digital Twin / Assets | `/platform/assets`      |
-| 🔧 Maintenance AI        | `/platform/maintenance` |
-| 🔍 Root Cause Analysis   | `/platform/rca`         |
-| 🛡️ Compliance OS        | `/platform/compliance`  |
-| 📚 Lessons Learned       | `/platform/lessons`     |
-| 📊 Reports               | `/platform/reports`     |
-| 🧪 Evidence Metrics      | `/platform/evaluation`  |
-| 🔐 Administration        | `/platform/admin`       |
-
----
-
-# 📂 Enterprise Solution Repository
-
-```text
-ForgeMind AI
-│
-├── 🌐 Product Experience
-│   ├── Executive Cockpit
-│   ├── Knowledge Copilot
-│   ├── Engineering Documents
-│   ├── Knowledge Graph
-│   ├── Asset 360
-│   ├── Maintenance Intelligence
-│   ├── Root Cause Analysis
-│   ├── Compliance OS
-│   └── Reports & Evaluation
-│
-├── 🧠 Backend Intelligence
-│   ├── Ingestion & document lineage
-│   ├── Retrieval & evidence sufficiency
-│   ├── Entity extraction
-│   ├── Operational graph
-│   ├── Maintenance intelligence
-│   ├── Root cause analysis
-│   ├── Compliance services
-│   ├── Agent orchestration
-│   └── Authentication / RBAC / Audit
-│
-├── ☁️ Azure-Native Delivery
-│   ├── Container Apps
-│   ├── Container Registry
-│   ├── PostgreSQL Flexible Server
-│   ├── Blob Storage
-│   ├── Azure AI Search
-│   ├── Microsoft Foundry
-│   ├── Key Vault
-│   ├── Managed Identity
-│   └── Application Insights / Log Analytics
-│
-└── 🛡️ Evidence & Governance
-    ├── Citations
-    ├── Confidence
-    ├── Migration manifest
-    ├── Evaluation results
-    ├── Human decision boundary
-    └── Architecture & research documentation
-```
-
----
-
-# 🧱 Repository Modules
-
-| Module               | Enterprise responsibility                                                                                     |
-| -------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `frontend/`          | Next.js and TypeScript product experience, dashboards, graph, evidence, RCA, governance views                 |
-| `backend/`           | FastAPI APIs, authentication, RBAC, ingestion, retrieval, AI providers, graph, compliance, reports, audit     |
-| `infra/`             | Azure Bicep for containers, PostgreSQL, Blob, Search, Foundry, Key Vault, identity, networking, observability |
-| `demo-data/`         | Synthetic evidence for deterministic demonstrations                                                           |
-| `sample_data/`       | Local evidence examples and dataset guidance                                                                  |
-| `docs/`              | Architecture, deployment, API, safety, research, migration, and conference material                           |
-| `.github/workflows/` | Manual OIDC-based Azure deployment workflow                                                                   |
-
----
-
-# ⚙️ Technology Stack
-
-| Layer               | Technology                                                                 |
-| ------------------- | -------------------------------------------------------------------------- |
-| 🌐 Experience       | Next.js 15, React 18, TypeScript, Tailwind CSS                             |
-| 📊 Visualization    | TanStack Query, Recharts, React Flow, D3                                   |
-| ⚡ API               | Python, FastAPI, Pydantic v2                                               |
-| 🗄️ Persistence     | SQLAlchemy, Alembic, SQLite / PostgreSQL                                   |
-| 📦 Evidence storage | Local document storage / Azure Blob Storage                                |
-| 🔎 Retrieval        | Deterministic local retrieval / Azure AI Search                            |
-| 🧠 AI               | Deterministic local provider / Microsoft Foundry                           |
-| 🔐 Identity         | JWT/RBAC locally / managed identity & Key Vault in Azure                   |
-| 📡 Observability    | OpenTelemetry, Application Insights, Log Analytics                         |
-| ☁️ Delivery         | Docker, Bicep, Azure Container Registry, Container Apps                    |
-| 🔄 CI/CD            | GitHub Actions + OIDC                                                      |
-| 🧪 Quality          | Pytest, Python compile checks, TypeScript, Next.js build, Bicep validation |
-
----
-
-# 🔐 Safety & Human Control
-
-Security and governance controls include:
-
-* 🔑 Signed JWT authentication
-* 🛡️ Backend-authoritative RBAC
-* 🔒 Role filtering before retrieval and generation
-* 🍪 HttpOnly, Secure, SameSite session-cookie design
-* 🌐 Private API ingress in the Azure architecture
-* 🗄️ Private PostgreSQL networking and DNS
-* 🪪 Managed identity
-* 🔐 Key Vault secret references
-* 🔗 SHA-256 lineage
-* 📚 Citation requirements
-* 🛑 Evidence-sufficiency guardrails
-* 👤 Explicit human review
-
-Demo identities are intended for local evaluation only.
-
-Shared or production environments must replace demo credentials with enterprise identity, managed RBAC, SSO, and rotated high-entropy secrets.
-
 ---
 
 # 🚦 Human Decision Boundary
 
+<table>
+
+<tr>
+
+<td width="50%" valign="top">
+
+## 🟢 AI CAN
+
+- Retrieve relevant evidence
+- Connect related records
+- Explain evidence context
+- Identify patterns
+- Surface maintenance concerns
+- Assist root-cause analysis
+- Support compliance investigation
+- Generate cited recommendations
+- Prepare decision-support information
+
+</td>
+
+<td width="50%" valign="top">
+
+## 🔴 AI CANNOT
+
+- Control trains
+- Operate signalling equipment
+- Actuate railway equipment
+- Start or stop machinery
+- Isolate systems
+- Repair infrastructure
+- Approve maintenance
+- Override access controls
+- Modify safety-critical configuration
+- Execute production actions
+
+</td>
+
+</tr>
+
+</table>
+
 <div align="center">
 
-## 🧠 AI Can
+# 👤 **HUMANS DECIDE**
 
-Explain evidence
-Identify patterns
-Retrieve authorized knowledge
-Support RCA
-Surface compliance gaps
-Prepare reports
-Generate cited recommendations
-
-<br/>
-
-## 🚫 AI Cannot
-
-Start equipment
-Stop equipment
-Isolate systems
-Repair machinery
-Approve maintenance
-Override access controls
-Modify industrial configuration
-Execute production actions
-
-<br/>
-
-# 👤 Humans Decide.
+## 🛑 **OPERATIONAL ACTION: NOT EXECUTED**
 
 </div>
 
 ---
 
-# 📡 Observability
+# 🚆 Synthetic Rail Demonstration Dataset
 
-ForgeMind initializes Azure Monitor OpenTelemetry when an Application Insights connection string is configured.
+The [`demo-data/rail/`](demo-data/rail/) directory contains the synthetic dataset used to demonstrate the Omnikon predictive-maintenance workflow.
 
-The Azure architecture targets structured telemetry through:
+The Cloud Run backend deterministically seeds the demonstration environment during startup.
 
-* 📊 Application Insights
-* 🧾 Log Analytics
-* 🔍 Azure Monitor
-* 🔗 OpenTelemetry
+### Demonstration dataset
 
-> Local verification confirms instrumentation initialization and application behavior.
+| Rail Evidence | Seeded Data |
+|---|---:|
+| 🚆 Rail assets | **8** |
+| ⚠️ Rail failures | **8** |
+| 🔍 Rail inspections | **10** |
+| 🛠️ Rail work orders | **8** |
+| 📈 Asset usage records | **11** |
+| 📄 Usage evidence | `rail_usage.csv` |
+
+Example asset identifiers include:
+
+```text
+TRK-001
+...
+OCS-008
+```
+
+Example verified demonstration evidence:
+
+```text
+Asset: TRK-001
+Period: 2025-Q4
+Gross tonnage: 13,200,000 tonnes
+Source evidence: rail_usage.csv
+```
+
+> [!CAUTION]
+> The railway dataset is **synthetic**.
 >
-> It does **not** claim exported Azure traces, production dashboards, alerts, or live telemetry without a deployed Azure resource and trace evidence.
+> It does not contain operational data from a real railway, metro operator or infrastructure owner.
 
 ---
 
-# ☁️ Azure Deployment Architecture
+# 🔄 Deterministic Cloud Startup
 
-```text
-GitHub
-   │
-   ▼
-🔐 GitHub OIDC
-   │
-   ▼
-☁️ Azure Resource Manager / Bicep
-   │
-   ├── 🌐 Virtual Network
-   ├── 📦 Azure Container Registry
-   ├── 🗄️ PostgreSQL Flexible Server
-   ├── 📁 Blob Storage
-   ├── 🔎 Azure AI Search
-   ├── 🧠 Microsoft Foundry
-   ├── 🔐 Key Vault
-   ├── 🪪 Managed Identity
-   ├── 📊 Application Insights
-   ├── 🧾 Log Analytics
-   └── 📦 Azure Container Apps
-        ├── 🌍 Public ForgeMind Web
-        └── 🔒 Private ForgeMind API
+The hackathon deployment deliberately uses a lightweight reproducible runtime.
+
+```mermaid
+flowchart LR
+
+    A["☁️ Cloud Run<br/>Cold Start"]
+    B["⚡ FastAPI<br/>Startup"]
+    C["🗄️ Create SQLite<br/>in /tmp"]
+    D["🚆 Seed Synthetic<br/>Rail Dataset"]
+    E["📄 Create Searchable<br/>Evidence"]
+    F["🟢 ForgeMind Rail<br/>Ready"]
+
+    A --> B --> C --> D --> E --> F
+
+    style A fill:#E8F0FE,stroke:#4285F4
+    style D fill:#EEF2FF,stroke:#6366F1
+    style F fill:#F0FDF4,stroke:#22C55E
 ```
 
-The workflow at:
+Runtime configuration is designed around writable ephemeral storage such as:
 
 ```text
-.github/workflows/azure-deploy.yml
+DATABASE_URL=sqlite:////tmp/forgemind.db
+FORGEMIND_DATA_DIR=/tmp/data
+FORGEMIND_UPLOAD_DIR=/tmp/uploads
+SEED_DEMO_ON_STARTUP=true
 ```
 
-is intentionally manual.
-
-It:
-
-1. authenticates through GitHub OIDC
-2. provisions shared Azure infrastructure
-3. builds API and web images
-4. stores images in Azure Container Registry
-5. deploys Container Apps
-6. publishes the frontend URL to the workflow summary
-
-### Required GitHub secrets
-
-```text
-AZURE_CLIENT_ID
-AZURE_TENANT_ID
-AZURE_SUBSCRIPTION_ID
-POSTGRES_ADMIN_PASSWORD
-JWT_SECRET
-```
-
-> [!WARNING]
-> Bicep templates, workflows, containers, identity configuration, and deployment scripts demonstrate **implementation readiness**.
+> [!NOTE]
+> Cloud Run local filesystem persistence is **ephemeral**.
 >
-> They do not demonstrate a live Azure deployment.
+> The prototype therefore recreates its synthetic demonstration state deterministically after a new container starts.
+>
+> **Durable production persistence is not claimed.**
 
 ---
 
-# 💻 Running Locally
+# 📊 Existing ForgeMind Evidence Baseline
+
+The underlying ForgeMind development corpus includes the following locally verified evidence counts:
+
+<div align="center">
+
+| Evidence Type | Verified Count |
+|---|---:|
+| 📄 Documents | **29** |
+| 🧩 Chunks | **969** |
+| 🏷️ Entities | **552** |
+| 🔗 Entity relationships | **122** |
+| 📚 Citations | **124** |
+| ⚙️ Assets | **12** |
+| ⚠️ Failures | **16** |
+| 🛠️ Work orders | **5** |
+| 🔍 Inspections | **6** |
+| 📋 Procedures | **2** |
+| ⚖️ Regulations | **10** |
+
+</div>
+
+> These figures describe the existing ForgeMind development evidence corpus.
+>
+> **They are not rail predictive-maintenance accuracy metrics.**
+
+A ForgeMind citation is a traceable reference from an analytical or generated output to supporting ingested evidence.
+
+It is **not an academic citation count**.
+
+---
+
+# 🔎 Evaluation Evidence
+
+> [!NOTE]
+> The existing eight-case local retrieval corpus is a **development smoke test**.
+>
+> It must not be interpreted as a railway predictive-maintenance benchmark.
+
+| Metric | Verified Local Result |
+|---|---:|
+| ✅ Cases passed | **8 / 8** |
+| 🎯 Positive retrieval cases | **6** |
+| 🛑 Negative abstention cases | **2** |
+| 📈 Mean Recall@5 | **1.00** |
+| 🥇 Mean Reciprocal Rank | **1.00** |
+| ✅ Negative abstention accuracy | **1.00** |
+| ⚡ Retrieval latency p50 | **1.68 ms** |
+| ⚡ Retrieval latency p95 | **1.73 ms** |
+
+Evaluation artifact:
+
+```text
+backend/evaluation/results/local_phase3.json
+```
+
+Research methodology:
+
+📘 [`docs/CONFERENCE_RESEARCH_PLAN.md`](docs/CONFERENCE_RESEARCH_PLAN.md)
+
+---
+
+# 🧪 Cloud Acceptance Scenario
+
+The Cloud Run deployment was designed around an end-to-end rail demonstration scenario.
+
+## 🎯 Supported Evidence Query
+
+```text
+What was the gross tonnage for TRK-001 in 2025-Q4?
+```
+
+Expected evidence-backed result:
+
+```text
+13,200,000 tonnes
+```
+
+Supporting source:
+
+```text
+rail_usage.csv
+```
+
+## 🛑 Abstention Scenario
+
+```text
+What is the inspection frequency of XYZ-999?
+```
+
+Expected behavior:
+
+- no fabricated asset
+- no fabricated evidence
+- no fabricated citation
+- low-confidence / unsupported response
+- abstention or refusal to infer unsupported information
+
+This distinction is fundamental to the ForgeMind architecture:
+
+> ### **When evidence is insufficient, the system should not manufacture certainty.**
+
+---
+
+# 🎬 Guided Product Demo
+
+## ⚡ Recommended 5-Minute Judge Flow
+
+| Step | Experience | Demonstrate |
+|---:|---|---|
+| **1** | 🎛️ Executive Cockpit | Operational overview |
+| **2** | 📄 Engineering Documents | Evidence and source lineage |
+| **3** | 🧠 Knowledge Copilot | Evidence-grounded answer |
+| **4** | 🕸️ Knowledge Graph | Connected operational context |
+| **5** | ⚙️ Asset 360 | Unified rail asset intelligence |
+| **6** | 🔧 Maintenance AI | Maintenance context and priorities |
+| **7** | 🔍 Root Cause Analysis | Evidence-supported investigation |
+| **8** | 🛡️ Compliance | Governance and supporting evidence |
+| **9** | 📊 Evidence Metrics | Retrieval and abstention behavior |
+| **10** | 👤 Human Boundary | Engineer retains authority |
+
+---
+
+# 🧭 Product Routes
+
+| Product Area | Route |
+|---|---|
+| 🏠 Landing | `/` |
+| 🎛️ Executive Cockpit | `/platform/dashboard` |
+| 🧠 Knowledge Copilot | `/platform/copilot` |
+| 📄 Engineering Documents | `/platform/documents` |
+| 🕸️ Knowledge Graph | `/platform/graph` |
+| 🧩 Entity Intelligence | `/platform/entities` |
+| ⚙️ Digital Twin / Assets | `/platform/assets` |
+| 🔧 Maintenance AI | `/platform/maintenance` |
+| 🔍 Root Cause Analysis | `/platform/rca` |
+| 🛡️ Compliance | `/platform/compliance` |
+| 📚 Lessons Learned | `/platform/lessons` |
+| 📊 Reports | `/platform/reports` |
+| 🧪 Evidence Metrics | `/platform/evaluation` |
+| 🔐 Administration | `/platform/admin` |
+
+---
+
+# 🧱 Technology Stack
+
+| Layer | Technology |
+|---|---|
+| 🌐 Experience | Next.js 15, React 18, TypeScript, Tailwind CSS |
+| 📊 Visualization | TanStack Query, Recharts, React Flow, D3 |
+| ⚡ API | Python, FastAPI, Pydantic |
+| 🗄️ Application persistence | SQLAlchemy / SQLite |
+| 🚆 Demo runtime database | Seeded SQLite in Cloud Run writable `/tmp` |
+| 📚 Evidence | Local/synthetic demonstration evidence |
+| 🧠 Intelligence | ForgeMind deterministic and AI-assisted services |
+| 🔐 Access control | JWT / RBAC application controls |
+| 📦 Packaging | Docker |
+| ☁️ Runtime | **Google Cloud Run** |
+| 🏗️ Container registry | Google Artifact Registry |
+| 🔨 Cloud build | Google Cloud Build |
+| 🧪 Quality | Pytest, Python compile checks, TypeScript, Next.js build |
+
+> [!IMPORTANT]
+> The presence of code, infrastructure files or architectural documentation for another cloud service does not mean that service is part of the current live prototype.
+>
+> The current public deployment claim is intentionally limited to the **verified Google Cloud Run deployment**.
+
+---
+
+# 🏗️ Repository Structure
+
+```text
+ForgeMind-AI/
+│
+├── 🌐 frontend/
+│   └── Next.js / React / TypeScript product experience
+│
+├── 🧠 backend/
+│   └── FastAPI APIs and ForgeMind intelligence services
+│
+├── 🚆 demo-data/
+│   └── Synthetic rail demonstration dataset
+│
+├── 📚 sample_data/
+│   └── Local evidence examples
+│
+├── 📘 docs/
+│   └── Architecture, API, deployment, research and demo documentation
+│
+├── 🏗️ infra/
+│   └── Infrastructure / reference deployment definitions
+│
+├── ⚙️ .github/workflows/
+│   └── CI/CD and deployment workflow definitions
+│
+├── 🔐 SECURITY.md
+├── 📄 LICENSE
+├── 🐳 docker-compose.yml
+├── ⚙️ .env.example
+└── 📖 README.md
+```
+
+---
+
+# 💻 Local Development
 
 ## Prerequisites
 
-* Python 3.11+
-* Node.js 20+
-* pnpm
+- Python **3.11+**
+- Node.js **20+**
+- pnpm
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Janicebenita/ForgeMind-AI.git
+cd ForgeMind-AI
+```
 
 Copy:
 
@@ -953,11 +977,11 @@ to:
 .env
 ```
 
-The default configuration uses SQLite, local retrieval, and the deterministic local provider.
-
 ---
 
 ## ⚡ Backend
+
+### Windows PowerShell
 
 ```powershell
 Set-Location backend
@@ -969,6 +993,18 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 
 python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+Backend API:
+
+```text
+http://localhost:8000
+```
+
+FastAPI documentation:
+
+```text
+http://localhost:8000/docs
 ```
 
 ---
@@ -988,26 +1024,42 @@ pnpm dev
 Open:
 
 ```text
-http://localhost:3000/
+http://localhost:3000
 ```
 
-API documentation:
+Dashboard:
 
 ```text
-http://localhost:8000/docs
+http://localhost:3000/platform/dashboard
 ```
 
-Docker Compose is also included for PostgreSQL, Redis, ChromaDB, backend, and frontend services.
+---
 
-The default deterministic application path does not require paid Azure services.
+# 🐳 Docker
+
+The repository includes containerized application support.
+
+Where appropriate for the local environment:
+
+```bash
+docker compose up --build
+```
+
+The deployed Cloud Run environment uses containerized frontend and backend services.
 
 ---
 
 # 🧪 Testing & Verification
 
+Backend:
+
 ```powershell
 python -m pytest backend/tests -q
+```
 
+Python compilation:
+
+```powershell
 python -m compileall -q backend/app backend/tests
 ```
 
@@ -1019,123 +1071,298 @@ Set-Location frontend
 pnpm build
 ```
 
-Infrastructure:
+The repository has undergone backend and frontend verification during development.
 
-```powershell
-az bicep build --file infra/main.bicep
+Test results establish software behavior within the tested scope.
+
+They do **not** constitute:
+
+- railway safety certification
+- railway operational validation
+- field predictive-maintenance accuracy
+- regulatory approval
+- production cybersecurity certification
+
+---
+
+# ☁️ Deployment Architecture
+
+```text
+                    INTERNET
+                        │
+                        ▼
+              ┌───────────────────┐
+              │   👷 USER /       │
+              │   ENGINEER        │
+              └─────────┬─────────┘
+                        │
+                        ▼
+          ┌───────────────────────────┐
+          │ 🌐 FORGEMIND WEB          │
+          │ Next.js                   │
+          │ Google Cloud Run          │
+          └─────────────┬─────────────┘
+                        │
+                        ▼
+          ┌───────────────────────────┐
+          │ ⚡ FORGEMIND API          │
+          │ FastAPI                   │
+          │ Google Cloud Run          │
+          └─────────────┬─────────────┘
+                        │
+             ┌──────────┴───────────┐
+             │                      │
+             ▼                      ▼
+    ┌─────────────────┐    ┌──────────────────┐
+    │ 🗄️ SEEDED       │    │ 🧠 FORGEMIND     │
+    │ SQLITE          │    │ INTELLIGENCE     │
+    │ /tmp runtime    │    │ SERVICES         │
+    └────────┬────────┘    └─────────┬────────┘
+             │                       │
+             └───────────┬───────────┘
+                         ▼
+               ┌───────────────────┐
+               │ 📚 EVIDENCE-      │
+               │ GROUNDED OUTPUT   │
+               └─────────┬─────────┘
+                         │
+                         ▼
+               ┌───────────────────┐
+               │ 👤 HUMAN REVIEW   │
+               └───────────────────┘
 ```
 
-### Verified preparation evidence
+---
 
-* ✅ 18 backend tests passed
-* ✅ Python compile checks passed
-* ✅ TypeScript validation passed
-* ✅ Next.js production build passed
-* ✅ 23 frontend routes compiled
-* ✅ Bicep compiled without diagnostics
-* ✅ Local retrieval smoke corpus passed **8 / 8**
+# 🔵 Reference / Alternative Architecture Material
+
+The repository may retain infrastructure or documentation created during earlier Azure architecture work.
+
+Those files represent a **reference or alternative enterprise deployment architecture**.
+
+They do **not** describe the current public runtime.
+
+<div align="center">
+
+| Architecture | Current Meaning |
+|---|---|
+| ☁️ **Google Cloud Run** | 🟢 **Current live prototype** |
+| 🔵 **Azure architecture material** | 📘 **Reference / alternative architecture** |
+| 🔵 **Azure runtime** | **Not the current live runtime** |
+
+</div>
+
+> [!WARNING]
+> Azure Bicep templates, Azure AI Search references, Microsoft Foundry references, Azure PostgreSQL designs, Container Apps designs or Azure deployment workflows must not be interpreted as evidence that those services currently power the public ForgeMind Rail prototype.
 
 ---
 
-# ✅ Implementation Readiness
+# 🛡️ Safety & Governance
 
-| Readiness area        | Evidence-backed outcome                                                                                    |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- |
-| 🌐 Product experience | ✅ Landing, dashboard, documents, copilot, graph, assets, maintenance, RCA, compliance, reports, evaluation |
-| 📚 Evidence platform  | ✅ 29 documents, 969 chunks, 552 entities, 122 relationships, 124 citations                                 |
-| 👤 Human control      | ✅ Access filters, citations, abstention, explicit non-execution boundary                                   |
-| 🧪 Local quality      | ✅ Backend tests, compilation, TypeScript, frontend build, APIs, browser verification                       |
-| ☁️ Azure architecture | 🟦 Bicep, containers, OIDC, identity, networking, data, AI, observability prepared                         |
-| 🌍 Live Azure runtime | ⏳ Not deployed; quota, resources, endpoints, and cloud smoke evidence remain pending                       |
+ForgeMind Rail is designed as **engineering decision support**.
 
----
+The architecture includes or represents controls such as:
 
-# 📚 Documentation
+- 🔑 Authentication
+- 🛡️ Role-based access control
+- 🔒 Backend-authoritative access logic
+- 🔎 Role-aware evidence retrieval
+- 🔗 Source lineage
+- 📚 Citation support
+- 🛑 Evidence-sufficiency handling
+- 🧠 AI advisory behavior
+- 👤 Human review
+- 🚫 Explicit non-execution boundary
 
-| Document                                                        | Purpose                                                         |
-| --------------------------------------------------------------- | --------------------------------------------------------------- |
-| 🚆 [Omnikon 2026](docs/OMNIKON_2026.md)                         | ForgeMind Rail hackathon problem statement and solution          |
-| 🏗️ [Azure Architecture](docs/AZURE_ARCHITECTURE.md)            | Trust boundaries, identity, networking, persistence, AI, safety |
-| ☁️ [Infrastructure Guide](infra/README.md)                      | Azure deployment and GitHub Actions                             |
-| 🚦 [Deployment Status](docs/DEPLOYMENT_STATUS.md)               | Verified, ready, pending, and external prerequisites            |
-| 🗄️ [Migration Report](docs/MIGRATION_REPORT.md)                | Migration evidence and integrity verification                   |
-| 🧪 [Conference Research Plan](docs/CONFERENCE_RESEARCH_PLAN.md) | Evaluation design, acceptance gates, and ablations              |
-| ⚡ [API Reference](docs/API.md)                                  | Backend endpoints                                               |
-| 🧱 [Architecture](docs/ARCHITECTURE.md)                         | Application components and data flow                            |
-| 🧠 [System Design](docs/SYSTEM_DESIGN.md)                       | Product-level architecture                                      |
-| 🗃️ [Database Diagram](docs/DATABASE_DIAGRAM.md)                | Persistence entities and relationships                          |
-| 🚀 [Deployment Guide](docs/DEPLOYMENT_GUIDE.md)                 | Local and deployment guidance                                   |
-| 🎬 [Demo Script](docs/DEMO_SCRIPT.md)                           | Conference demonstration sequence                               |
+> ### **No AI-generated output should be interpreted as permission to execute a railway maintenance or safety-critical action.**
 
 ---
 
 # ⚠️ Known Limitations
 
-ForgeMind intentionally documents its current boundaries.
+ForgeMind Rail intentionally documents the boundaries of the current prototype.
 
-* Azure resources have not yet been deployed from this workspace
-* Microsoft Foundry model availability depends on subscription-specific quota
-* Azure AI Search quality and latency require a live held-out benchmark
-* The eight-case local retrieval suite is a development smoke test
-* Some secondary UI cards remain curated conference demonstration views
-* The deterministic local provider supports reproducibility but does not replace managed-model evaluation
-* SQLite is suitable for local verification, not distributed production workloads
-* Stricter production security may require private endpoints for Search, Storage, Foundry, and Key Vault
-* Raw migrated documents and database snapshots are intentionally absent from the public repository
-* ForgeMind provides decision support only
-* **ForgeMind does not execute industrial actions**
+### 🚆 Data
+
+- The rail demonstration dataset is synthetic.
+- It does not represent a real railway or metro operator.
+- Real-world predictive performance has not been established by the synthetic demonstration.
+
+### 🧪 Evaluation
+
+- The existing eight-case retrieval evaluation is a development smoke test.
+- It is not a held-out railway predictive-maintenance benchmark.
+- Existing ForgeMind evidence counts are not predictive-maintenance accuracy metrics.
+
+### ☁️ Cloud Runtime
+
+- The public prototype runs on Google Cloud Run.
+- The current demo database uses ephemeral SQLite storage.
+- Runtime-created data may be lost when a container instance is replaced.
+- Synthetic demonstration state is recreated through deterministic startup seeding.
+- Durable production persistence is not claimed.
+
+### 🧠 AI
+
+- AI-generated outputs are advisory.
+- Evidence insufficiency should result in abstention rather than fabrication.
+- AI output requires engineering review.
+
+### 🛡️ Railway Safety
+
+ForgeMind Rail does not:
+
+- control trains
+- control signalling
+- actuate railway equipment
+- automatically approve maintenance
+- replace qualified railway engineers
+- claim railway safety certification
+
+### 🏭 Production Readiness
+
+A real railway deployment would require additional work including:
+
+- representative railway field data
+- held-out validation
+- durable persistence
+- enterprise identity
+- production cybersecurity controls
+- monitoring and incident management
+- operator-system integration
+- railway-domain validation
+- safety engineering
+- applicable regulatory and certification processes
 
 ---
 
-## Team — Omnikon National Hackathon 2026
+# 📚 Documentation
 
-- **Janice Benita F** — Team Leader
-- **Tytus Glastin** ([@TytusGlastin](https://github.com/TytusGlastin)) — Frontend Development
-
----
-
-## Generative AI Usage Disclosure
-
-Generative AI tools, including OpenAI Codex and other AI-assisted software
-engineering tools, were used during development for assistance with code,
-refactoring, documentation, and testing.
-
-All architecture decisions, review, validation, and hackathon submission
-responsibility remain with the registered team.
-
----
-
-## 📄 License
-
-ForgeMind AI is released under the [MIT License](LICENSE).
-
-Third-party libraries, services, trademarks, datasets, and external materials remain subject to their respective licenses and terms.
+| Document | Purpose |
+|---|---|
+| 🚆 [`docs/OMNIKON_2026.md`](docs/OMNIKON_2026.md) | Omnikon problem statement and rail solution |
+| 🧱 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Application architecture |
+| 🧠 [`docs/SYSTEM_DESIGN.md`](docs/SYSTEM_DESIGN.md) | Product-level system design |
+| ⚡ [`docs/API.md`](docs/API.md) | Backend API reference |
+| 🗃️ [`docs/DATABASE_DIAGRAM.md`](docs/DATABASE_DIAGRAM.md) | Persistence entities |
+| 🚀 [`docs/DEPLOYMENT_GUIDE.md`](docs/DEPLOYMENT_GUIDE.md) | Deployment guidance |
+| 🎬 [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) | Demonstration sequence |
+| 🧪 [`docs/CONFERENCE_RESEARCH_PLAN.md`](docs/CONFERENCE_RESEARCH_PLAN.md) | Evaluation methodology |
+| 🗄️ [`docs/MIGRATION_REPORT.md`](docs/MIGRATION_REPORT.md) | Migration evidence |
+| 🔐 [`SECURITY.md`](SECURITY.md) | Security and governance |
 
 ---
 
-# 👤 Author & Hackathon Team
+# 🖼️ Visual Assets
+
+The public README is designed around the following ForgeMind Rail visual assets:
+
+```text
+docs/assets/
+│
+├── forgemind-rail-hero.gif
+├── forgemind-rail-live-architecture.png
+├── forgemind-rail-workflow.png
+├── forgemind-evidence-lifecycle.png
+├── forgemind-human-boundary.png
+└── forgemind-rail-demo.gif
+```
+
+> Some of these assets may be added progressively.
+>
+> All new architecture artwork should represent **ForgeMind Rail + Google Cloud Run** as the current live prototype.
+
+---
+
+# 🎬 Product Demo Video
 
 <div align="center">
 
-### ForgeMind AI — created by **Janice Benita F**
+## 🎥 **ForgeMind Rail Product Walkthrough**
 
-### Omnikon 2026 submission team: **Janice Benita F** & **Tytus Glastin**
+A complete demonstration can showcase:
+
+**Executive Cockpit → Documents → Copilot → Knowledge Graph → Asset 360 → Maintenance Intelligence → RCA → Compliance → Human Decision**
+
+</div>
+
+When the product demonstration video is available, place it under:
+
+```text
+docs/demo/
+```
+
+Recommended repository structure:
+
+```text
+docs/
+└── demo/
+    └── forgemind-rail-product-demo.mp4
+```
+
+---
+
+# 🤖 Generative AI Usage Disclosure
+
+Generative AI tools, including OpenAI Codex and other AI-assisted software-engineering tools, were used during development for assistance with:
+
+- code generation
+- refactoring
+- debugging
+- documentation
+- testing support
+- architecture refinement
+
+All architecture decisions, engineering review, validation and hackathon submission responsibility remain with the registered team.
+
+AI-generated outputs within ForgeMind Rail are **advisory** and remain subject to evidence review and authorized human engineering judgment.
+
+---
+
+# 👥 Omnikon 2026 Team
+
+<div align="center">
+
+## 🚆 **ForgeMind Rail**
+
+### Omnikon National Hackathon 2026
 
 <br/>
 
-### 🚆 ForgeMind Rail
+| Role | Team Member |
+|---|---|
+| 🚆 **Team Leader** | **Janice Benita F** |
+| 💻 **Frontend Development** | **Tytus Glastin** — [@TytusGlastin](https://github.com/TytusGlastin) |
 
-### Evidence-Grounded AI for Predictive Rail Infrastructure Maintenance
+</div>
+
+---
+
+# 📄 License
+
+ForgeMind AI / ForgeMind Rail is released under the [MIT License](LICENSE).
+
+Third-party libraries, services, trademarks, datasets and external materials remain subject to their respective licenses and terms.
+
+---
+
+# 🌟 Project Vision
+
+<div align="center">
+
+## **Rail maintenance should not depend on isolated evidence.**
+
+### ForgeMind Rail connects the evidence.
+
+### AI helps understand the context.
+
+### The platform explains the concern.
+
+### The engineer makes the decision.
 
 <br/>
 
-## **Connect evidence. Understand operations. Decide with confidence.**
-
-<br/>
-
-**Evidence Grounded · Human Governed · Google Cloud Run · Live Prototype**
-
-### **Operational Action: NOT EXECUTED**
+# 🚆 **Predict Earlier. Explain Why. Act with Evidence.**
 
 </div>
 
@@ -1143,6 +1370,44 @@ Third-party libraries, services, trademarks, datasets, and external materials re
 
 <div align="center">
 
-⭐ If ForgeMind AI is useful to your work, consider starring the repository.
+# 🚆 ForgeMind Rail
+
+### **Evidence-Grounded AI for Predictive Rail Infrastructure Maintenance**
+
+<br/>
+
+### 📚 **Connect evidence.**
+
+### 🧠 **Understand operations.**
+
+### 🔍 **Explain maintenance risk.**
+
+### 👤 **Let engineers decide.**
+
+<br/>
+
+<img src="https://img.shields.io/badge/Google_Cloud_Run-LIVE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+
+<img src="https://img.shields.io/badge/Evidence_Grounded-YES-8B5CF6?style=for-the-badge" />
+
+<img src="https://img.shields.io/badge/Human_Governed-YES-22C55E?style=for-the-badge" />
+
+<img src="https://img.shields.io/badge/Operational_Action-NOT_EXECUTED-EF4444?style=for-the-badge" />
+
+<br/><br/>
+
+### 👉 [**🚀 Launch Live ForgeMind Rail**](https://forgemind-web-911883042537.asia-south1.run.app/platform/dashboard)
+
+<br/>
+
+**Omnikon National Hackathon 2026 · Transportation & Logistics**
+
+<br/>
+
+### **Evidence Grounded · Human Governed · Google Cloud Run · Live Prototype**
+
+<br/>
+
+⭐ **If ForgeMind Rail is useful to your work, consider starring the repository.**
 
 </div>
