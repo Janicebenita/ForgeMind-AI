@@ -1123,9 +1123,9 @@ Third-party libraries, services, trademarks, datasets, and external materials re
 
 <br/>
 
-### 🧠 ForgeMind AI
+### 🚆 ForgeMind Rail
 
-### Azure-Native Industrial Intelligence Platform
+### Evidence-Grounded AI for Predictive Rail Infrastructure Maintenance
 
 <br/>
 
@@ -1133,7 +1133,7 @@ Third-party libraries, services, trademarks, datasets, and external materials re
 
 <br/>
 
-**Evidence Grounded · Human Governed · Azure Native**
+**Evidence Grounded · Human Governed · Google Cloud Run · Live Prototype**
 
 ### **Operational Action: NOT EXECUTED**
 
