@@ -94,7 +94,7 @@ The platform transforms fragmented railway engineering, inspection, usage, maint
 |---|---|
 | 🏁 **Hackathon** | National Hackathon 2026 |
 | 🚚 **Domain** | Transportation & Logistics |
-| 🎯 **Problem Statement** | `Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure` |
+| 🎯 **Problem Statement** | `Open Innovation Track — Predictive Maintenance for Rail Infrastructure` |
 | 🚆 **Solution** | ForgeMind Rail |
 | 🧠 **Approach** | Evidence-grounded predictive maintenance intelligence |
 | ☁️ **Deployment** | Google Cloud Run |
