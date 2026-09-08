@@ -12,7 +12,7 @@
 
 ### 🧠 Evidence-Grounded AI for Predictive Rail Infrastructure Maintenance
 
-**Omnikon National Hackathon 2026 · Transportation & Logistics**
+**National Hackathon 2026 · Transportation & Logistics**
 
 > ### **Predict earlier. Explain why. Let engineers decide.**
 
@@ -88,11 +88,11 @@ The platform transforms fragmented railway engineering, inspection, usage, maint
 
 ---
 
-# 🏆 Omnikon National Hackathon 2026
+# 🏆 National Hackathon 2026
 
 | | |
 |---|---|
-| 🏁 **Hackathon** | Omnikon National Hackathon 2026 |
+| 🏁 **Hackathon** | National Hackathon 2026 |
 | 🚚 **Domain** | Transportation & Logistics |
 | 🎯 **Problem Statement** | `Omni_Transport_8 — Predictive Maintenance for Rail Infrastructure` |
 | 🚆 **Solution** | ForgeMind Rail |
@@ -1325,7 +1325,7 @@ AI-generated outputs within ForgeMind Rail are **advisory** and remain subject t
 
 ## 🚆 **ForgeMind Rail**
 
-### Omnikon National Hackathon 2026
+### National Hackathon 2026
 
 <br/>
 
@@ -1400,7 +1400,7 @@ Third-party libraries, services, trademarks, datasets and external materials rem
 
 <br/>
 
-**Omnikon National Hackathon 2026 · Transportation & Logistics**
+**National Hackathon 2026 · Transportation & Logistics**
 
 <br/>
 
