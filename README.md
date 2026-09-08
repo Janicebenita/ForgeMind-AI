@@ -1319,7 +1319,7 @@ AI-generated outputs within ForgeMind Rail are **advisory** and remain subject t
 
 ---
 
-# 👥 Omnikon 2026 Team
+# 👥 Hackathon: Stop prompting. Code solo agents 2026 Team
 
 <div align="center">
 
@@ -1332,7 +1332,6 @@ AI-generated outputs within ForgeMind Rail are **advisory** and remain subject t
 | Role | Team Member |
 |---|---|
 | 🚆 **Team Leader** | **Janice Benita F** |
-| 💻 **Frontend Development** | **Tytus Glastin** — [@TytusGlastin](https://github.com/TytusGlastin) |
 
 </div>
 
