@@ -1,0 +1,10 @@
+spec_version: 0.1.0
+
+name: forgemind-rail
+
+description: >
+  Evidence-grounded AI agent for predictive rail infrastructure
+  maintenance decision support. ForgeMind Rail connects inspection,
+  usage, failure, maintenance, work-order, engineering, and compliance
+  evidence to produce traceable maintenance intelligence while keeping
+  final decision authority with human engineers.
